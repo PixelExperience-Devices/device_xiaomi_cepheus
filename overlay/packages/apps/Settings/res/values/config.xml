@@ -13,4 +13,7 @@
 <resources>
     <!-- Use only if devices have variable intensity support for haptics-->
     <bool name="config_vibration_supports_multiple_intensities">true</bool>
+
+    <!-- Whether to show a preference item for mobile plan -->
+    <bool name="config_show_mobile_plan">false</bool>
 </resources>
