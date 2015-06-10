@@ -69,6 +69,9 @@ persist.mm.enable.prefetch=true
 ro.hardware.fp.fod=true
 persist.vendor.sys.pay.ifaa=1
 
+# Additional buffers shared between Camera and Video
+vidc.enc.dcvs.extra-buff-count=2
+
 # Netflix custom property
 ro.netflix.bsp_rev=Q855-16947-1
 
