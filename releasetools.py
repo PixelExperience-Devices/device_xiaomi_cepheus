@@ -17,6 +17,14 @@
 import common
 import re
 
+def FullOTA_Assertions(info):
+  AddModemAssertion(info, info.input_zip)
+  return
+
+def IncrementalOTA_Assertions(info):
+  AddModemAssertion(info, info.input_zip)
+  return
+
 def FullOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
@@ -35,4 +43,15 @@ def OTA_InstallEnd(info):
   info.script.Print("Patching firmware images...")
   AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+  return
+
+def AddModemAssertion(info, input_zip):
+  android_info = info.input_zip.read("OTA/android-info.txt")
+  m = re.search(r'require\s+version-modem\s*=\s*(.+)', android_info)
+  if m:
+    timestamp, firmware_version = m.group(1).rstrip().split(',')
+    if ((len(timestamp) and '*' not in timestamp) and \
+        (len(firmware_version) and '*' not in firmware_version)):
+      cmd = 'assert(xiaomi.verify_modem("{}") == "1" || abort("ERROR: This package requires firmware from MIUI {} or newer. Please upgrade firmware and retry!"););'
+      info.script.AppendExtra(cmd.format(timestamp, firmware_version))
   return
