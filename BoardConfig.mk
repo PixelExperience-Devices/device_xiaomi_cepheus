@@ -18,5 +18,7 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/cepheus
 
+BUILD_BROKEN_DUP_RULES := true
+
 # Inherit from proprietary files
 include vendor/xiaomi/cepheus/BoardConfigVendor.mk
