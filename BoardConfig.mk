@@ -110,6 +110,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_xiaomi
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# RIL
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+
 # Sepolicy
 TARGET_SEPOLICY_DIR := msmnile
 include device/qcom/sepolicy/sepolicy.mk
