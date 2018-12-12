@@ -388,8 +388,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat
 
 # Screen density
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_DENSITY := 440
 
 # Sensors
