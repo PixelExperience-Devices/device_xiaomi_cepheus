@@ -1,3 +1,6 @@
+# Insmod
+type vendor_device_prop, property_type;
+
 # Mlipay
 type mlipay_prop, property_type;
 

@@ -197,6 +197,10 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhidltransport.vendor
 
+# Insmod files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init.insmod.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.cfg
+
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
@@ -221,7 +225,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.qcom.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sh
 
 PRODUCT_PACKAGES += \
-    init.affinity.sh
+    init.affinity.sh \
+    init.insmod.sh
 
 # Input
 PRODUCT_COPY_FILES += \

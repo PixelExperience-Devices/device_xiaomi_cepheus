@@ -27,7 +27,6 @@
 #
 #
 on early-init
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules adsp_loader_dlkm apr_dlkm cs35l41_dlkm hdmi_dlkm machine_dlkm mbhc_dlkm native_dlkm pinctrl_wcd_dlkm platform_dlkm q6_dlkm q6_notifier_dlkm q6_pdr_dlkm stub_dlkm swr_ctrl_dlkm swr_dlkm tas2557_dlkm usf_dlkm wcd934x_dlkm wcd9360_dlkm wcd9xxx_dlkm wcd_core_dlkm wcd_cpe_dlkm wcd_spi_dlkm wglink_dlkm wsa881x_dlkm
     symlink /data/tombstones /tombstones
 
 on init
@@ -77,6 +76,13 @@ on fs
     restorecon_recursive /mnt/vendor/persist
 
 on late-fs
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-2
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.allocator
+    start vendor.light-hal-2-0
+
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.qcom --late
