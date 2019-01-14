@@ -261,14 +261,14 @@ Return<void> Power::setFeature(Feature feature, bool activate) {
 }
 
 Return<void> Power::getPlatformLowPowerStats(getPlatformLowPowerStats_cb _hidl_cb) {
-    LOG(ERROR) << "getPlatformLowPowerStats not supported. Use IPowerStats HAL.";
+    LOG(INFO) << "getPlatformLowPowerStats not supported. Do nothing.";
     _hidl_cb({}, Status::SUCCESS);
     return Void();
 }
 
 // Methods from ::android::hardware::power::V1_1::IPower follow.
 Return<void> Power::getSubsystemLowPowerStats(getSubsystemLowPowerStats_cb _hidl_cb) {
-    LOG(ERROR) << "getSubsystemLowPowerStats not supported. Use IPowerStats HAL.";
+    LOG(INFO) << "getSubsystemLowPowerStats not supported. Do nothing.";
     _hidl_cb({}, Status::SUCCESS);
     return Void();
 }
