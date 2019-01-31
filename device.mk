@@ -147,3 +147,7 @@ PRODUCT_BOOT_JARS += \
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
+
+# ThermalController app
+PRODUCT_PACKAGES += \
+    ThermalController
