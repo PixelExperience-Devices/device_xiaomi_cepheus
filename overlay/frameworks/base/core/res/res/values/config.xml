@@ -697,4 +697,7 @@
 
     <!-- Show a custom view for Facola -->
     <bool name="config_needCustomFacolaView">true</bool>
+
+    <!-- Whether to allow sending active app broadcast -->
+    <bool name="config_allowActivePackageBroadcast">true</bool>
 </resources>
