@@ -1,0 +1,2 @@
+# Allow nfc to find hal_nxpnfc_hwservice
+allow nfc hal_nxpnfc_hwservice:hwservice_manager find;
