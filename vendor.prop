@@ -117,6 +117,7 @@ persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 
 # Display
+debug.cpurend.vsync=false
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.disable_backpressure=1
