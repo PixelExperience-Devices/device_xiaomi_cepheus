@@ -645,4 +645,7 @@
         <item>7,1</item>
         <item>9,1</item>
     </string-array>
+
+    <!-- Whether device has a physical display cutout -->
+    <bool name="config_physicalDisplayCutout">true</bool>
 </resources>
