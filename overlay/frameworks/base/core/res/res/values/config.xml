@@ -228,7 +228,10 @@
      <bool name="skip_restoring_network_selection">true</bool>
 
     <!-- Height of the status bar -->
-     <dimen name="status_bar_height_portrait">27.269989dip</dimen>
+     <dimen name="status_bar_height_portrait">74px</dimen>
+
+    <!-- Height of the status bar in landscape -->
+     <dimen name="status_bar_height_landscape">24dp</dimen>
 
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
@@ -257,6 +260,13 @@
          hysteresis threshold. -->
      <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
      <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
+
+     <!-- Radius of the software rounded corners at the top of the display in its natural
+        orientation. If zero, the value of rounded_corner_radius is used. -->
+     <dimen name="rounded_corner_radius_top">100px</dimen>
+    <!-- Radius of the software rounded corners at the bottom of the display in its natural
+        orientation. If zero, the value of rounded_corner_radius is used. -->
+     <dimen name="rounded_corner_radius_bottom">110px</dimen>
 
     <!-- Operating volatage for bluetooth controller. 0 by default-->
      <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
