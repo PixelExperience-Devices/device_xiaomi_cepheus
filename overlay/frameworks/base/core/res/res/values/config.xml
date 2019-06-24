@@ -101,10 +101,10 @@
      <bool name="config_hotswapCapable">true</bool>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
-     <bool name="config_intrusiveNotificationLed">false</bool>
+     <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-     <bool name="config_intrusiveBatteryLed">false</bool>
+     <bool name="config_intrusiveBatteryLed">true</bool>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
