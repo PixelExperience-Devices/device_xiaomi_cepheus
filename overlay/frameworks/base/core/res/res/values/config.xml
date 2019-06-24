@@ -57,9 +57,6 @@
     <!-- Flag specifying whether WFC over IMS is available on device -->
      <bool name="config_device_wfc_ims_available">false</bool>
 
-    <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
-     <bool name="config_displayBlanksAfterDoze">false</bool>
-
     <!-- If true, the doze component is not started until after the screen has been turned off
          and the screen off animation has been performed. -->
      <bool name="config_dozeAfterScreenOffByDefault">true</bool>
@@ -351,7 +348,7 @@
          Specify the component name or an empty string if none.
          Note that doze dreams are not subject to the same start conditions as ordinary dreams.
          Doze dreams will run whenever the power manager is in a dozing state. -->
-     <string name="config_dozeComponent">com.android.systemui/com.android.keyguard.doze.DozeService</string>
+     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
 
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
