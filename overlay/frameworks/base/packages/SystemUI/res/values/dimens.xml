@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The maximum count of notifications on Keyguard (only when ambient play indication is showing on keyguard).
+         The rest will be collapsed in an overflow card.
+     -->
+    <integer name="keyguard_max_notification_count_ambient_play">2</integer>
+
+    <!-- Bottom margin size when fingerprint in display is active -->
+    <dimen name="keyguard_indication_margin_bottom_fingerprint_in_display">140dp</dimen>
+</resources>
