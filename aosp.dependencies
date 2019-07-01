@@ -1,12 +1,12 @@
 [
   {
     "repository": "kernel_xiaomi_sm8150",
-    "target_path": "kernel/xiaomi/sm8150"
-    "remote": "pixel"
+    "target_path": "kernel/xiaomi/sm8150",
+    "remote": "pixel-devices"
   },
   {
     "repository": "vendor_xiaomi_cepheus",
     "target_path": "vendor/xiaomi/cepheus",
-    "remote": "pixel"
+    "remote": "pixel-devices"
   }
 ]
