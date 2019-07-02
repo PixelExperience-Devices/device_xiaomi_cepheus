@@ -83,6 +83,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.qcom.rc \
+    init.mi_thermald.rc \
     fstab.qcom
 
 # IR
