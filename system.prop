@@ -64,8 +64,5 @@ telephony.lteOnCdmaDevice=1
 # RCS
 persist.rcs.supported=1
 
-# SSR
-persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # WiFi
 wifi.interface=wlan0
