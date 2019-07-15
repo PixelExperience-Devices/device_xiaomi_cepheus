@@ -1,12 +1,18 @@
 [
   {
     "repository": "kernel_xiaomi_sm8150",
-    "target_path": "kernel/xiaomi/sm8150"
-    "remote": "pixel"
+    "target_path": "kernel/xiaomi/sm8150",
+    "remote": "pixel-devices"
   },
   {
     "repository": "vendor_xiaomi_cepheus",
     "target_path": "vendor/xiaomi/cepheus",
-    "remote": "pixel"
+    "remote": "pixel-devices"
+  },
+  {
+    "remote":      "github",
+    "repository":  "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch":      "lineage-16.0"
   }
 ]
