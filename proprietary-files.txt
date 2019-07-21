@@ -2,5 +2,81 @@
 vendor/lib64/soundfx/libvolumelistener.so:lib64/soundfx/libvolumelistener.so|2dffcd0bde20f5f1830918146c9f40c02bbbae9f
 vendor/lib/soundfx/libvolumelistener.so:lib/soundfx/libvolumelistener.so|117f8b7d834b4587dc8c8c5d15fada85b877ed26
 
+# Bluetooth (aptX) - from crosshatch - PD1A.180720.030
+lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
+lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
+
+# CNE
+etc/permissions/cneapiclient.xml
+etc/permissions/com.quicinc.cne.xml
+framework/cneapiclient.jar
+framework/com.quicinc.cne.jar
+lib64/com.quicinc.cne.server@1.0.so
+lib64/vendor.qti.hardware.data.latency@1.0.so
+lib64/vendor.qti.latency@2.0.so
+-priv-app/CNEService/CNEService.apk
+
+# DPM
+bin/dpmd
+etc/dpm/dpm.conf
+etc/init/dpmd.rc
+etc/permissions/com.qti.dpmframework.xml
+etc/permissions/dpmapi.xml
+framework/com.qti.dpmframework.jar
+framework/dpmapi.jar
+framework/tcmclient.jar
+lib64/com.qualcomm.qti.dpm.api@1.0.so
+lib64/libdpmctmgr.so
+lib64/libdpmfdmgr.so
+lib64/libdpmframework.so
+lib64/libdpmtcm.so
+-priv-app/dpmserviceapp/dpmserviceapp.apk
+
+# Display postprocessing
+lib64/libsdm-disp-apis.so
+lib64/vendor.display.color@1.0.so
+
+# IMS
+-app/uceShimService/uceShimService.apk
+etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
+etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
+framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
+framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
+lib64/com.qualcomm.qti.imscmservice@1.0.so
+lib64/com.qualcomm.qti.imscmservice@2.0.so
+lib64/com.qualcomm.qti.imscmservice@2.1.so
+lib64/com.qualcomm.qti.uceservice@2.0.so
+lib64/libdiag_system.so
+lib64/libimscamera_jni.so
+lib64/libimsmedia_jni.so
+lib64/libmmrtpdecoder.so
+lib64/libmmrtpencoder.so
+lib64/librcc.so
+lib64/lib-imsvideocodec.so
+lib64/lib-imsvt.so
+lib64/lib-imsvtextutils.so
+lib64/lib-imsvtutils.so
+lib64/vendor.qti.ims.callinfo@1.0.so
+lib64/vendor.qti.ims.rcsconfig@1.0.so
+lib64/vendor.qti.imsrtpservice@1.0.so
+lib64/vendor.qti.hardware.radio.ims@1.0.so
+lib64/vendor.qti.hardware.radio.ims@1.1.so
+lib64/vendor.qti.hardware.radio.ims@1.2.so
+lib64/vendor.qti.hardware.radio.ims@1.3.so
+-priv-app/ims/ims.apk
+
 # Power-off charging daemon
 -sbin/charger:sbin/chargeonlymode;rootfs|f048d2cc20783ba1a608b73d440b3053af6ec9fd
+
+# QMI
+etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
+etc/permissions/qti_permissions.xml
+
+# RIL
+-app/QtiTelephonyService/QtiTelephonyService.apk
+etc/permissions/qcrilhook.xml
+etc/permissions/telephonyservice.xml
+framework/qcrilhook.jar
+framework/qti-telephony-common.jar|4c5c554855eae7f8b1fcb0573b5425c87452c8b6
+framework/QtiTelephonyServicelibrary.jar
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
