@@ -507,3 +507,7 @@ PRODUCT_BOOT_JARS += \
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=256m
+
+# Mac Address Generator
+PRODUCT_PACKAGES += \
+    wifi-mac-generator
