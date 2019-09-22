@@ -76,7 +76,6 @@ vendor/lib/libhdmipassthru.so
 vendor/lib/libhfp.so
 vendor/lib/libqtigef.so
 vendor/lib/libsmwrapper.so
-vendor/lib/libsndmonitor.so
 vendor/lib/libspkrprot.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libtinycompress.so
