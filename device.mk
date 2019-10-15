@@ -264,6 +264,9 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.3-service.xiaomi-libperfmgr \
     powerhint.json
 
+# Product characteristics
+PRODUCT_CHARACTERISTICS := nosdcard
+
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor
