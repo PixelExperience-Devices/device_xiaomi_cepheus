@@ -310,7 +310,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjson \
     libril \
-    librilutils
+    librilutils \
+    librmnetctl
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
