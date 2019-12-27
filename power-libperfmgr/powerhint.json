@@ -503,12 +503,6 @@
       "Value": "2597"
     },
     {
-      "PowerHint": "INTERACTION",
-      "Node": "UfsClkGateEnable",
-      "Duration": 200,
-      "Value": "0"
-    },
-    {
       "PowerHint": "LAUNCH",
       "Node": "ForegroundCpuset",
       "Duration": 2000,
