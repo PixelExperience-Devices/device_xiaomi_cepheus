@@ -15,6 +15,12 @@
    "branch"     : "lineage-17.1"
  },
  {
+   "repository" : "EcrosoftXiao/vendor_xiaomi_firmware",
+   "target_path": "vendor/xiaomi/firmware",
+   "remote"     : "gitlab",
+   "branch"     : "master"
+ },
+ {
    "repository" : "EcrosoftXiao/vendor_MiuiCamera",
    "target_path": "vendor/miuicamera",
    "branch"     : "ten"

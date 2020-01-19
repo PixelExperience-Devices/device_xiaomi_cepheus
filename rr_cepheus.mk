@@ -48,3 +48,6 @@ PRODUCT_DEFAULT_DEV_CERTIFICATE:= build/target/product/security/devkey
 
 # Inherit from custom vendor
 $(call inherit-product, vendor/miuicamera/common/common-vendor.mk)
+
+# Include firmware
+$(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
