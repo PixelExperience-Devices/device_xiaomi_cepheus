@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-#define ATRACE_TAG (ATRACE_TAG_POWER | ATRACE_TAG_HAL)
 #define LOG_TAG "libperfmgr"
 
 #include "perfmgr/PropertyNode.h"
@@ -49,7 +48,6 @@ std::chrono::milliseconds PropertyNode::Update(bool) {
 
     // Update node only if request index changes
     if (value_index != current_val_index_ || reset_on_init_) {
-        ATRACE_BEGIN(GetName().c_str());
         const std::string& req_value =
             req_sorted_[value_index].GetRequestValue();
 
@@ -61,7 +59,6 @@ std::chrono::milliseconds PropertyNode::Update(bool) {
             current_val_index_ = value_index;
             reset_on_init_ = false;
         }
-        ATRACE_END();
     }
     return expire_time;
 }

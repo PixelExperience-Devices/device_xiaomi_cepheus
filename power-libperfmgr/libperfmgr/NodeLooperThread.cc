@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-#define ATRACE_TAG (ATRACE_TAG_POWER | ATRACE_TAG_HAL)
 #define LOG_TAG "libperfmgr"
 
 #include "perfmgr/NodeLooperThread.h"
@@ -104,14 +103,12 @@ bool NodeLooperThread::threadLoop() {
     // Update 2 passes: some node may have dependency in other node
     // e.g. update cpufreq min to VAL while cpufreq max still set to
     // a value lower than VAL, is expected to fail in first pass
-    ATRACE_BEGIN("update_nodes");
     for (auto& n : nodes_) {
         n->Update(false);
     }
     for (auto& n : nodes_) {
         timeout_ms = std::min(n->Update(true), timeout_ms);
     }
-    ATRACE_END();
 
     nsecs_t sleep_timeout_ns = std::numeric_limits<nsecs_t>::max();
     if (timeout_ms.count() < sleep_timeout_ns / 1000 / 1000) {
@@ -120,9 +117,7 @@ bool NodeLooperThread::threadLoop() {
     // VERBOSE level won't print by default in user/userdebug build
     LOG(VERBOSE) << "NodeLooperThread will wait for " << sleep_timeout_ns
                  << "ns";
-    ATRACE_BEGIN("wait");
     wake_cond_.waitRelative(lock_, sleep_timeout_ns);
-    ATRACE_END();
     return true;
 }
 

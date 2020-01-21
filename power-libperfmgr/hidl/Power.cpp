@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-#define ATRACE_TAG (ATRACE_TAG_POWER | ATRACE_TAG_HAL)
 #define LOG_TAG "android.hardware.power@1.3-service.xiaomi-libperfmgr"
 
 #include <android-base/file.h>
@@ -129,7 +128,6 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
     if (!mReady) {
         return Void();
     }
-    ATRACE_INT(android::hardware::power::V1_0::toString(hint).c_str(), data);
     ALOGD_IF(hint != PowerHint_1_0::INTERACTION, "%s: %d",
              android::hardware::power::V1_0::toString(hint).c_str(), static_cast<int>(data));
     switch (hint) {
@@ -284,7 +282,6 @@ Return<void> Power::powerHintAsync_1_2(PowerHint_1_2 hint, int32_t data) {
         return Void();
     }
 
-    ATRACE_INT(android::hardware::power::V1_2::toString(hint).c_str(), data);
     ALOGD_IF(hint >= PowerHint_1_2::AUDIO_STREAMING, "%s: %d",
              android::hardware::power::V1_2::toString(hint).c_str(), static_cast<int>(data));
 
@@ -356,7 +353,6 @@ Return<void> Power::powerHintAsync_1_3(PowerHint_1_3 hint, int32_t data) {
     }
 
     if (hint == PowerHint_1_3::EXPENSIVE_RENDERING) {
-        ATRACE_INT(android::hardware::power::V1_3::toString(hint).c_str(), data);
         if (mVRModeOn || mSustainedPerfModeOn) {
             ALOGV("%s: ignoring due to other active perf hints", __func__);
         } else {
