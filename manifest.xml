@@ -913,6 +913,15 @@
         </interface>
         <fqname>@1.0::IXiaomiFingerprint/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.mlipay</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IMlipayService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <sepolicy>
         <version>29.0</version>
     </sepolicy>
