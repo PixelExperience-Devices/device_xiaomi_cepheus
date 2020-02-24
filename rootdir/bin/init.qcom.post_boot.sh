@@ -30,7 +30,7 @@
 target=`getprop ro.board.platform`
 
 function configure_read_ahead_kb_values() {
-    echo 512 > /sys/block/sda/bdi/read_ahead_kb
+    echo 128 > /sys/block/sda/bdi/read_ahead_kb
 }
 
 function configure_memory_parameters() {
