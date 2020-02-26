@@ -170,6 +170,9 @@ debug.sf.enable_gl_backpressure=1
 # FOD
 ro.hardware.fp.fod=true
 
+# Fastbootd
+ro.fastbootd.available=true
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
