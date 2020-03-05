@@ -19,6 +19,9 @@
 # Remosaic
 /vendor/bin/remosaic_daemon                                          u:object_r:remosaic_daemon_exec:s0
 
+# Sensors
+/dev/elliptic(.*)?          u:object_r:sound_device:s0
+
 # WiFi
 /vendor/bin/nv_mac                                                   u:object_r:wcnss_service_exec:s0
 
