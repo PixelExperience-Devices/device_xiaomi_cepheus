@@ -166,6 +166,9 @@ persist.dbg.wfc_avail_ovr=1
 ro.vendor.qti.va_aosp.support=1
 ro.vendor.qti.va_odm.support=1
 
+#Media
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+
 # Property to enable/disable PASR
 vendor.power.pasr.enabled=true
 
