@@ -42,6 +42,25 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_BOOTLOADER_BOARD_NAME := cepheus
 TARGET_NO_BOOTLOADER := true
 
+# Kernel
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_IMAGE_NAME := Image-dtb
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_RAMDISK_OFFSET := 0x01000000
+
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CONFIG := cepheus_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/cepheus
+
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0 androidboot.memcg=1
+BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000
+BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1
+BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3 earlycon=msm_geni_serial,0xa90000
+BOARD_KERNEL_CMDLINE += loop.max_part=7 cgroup.memory=nokmem,nosocket
+
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
 
