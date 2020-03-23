@@ -17,3 +17,6 @@
 BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/cepheus
+
+# Inherit from proprietary files
+include vendor/xiaomi/cepheus/BoardConfigVendor.mk
