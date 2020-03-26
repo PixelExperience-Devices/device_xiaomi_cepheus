@@ -1,0 +1,4 @@
+allow qti_init_shell sysfs_io_sched_tuneable:file { write };
+allow qti_init_shell sysfs:file { write };
+allow qti_init_shell sysfs_loop:file { write };
+allow qti_init_shell sysfs_devices_block:file { write };

@@ -1,0 +1,3 @@
+allow init firmware_file:filesystem { getattr };
+allow init bt_firmware_file:filesystem { getattr };
+allow init sysfs:file { open write };
