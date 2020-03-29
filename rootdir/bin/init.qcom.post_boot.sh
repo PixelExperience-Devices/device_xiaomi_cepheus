@@ -29,10 +29,6 @@
 
 target=`getprop ro.board.platform`
 
-function configure_read_ahead_kb_values() {
-    echo 128 > /sys/block/sda/bdi/read_ahead_kb
-}
-
 function configure_memory_parameters() {
     # Set Memory parameters.
     #
@@ -92,7 +88,6 @@ function configure_memory_parameters() {
     echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
     echo 100 > /proc/sys/vm/swappiness
 
-    configure_read_ahead_kb_values
 }
 
 case "$target" in
