@@ -137,6 +137,9 @@ on boot
     chown system system /sys/class/power_supply/battery/input_suspend
     chmod 0666 /sys/class/power_supply/battery/input_suspend
 
+    # limit discard size to 128MB in order to avoid long IO latency
+    write /sys/block/sda/queue/discard_max_bytes 134217728
+
 on post-fs-data
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
