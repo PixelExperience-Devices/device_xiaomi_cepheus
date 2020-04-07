@@ -1,7 +1,9 @@
 on boot
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/backlight_level
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm
     chown system system /sys/devices/virtual/touch/tp_dev/fod_status
 
+    chmod 0444 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/backlight_level
     chmod 0644 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm
     chmod 0644 /sys/devices/virtual/touch/tp_dev/fod_status
 
