@@ -149,6 +149,9 @@ vendor.display.enable_optimize_refresh=1
 vendor.gralloc.disable_ubwc=0
 debug.sf.enable_gl_backpressure=1
 
+# FOD
+ro.hardware.fp.fod=true
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
