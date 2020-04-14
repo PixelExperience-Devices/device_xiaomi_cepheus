@@ -16,6 +16,9 @@
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.cepheus        u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.cepheus u:object_r:hal_lineage_fod_default_exec:s0
 
+# IR
+/dev/lirc0          u:object_r:ir_spi_device:s0
+
 # Remosaic
 /vendor/bin/remosaic_daemon                                          u:object_r:remosaic_daemon_exec:s0
 
