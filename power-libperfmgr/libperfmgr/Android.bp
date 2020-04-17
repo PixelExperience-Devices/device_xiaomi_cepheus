@@ -19,6 +19,7 @@ cc_defaults {
     local_include_dirs: ["include"],
     shared_libs: [
         "libbase",
+        "libcutils",
         "libutils",
     ],
     static_libs: [
