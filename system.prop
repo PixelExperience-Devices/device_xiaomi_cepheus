@@ -1,0 +1,58 @@
+# Camera
+persist.camera.gyro.disable=0
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+persist.camera.sat.fallback.dist.d=10
+persist.camera.sat.fallback.dist=40
+persist.camera.sat.fallback.lux.d=50
+persist.camera.sat.fallback.luxindex=360
+persist.vendor.camera.enableNCSService=TRUE
+persist.vendor.camera.enableTOFInterface=TRUE
+persist.vendor.camera.mfnrframenum=8
+persist.vendor.camera.multicam=TRUE
+
+# DPM
+persist.vendor.dpm.feature=1
+persist.vendor.dpm.loglevel=0
+persist.vendor.dpm.nsrm.bkg.evt=3955
+
+# Display density
+ro.sf.lcd_density=440
+
+# Graphics
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.max_virtual_display_dimension=4096
+
+# Netflix custom property
+ro.netflix.bsp_rev=Q855-16947-1
+
+# NFC DT
+ro.nfc.port=I2C
+
+# Product
+ro.product.mod_device=cepheus_eea_global
+
+# Radio
+DEVICE_PROVISIONED=1
+persist.radio.apm_sim_not_pwdn=1
+persist.radio.dynamic_sar=false
+persist.radio.multisim.config=dsds
+persist.radio.NO_STAPA=1
+persist.radio.sar_sar_sensor=true
+persist.radio.VT_HYBRID_ENABLE=1
+persist.vendor.radio.enable_temp_dds=true
+ril.subscription.types=RUIM
+ro.telephony.default_cdma_sub=0
+ro.telephony.default_network=22,22
+telephony.lteOnCdmaDevice=1
+
+# RCS
+persist.rcs.supported=1
+
+# SSR
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# WiFi
+wifi.interface=wlan0
