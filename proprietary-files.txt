@@ -746,6 +746,12 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 # SSR
 vendor/bin/ssr_setup
 
+# Time
+-vendor/app/TimeService/TimeService.apk
+vendor/bin/time_daemon
+vendor/etc/init/init.time_daemon.rc
+vendor/lib64/libtime_genoff.so
+
 # WLAN
 vendor/bin/cnss-daemon
 vendor/lib/libqsap_sdk.so
