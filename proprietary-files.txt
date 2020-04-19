@@ -385,6 +385,11 @@ vendor/lib64/libsdmextension.so|72991016a61b3d56ef91265ac76134b55636c392
 vendor/lib64/libtinyxml.so|f53f3bcd3bc2ddf39d01604a6870653df460a4f7
 vendor/lib64/libtinyxml2_1.so|ba981e332895a053a67fc54a8190365a3ad37f2d
 
+# Display calibration
+vendor/etc/hdr_config.cfg
+vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml
+vendor/etc/sdr_config.cfg
+
 # DPM
 framework/tcmclient.jar
 product/bin/dpmd
