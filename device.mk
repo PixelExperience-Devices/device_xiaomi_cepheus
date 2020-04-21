@@ -142,6 +142,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
+# GPS
+PRODUCT_PACKAGES += \
+    libsensorndkbridge
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
