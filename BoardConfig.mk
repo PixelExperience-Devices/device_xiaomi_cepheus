@@ -96,3 +96,7 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+
+# Sepolicy
+TARGET_SEPOLICY_DIR := msmnile
+include device/qcom/sepolicy/sepolicy.mk
