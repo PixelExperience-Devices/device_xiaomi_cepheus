@@ -745,3 +745,26 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 
 # SSR
 vendor/bin/ssr_setup
+
+# WLAN
+vendor/bin/cnss-daemon
+vendor/lib/libqsap_sdk.so
+vendor/lib64/libqsap_sdk.so
+
+# WLAN (IPACM)
+vendor/etc/init/ipa_fws.rc
+vendor/firmware/ipa_fws.b00
+vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b04
+vendor/firmware/ipa_fws.elf
+vendor/firmware/ipa_fws.mdt
+vendor/firmware/ipa_uc.b00
+vendor/firmware/ipa_uc.b01
+vendor/firmware/ipa_uc.b02
+vendor/firmware/ipa_uc.elf
+vendor/firmware/ipa_uc.mdt
+
+# Xiaomi MAC
+vendor/bin/nv_mac
