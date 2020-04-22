@@ -178,6 +178,9 @@ VENDOR_SECURITY_PATCH := 2020-01-01
 TARGET_SEPOLICY_DIR := msmnile
 include device/qcom/sepolicy/sepolicy.mk
 
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
