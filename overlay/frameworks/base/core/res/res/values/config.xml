@@ -1094,4 +1094,10 @@
 
     <!-- Display has physical cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
+
+    <!-- Whether UI for multi user should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
+
+    <!--  Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">4</integer>
 </resources>
