@@ -195,3 +195,6 @@ persist.vendor.uspsensor=default
 
 # Zygote preforking
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# WiFi
+wifi.aware.interface=wifi-aware0
