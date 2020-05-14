@@ -966,7 +966,6 @@ etc/init/wfdservice.rc
 etc/wfdconfigsink.xml
 -framework/WfdCommon.jar
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
-lib/libdisplayconfig.so
 lib/libFileMux.so
 lib/libmmosal.so
 lib/libmmparser_lite.so
@@ -1004,7 +1003,6 @@ lib64/libwfdrtsp.so
 lib64/libwfdsinksm.so
 lib64/libwfdsm.so
 lib64/libwfduibcinterface.so
-lib64/libdisplayconfig.so
 lib64/libwfduibcsink.so
 lib64/libwfduibcsinkinterface.so
 lib64/libwfduibcsrc.so
