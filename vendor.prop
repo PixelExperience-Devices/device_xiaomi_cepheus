@@ -43,6 +43,7 @@ vendor.audio.feature.compress_in.enable=false
 vendor.audio.feature.compress_meta_data.enable=true
 vendor.audio.feature.concurrent_capture.enable=false
 vendor.audio.feature.custom_stereo.enable=true
+vendor.audio.dolby.ds2.enabled=true
 vendor.audio.feature.deepbuffer_as_primary.enable=false
 vendor.audio.feature.display_port.enable=true
 vendor.audio.feature.dsm_feedback.enable=false

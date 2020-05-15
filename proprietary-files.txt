@@ -611,6 +611,25 @@ vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libstagefrighthw.so
 -vendor/lib64/libplatformconfig.so
 
+# MotoDolbyV3
+-app/MotoDolbyV3/MotoDolbyV3.apk
+-priv-app/daxService/daxService.apk
+etc/permissions/com.motorola.dolby.dolbyui.features.xml
+etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml
+product/etc/permissions/com.dolby.daxservice.xml
+vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
+vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc
+vendor/etc/dolby/dax-default.xml
+vendor/lib/libdapparamstorage_ds1se.so
+vendor/lib/libstagefrightdolby.so
+vendor/lib/vendor.dolby.hardware.dms@1.0.so
+vendor/lib/soundfx/libswdap_ds1se.so
+vendor/lib64/libdapparamstorage_ds1se.so
+vendor/lib64/libdlbdsservice_ds1se.so
+vendor/lib64/soundfx/libswdap_ds1se.so
+vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@1.0.so
+
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
