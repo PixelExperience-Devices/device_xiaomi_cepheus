@@ -185,3 +185,6 @@ persist.vendor.radio.sib16_support=1
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 persist.vendor.uspsensor=default
+
+# Zygote preforking
+persist.device_config.runtime_native.usap_pool_enabled=true
