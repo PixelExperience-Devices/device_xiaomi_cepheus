@@ -96,6 +96,11 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.3-service.pixel-libperfmgr \
+    powerhint.json
+
 # QTI
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
