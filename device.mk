@@ -98,7 +98,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.pixel-libperfmgr \
+    android.hardware.power@1.3-service.xiaomi-libperfmgr \
     powerhint.json
 
 # QTI
