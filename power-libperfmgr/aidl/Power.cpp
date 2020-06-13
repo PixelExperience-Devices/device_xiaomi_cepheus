@@ -33,7 +33,6 @@
 
 #include "PowerHintSession.h"
 #include "PowerSessionManager.h"
-#include "disp-power/DisplayLowPower.h"
 
 namespace aidl {
 namespace google {
@@ -101,12 +100,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     PowerSessionManager::getInstance()->updateHintMode(toString(type), enabled);
     switch (type) {
         case Mode::LOW_POWER:
-            mDisplayLowPower->SetDisplayLowPower(enabled);
-            if (enabled) {
-                mHintManager->DoHint(toString(type));
-            } else {
-                mHintManager->EndHint(toString(type));
-            }
             break;
         case Mode::SUSTAINED_PERFORMANCE:
             if (enabled && !mSustainedPerfModeOn) {
