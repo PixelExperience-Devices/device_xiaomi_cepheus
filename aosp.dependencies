@@ -9,7 +9,7 @@
       "remote"       : "github",
       "repository"   : "markakash/kernel_xiaomi_sm8150",
       "target_path"  : "kernel/xiaomi/sm8150",
-      "branch"       : "ten"
+      "branch"       : "upstreamed"
   },
   {
       "repository": "packages_apps_PixelLiveWallpaper",
