@@ -10,6 +10,7 @@ dalvik.vm.image-dex2oat-filter=everything
 dalvik.vm.image-dex2oat-threads=8
 
 # Bluetooth
+persist.bluetooth.a2dp_aac.vbr_supported=true
 persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.btstack.enable.twsplus=true
 persist.vendor.btstack.enable.twsplussho=true
