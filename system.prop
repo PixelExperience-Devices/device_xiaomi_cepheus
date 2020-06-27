@@ -71,3 +71,6 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
 # WiFi
 wifi.interface=wlan0
+
+# Zygote preforking
+persist.device_config.runtime_native.usap_pool_enabled=true
