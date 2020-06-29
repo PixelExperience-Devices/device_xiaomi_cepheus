@@ -156,14 +156,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             [[fallthrough]];
         case Mode::AUDIO_STREAMING_LOW_LATENCY:
             [[fallthrough]];
-        case Mode::CAMERA_STREAMING_SECURE:
-            [[fallthrough]];
-        case Mode::CAMERA_STREAMING_LOW:
-            [[fallthrough]];
-        case Mode::CAMERA_STREAMING_MID:
-            [[fallthrough]];
-        case Mode::CAMERA_STREAMING_HIGH:
-            [[fallthrough]];
         default:
             if (enabled) {
                 mHintManager->DoHint(toString(type));
@@ -202,10 +194,6 @@ ndk::ScopedAStatus Power::setBoost(Boost type, int32_t durationMs) {
         case Boost::ML_ACC:
             [[fallthrough]];
         case Boost::AUDIO_LAUNCH:
-            [[fallthrough]];
-        case Boost::CAMERA_LAUNCH:
-            [[fallthrough]];
-        case Boost::CAMERA_SHOT:
             [[fallthrough]];
         default:
             if (mVRModeOn || mSustainedPerfModeOn) {
