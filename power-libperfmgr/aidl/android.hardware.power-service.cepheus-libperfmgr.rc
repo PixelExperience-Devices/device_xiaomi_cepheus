@@ -22,3 +22,7 @@ on property:vendor.powerhal.dalvik.vm.dex2oat-threads=*
 on property:vendor.powerhal.dalvik.vm.dex2oat-cpu-set=*
     setprop dalvik.vm.dex2oat-cpu-set ${vendor.powerhal.dalvik.vm.dex2oat-cpu-set}
     setprop dalvik.vm.restore-dex2oat-cpu-set ${vendor.powerhal.dalvik.vm.dex2oat-cpu-set}
+
+# initialize powerHAL when boot is completed
+on property:sys.boot_completed=1
+    setprop vendor.powerhal.init 1
