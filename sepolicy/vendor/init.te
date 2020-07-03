@@ -1,2 +1,6 @@
+allow init vendor_data_file:file lock;
+allow init hal_audio_default:binder call;
+allow init platform_app:binder call;
+
 dontaudit init bt_firmware_file:filesystem getattr;
 dontaudit init firmware_file:filesystem getattr;

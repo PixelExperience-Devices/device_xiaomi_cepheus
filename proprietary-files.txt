@@ -718,6 +718,25 @@ vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 
+# MotoDolbyV3
+-app/MotoDolbyV3/MotoDolbyV3.apk|5288201f7890811e0a0f28434833caeb159b7c61
+-product/priv-app/daxService/daxService.apk|436ccb3e5d4bba4082538ca36933c65ccd24fe58
+etc/permissions/com.motorola.dolby.dolbyui.features.xml|7eafc481b604505f057931a6f83c507e357886b3
+etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml|ab4600814879c626a410e607107829faceec9d2c
+product/etc/permissions/com.dolby.daxservice.xml|38eb347890c0140fd6ff329dff5ba94cdabba08b
+vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service|cd0613b5713154a4aa604186a4922e074efd7472
+vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc|3f2ef278f56489ffaab9fe3578f86f9c1265de8a
+vendor/etc/dolby/dax-default.xml|9b1f284031ff38836a9ff12a0869c81ac0991f6c
+vendor/lib/libdapparamstorage.so|0f640ae673a390c7671ed60c8fb471e261d6a71f
+vendor/lib/libstagefrightdolby.so|44c8966d596cef60802e192e3986320adc544b38
+vendor/lib/vendor.dolby.hardware.dms@1.0.so|6e6d11272abbc02435551bad8564e70d7f7a33cb
+vendor/lib/soundfx/libswdap.so|2de162b80b491b710e93d2c74e742e0d9f535410
+vendor/lib64/libdapparamstorage.so|980b2f9c0facb0066236c4adf04c3a1b1567bbde
+vendor/lib64/libdlbdsservice.so|69f2a62245f93038cb03e6244ed0d4915e6c5084
+vendor/lib64/soundfx/libswdap.so|e83ca5da45c5de34eb658eca21b6b0a1c961aba3
+vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so|8e147d44ed80c303add412787c47524b27fa001a
+vendor/lib64/vendor.dolby.hardware.dms@1.0.so|2660a8f57f7131d08edfea4e1d4ad75a7de97b5b
+
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
