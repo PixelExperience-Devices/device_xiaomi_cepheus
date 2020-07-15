@@ -50,7 +50,6 @@ class Power : public ::aidl::android::hardware::power::BnPower {
                                          int64_t durationNanos,
                                          std::shared_ptr<IPowerHintSession> *_aidl_return) override;
     ndk::ScopedAStatus getHintSessionPreferredRate(int64_t *outNanoseconds) override;
-    binder_status_t dump(int fd, const char **args, uint32_t numArgs) override;
 
   private:
     std::shared_ptr<HintManager> mHintManager;
