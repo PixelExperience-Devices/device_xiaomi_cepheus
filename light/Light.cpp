@@ -22,7 +22,7 @@
 
 #include <fstream>
 
-#define WHITE_LED       "/sys/class/leds/white/"
+#define NOTIFICATION_LED       "/sys/class/leds/white/"
 
 #define BREATH          "breath"
 #define BRIGHTNESS      "brightness"
@@ -98,11 +98,11 @@ static inline uint32_t getScaledBrightness(const LightState& state, uint32_t max
 }
 
 static void handleNotification(const LightState& state) {
-    uint32_t whiteBrightness = getScaledBrightness(state, getMaxBrightness(WHITE_LED MAX_BRIGHTNESS));
+    uint32_t whiteBrightness = getScaledBrightness(state, getMaxBrightness(NOTIFICATION_LED MAX_BRIGHTNESS));
 
     /* Disable breathing or blinking */
-    set(WHITE_LED BREATH, 0);
-    set(WHITE_LED BRIGHTNESS, 0);
+    set(NOTIFICATION_LED BREATH, 0);
+    set(NOTIFICATION_LED BRIGHTNESS, 0);
 
     if (!whiteBrightness) {
         return;
@@ -112,11 +112,11 @@ static void handleNotification(const LightState& state) {
         case Flash::HARDWARE:
         case Flash::TIMED:
             /* Breathing */
-            set(WHITE_LED BREATH, 1);
+            set(NOTIFICATION_LED BREATH, 1);
             break;
         case Flash::NONE:
         default:
-            set(WHITE_LED BRIGHTNESS, whiteBrightness);
+            set(NOTIFICATION_LED BRIGHTNESS, whiteBrightness);
     }
 }
 
