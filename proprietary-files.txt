@@ -533,6 +533,10 @@ vendor/lib64/vendor.qti.imsrtpservice@2.0.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so
 
+# IRQ balance
+vendor/bin/msm_irqbalance
+vendor/etc/msm_irqbalance.conf
+
 # Peripheral Manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
