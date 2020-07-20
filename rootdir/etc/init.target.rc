@@ -132,6 +132,11 @@ on property:sys.boot_completed=1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
 
+    # Configure dynamic stune boost
+    write /sys/module/cpu_boost/parameters/dynamic_stune_boost 15
+    write /sys/module/cpu_boost/parameters/dynamic_stune_boost_ms 1500
+    write /dev/stune/top-app/schedtune.sched_boost 15
+
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
