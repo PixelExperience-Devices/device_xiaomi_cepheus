@@ -384,7 +384,6 @@ vendor/lib64/libtinyxml2_1.so|92adc9b612766cda6fa50f4c36d046b1a6da0816
 
 # Display-calibration
 vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml
-vendor/etc/sdr_config.cfg
 
 # Factory
 vendor/lib64/vendor.qti.data.factory@2.0.so
@@ -895,7 +894,6 @@ vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/gpfspath_oem_config.xml
-vendor/etc/hdr_config.cfg
 vendor/etc/init/cnd.rc
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
