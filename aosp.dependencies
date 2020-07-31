@@ -2,13 +2,14 @@
   { 
       "repository"   : "markakash/vendor_xiaomi_cepheus",
       "target_path"  : "vendor/xiaomi/cepheus",
-      "branch"       : "ten",
+      "branch"       : "test",
       "remote"       : "github"
   },
   { 
-      "repository"   : "kernel_xiaomi_sm8150",
+      "repository"   : "markakash/kernel_xiaomi_sm8150",
       "target_path"  : "kernel/xiaomi/sm8150",
       "branch"       : "ten",
+      "remote"       : "github"
   },
   {
       "repository": "packages_apps_PixelLiveWallpaper",
