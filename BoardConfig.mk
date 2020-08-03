@@ -22,6 +22,7 @@ BUILD_BROKEN_DUP_RULES := true
 
 # Inherit from proprietary files
 include vendor/xiaomi/cepheus/BoardConfigVendor.mk
+include vendor/miuicamera/common/BoardConfigVendor.mk
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
@@ -66,6 +67,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
+USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
