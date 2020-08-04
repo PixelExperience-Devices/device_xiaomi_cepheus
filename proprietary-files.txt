@@ -714,6 +714,17 @@ vendor/lib64/unnhal-acc-hvx.so
 # NFC
 vendor/lib/libsn100u_fw.so
 
+# Pasrmanager
+-vendor/app/pasrservice/pasrservice.apk
+vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service
+vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc
+vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so
+vendor/lib64/libappclassifier.so
+vendor/lib64/libdng_sdk.so
+vendor/lib64/liblearningmodule.so
+vendor/lib64/libmeters.so
+vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
+
 # Peripheral Manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
