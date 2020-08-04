@@ -414,7 +414,7 @@ vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
 # Display calibration
 vendor/etc/hdr_config.cfg
-vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml
+vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|b7f87b7987de1692a9ba9b1bd6327b8369ef51ef
 vendor/etc/sdr_config.cfg
 
 # DPM
