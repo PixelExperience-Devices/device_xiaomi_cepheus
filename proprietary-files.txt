@@ -933,6 +933,10 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
+# Vibrator
+vendor/bin/hw/vendor.qti.hardware.vibrator@1.2-service
+vendor/etc/init/vendor.qti.hardware.vibrator@1.2-service.rc
+
 # WiFi Display (system)
 bin/wfdservice
 etc/init/wfdservice.rc
