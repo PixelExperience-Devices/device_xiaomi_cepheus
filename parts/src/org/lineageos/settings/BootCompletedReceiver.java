@@ -39,13 +39,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        if (DozeUtils.isDozeEnabled(context) && DozeUtils.sensorsEnabled(context)) {
-            if (DEBUG) Log.d(TAG, "Starting Doze service");
-            DozeUtils.startService(context);
-            ThermalUtils.startService(context);
-        }
 
-        new DiracUtils(context).onBootCompleted();
+        if (DEBUG) Log.d(TAG, "Received boot completed intent");
+        DozeUtils.checkDozeService(context);
+        ThermalUtils.startService(context);
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
