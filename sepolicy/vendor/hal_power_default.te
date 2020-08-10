@@ -1,0 +1,15 @@
+allow hal_power_default debugfs:file { write };
+allow hal_power_default debugfs:file { open };
+allow hal_power_default sysfs:file { read open write getattr };
+allow hal_power_default input_device:dir { search read open };
+allow hal_power_default input_device:chr_file { read write open ioctl };
+allow hal_power_default sysfs_devices_system_cpu:file { write };
+allow hal_power_default sysfs_devfreq:dir { search write };
+allow hal_power_default sysfs_devfreq:file { read write open };
+allow hal_power_default sysfs_kgsl:file { read write open };
+allow hal_power_default sysfs_kgsl:lnk_file { read };
+allow hal_power_default sysfs_devices_system_cpu:file { write };
+allow hal_power_default hal_power_default:capability { dac_override };
+allow hal_power_default latency_device:chr_file { write open };
+allow hal_power_default property_socket:sock_file { write };
+allow hal_power_default init:unix_stream_socket { connectto };

@@ -19,6 +19,9 @@
 # IR
 /dev/lirc0          u:object_r:ir_spi_device:s0
 
+# Power
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.3-service\.xiaomi-libperfmgr u:object_r:hal_power_default_exec:s0
+
 # Remosaic
 /vendor/bin/remosaic_daemon                                          u:object_r:remosaic_daemon_exec:s0
 
