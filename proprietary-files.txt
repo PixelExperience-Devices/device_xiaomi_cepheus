@@ -186,7 +186,7 @@ vendor/lib64/libHalSuperSensorServer.so
 vendor/lib64/libhexagon_nn_stub.so
 vendor/lib64/libmegface.so
 vendor/lib64/libMegviiFacepp-0.5.2.so
-vendor/lib64/libmialgo_basic.so
+vendor/lib64/libmialgo_basic.so|abeba4f8d760c83a72fb8bbc403ecf8f7a9fef0d
 vendor/lib64/libmialgo_fs.so
 vendor/lib64/libmialgo_rfs.so
 vendor/lib64/libmialgo_sd.so
