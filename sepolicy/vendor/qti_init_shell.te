@@ -1,0 +1,2 @@
+allow qti_init_shell debugfs:file { write open };
+dontaudit qti_init_shell self:capability dac_override;
