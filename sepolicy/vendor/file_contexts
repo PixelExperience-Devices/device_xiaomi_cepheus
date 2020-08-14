@@ -4,6 +4,9 @@
 # Camera
 /mnt/vendor/persist/camera(/.*)?                                     u:object_r:camera_persist_file:s0
 
+# DC Dimming
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable      u:object_r:sysfs_dm:s0
+
 # Fingerprint
 /dev/goodix_fp                                                       u:object_r:fingerprint_device:s0
 /data/vendor/goodix(/.*)?                                            u:object_r:fingerprint_data_file:s0
