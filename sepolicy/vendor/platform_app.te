@@ -1,3 +1,4 @@
 allow platform_app hal_dms_hwservice:hwservice_manager find;
 allow platform_app hal_dms_default:binder { call transfer };
 allow platform_app sysfs_kgsl:lnk_file read;
+allow platform_app sysfs_graphics:file r_file_perms;
