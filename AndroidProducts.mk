@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_cepheus.mk
+    $(LOCAL_DIR)/rr_cepheus.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_cepheus-user \
-    derp_cepheus-userdebug \
-    derp_cepheus-eng
+    rr_cepheus-user \
+    rr_cepheus-userdebug \
+    rr_cepheus-eng
