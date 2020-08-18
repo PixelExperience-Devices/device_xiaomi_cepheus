@@ -51,6 +51,10 @@ mmp.enable.3g2=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 persist.mm.enable.prefetch=true
 
+# Mlipay
+ro.hardware.fp.fod=true
+persist.vendor.sys.pay.ifaa=1
+
 # Netflix custom property
 ro.netflix.bsp_rev=Q855-16947-1
 

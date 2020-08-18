@@ -17,6 +17,11 @@ ro.hardware.fp                     u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.                    u:object_r:vendor_fp_prop:s0
 sys.panel.display                  u:object_r:vendor_fp_prop:s0
 
+# Mlipay
+persist.vendor.sys.pay.                 u:object_r:mlipay_prop:s0
+persist.vendor.sys.provision.status     u:object_r:mlipay_prop:s0
+ro.hardware.fp.fod			            u:object_r:mlipay_prop:s0
+
 # Sensors
 persist.sensor.                    u:object_r:persist_sensors_prop:s0
 
