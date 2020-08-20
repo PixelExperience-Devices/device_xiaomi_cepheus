@@ -1,4 +1,1 @@
 hal_client_domain(system_app, hal_mlipay)
-
-allow system_app sysfs_device_info:file r_file_perms;
-
