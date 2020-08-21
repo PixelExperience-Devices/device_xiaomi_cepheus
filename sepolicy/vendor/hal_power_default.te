@@ -13,3 +13,4 @@ allow hal_power_default hal_power_default:capability { dac_override };
 allow hal_power_default latency_device:chr_file { write open };
 allow hal_power_default property_socket:sock_file { write };
 allow hal_power_default init:unix_stream_socket { connectto };
+set_prop(hal_power_default, power_prop)
