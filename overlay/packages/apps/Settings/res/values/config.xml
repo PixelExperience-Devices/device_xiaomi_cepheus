@@ -12,7 +12,7 @@
 -->
 <resources>
      <!-- Battery Health -->
-    <bool name="config_supportBatteryHealth">false</bool>
+    <bool name="config_supportBatteryHealth">true</bool>
     <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
     <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
     <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
