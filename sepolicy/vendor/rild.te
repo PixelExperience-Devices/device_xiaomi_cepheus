@@ -1,0 +1,3 @@
+allow rild vendor_file:file ioctl;
+allow rild qcom_ims_prop:file { read };
+allow rild default_prop:file { read };
