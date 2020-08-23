@@ -108,9 +108,7 @@ on boot
     start rmt_storage
     start rfs_access
 
-    # Set thermal mode to evaluation
     chown system system /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 10
 
     # Allow system to modify exposure adjustment state
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable
