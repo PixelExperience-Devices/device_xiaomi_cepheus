@@ -161,6 +161,15 @@
       "ResetOnInit": true
     },
     {
+      "Name": "L3LittleClusterMinFreq",
+      "Path": "/sys/class/devfreq/soc:qcom,cpu0-cpu-l3-lat/min_freq",
+      "Values": [
+        "1440000000",
+        "300000000"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "L3BigClusterMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu4-cpu-l3-lat/min_freq",
       "Values": [
@@ -206,11 +215,11 @@
       "ResetOnInit": true
     },
     {
-      "Name": "SchedFeatures",
-      "Path": "/sys/kernel/debug/sched_features",
+      "Name": "EnergyAware",
+      "Path": "/proc/sys/kernel/sched_energy_aware",
       "Values": [
-        "NO_ENERGY_AWARE",
-        "ENERGY_AWARE"
+        "0",
+        "1"
       ],
       "ResetOnInit": true
     },
@@ -370,9 +379,9 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "SchedFeatures",
+      "Node": "EnergyAware",
       "Duration": 2000,
-      "Value": "NO_ENERGY_AWARE"
+      "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
@@ -445,6 +454,12 @@
       "Node": "LLCCBWMinFreq",
       "Duration": 2000,
       "Value": "6881"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "L3LittleClusterMinFreq",
+      "Duration": 2000,
+      "Value": "1440000000"
     },
     {
       "PowerHint": "LAUNCH",
