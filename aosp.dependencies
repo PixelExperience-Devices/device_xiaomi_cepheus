@@ -1,9 +1,9 @@
 [
   { 
-      "repository"   : "vendor_xiaomi_cepheus",
+      "repository"   : "markakash/vendor_cepheus",
       "target_path"  : "vendor/xiaomi/cepheus",
       "branch"       : "ten",
-      "remote"       : "pixel-devices-bitbucket"
+      "remote"       : "github"
   },
   { 
       "repository"   : "markakash/kernel_xiaomi_sm8150",
