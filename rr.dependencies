@@ -34,12 +34,5 @@
    "target_path": "packages/apps/PixelLiveWallpaper",
    "remote"     : "gitlab",
    "branch"     : "ten"
- },
- {
-   "repository" : "EcrosoftXiao/vendor_gapps",
-   "target_path": "vendor/gapps",
-   "remote"     : "gitlab",
-   "clone-depth": "1",
-   "branch"     : "ten"
  }
 ]

@@ -24,9 +24,6 @@ $(call inherit-product, device/xiaomi/cepheus/device.mk)
 # Inherit some common RR stuff.
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
-# Inherit PixelGApps
-$(call inherit-product-if-exists, vendor/gapps/config.mk)
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
@@ -42,11 +39,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 #FaceUnlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
-
-# GApps
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-TARGET_INCLUDE_STOCK_ARCORE := true
 
 # Inherit from custom vendor
 $(call inherit-product, vendor/miuicamera/common/common-vendor.mk)
