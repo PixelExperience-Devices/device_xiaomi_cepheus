@@ -36,7 +36,7 @@
    "branch"     : "ten"
  },
  {
-   "repository" : "PixelExperience/vendor_gapps",
+   "repository" : "EcrosoftXiao/vendor_gapps",
    "target_path": "vendor/gapps",
    "remote"     : "gitlab",
    "clone-depth": "1",
