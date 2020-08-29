@@ -37,8 +37,11 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-#FaceUnlock
+# FaceUnlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# FOD
+TARGET_HAS_FOD := true
 
 # Inherit from custom vendor
 $(call inherit-product, vendor/miuicamera/common/common-vendor.mk)
