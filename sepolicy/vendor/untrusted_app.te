@@ -6,3 +6,4 @@ r_dir_file(untrusted_app, sysfs_battery_supply)
 r_dir_file(untrusted_app, sysfs_usb_supply)
 
 allow untrusted_app_27 theme_prop:file { map read open getattr };
+allow untrusted_app theme_prop:file { map read open getattr };
