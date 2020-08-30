@@ -299,8 +299,10 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.xiaomi-libperfmgr \
-    powerhint.json
+    android.hardware.power@1.3-service.xiaomi-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Product characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
