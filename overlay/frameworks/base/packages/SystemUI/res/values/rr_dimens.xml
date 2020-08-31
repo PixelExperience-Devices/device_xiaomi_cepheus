@@ -16,5 +16,5 @@
 */
 -->
 <resources>
-    <dimen name="status_bar_extra_padding">16dp</dimen>
+    <dimen name="status_bar_extra_padding">5dp</dimen>
 </resources>

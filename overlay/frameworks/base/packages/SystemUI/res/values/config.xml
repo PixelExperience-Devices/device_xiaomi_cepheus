@@ -39,4 +39,6 @@
     <!-- The CPU temperature divider, if needed -->
     <integer name="config_cpuTempDivider" translatable="false">1000</integer>
 
+    <!-- Allow device to use unordinary cutout overlays -->
+    <bool name="config_customCutout">true</bool>
 </resources>
