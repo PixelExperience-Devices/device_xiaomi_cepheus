@@ -4,7 +4,6 @@
       "Name": "CPULittleClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
-        "9999999",
         "1113600",
         "1036800"
       ],
@@ -37,7 +36,6 @@
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "1497600",
         "1056000"
       ],
       "ResetOnInit": true
@@ -46,7 +44,6 @@
       "Name": "CPUBigPlusClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq",
       "Values": [
-        "9999999",
         "1497600",
         "825600"
       ],
@@ -57,8 +54,6 @@
       "Name": "CPUBigPlusClusterMinFreq",
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq",
       "Values": [
-        "9999999",
-        "1497600",
         "825600"
       ],
       "ResetOnInit": true
@@ -69,7 +64,6 @@
       "Values": [
         "585000000",
         "427000000",
-        "345000000",
         "257000000"
       ],
       "DefaultIndex": 0,
@@ -79,9 +73,7 @@
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
       "Values": [
-        "585000000",
         "427000000",
-        "345000000",
         "257000000"
       ],
       "ResetOnInit": true
@@ -249,89 +241,6 @@
         ""
       ],
       "Type": "Property"
-    },
-    {
-      "Name": "PowerHALPerfProfileState",
-      "Path": "vendor.powerhal.perf_profile",
-      "Values": [
-        "POWER_SAVE",
-        "BIAS_POWER_SAVE",
-        "BIAS_PERFORMANCE",
-        "HIGH_PERFORMANCE"
-      ],
-      "Type": "Property"
-    },
-    {
-      "Name": "CPU0",
-      "Path": "/sys/devices/system/cpu/cpu0/online",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPU1",
-      "Path": "/sys/devices/system/cpu/cpu1/online",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPU2",
-      "Path": "/sys/devices/system/cpu/cpu2/online",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPU3",
-      "Path": "/sys/devices/system/cpu/cpu3/online",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPU4",
-      "Path": "/sys/devices/system/cpu/cpu4/online",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPU5",
-      "Path": "/sys/devices/system/cpu/cpu5/online",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPU6",
-      "Path": "/sys/devices/system/cpu/cpu6/online",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPU7",
-      "Path": "/sys/devices/system/cpu/cpu7/online",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
     }
   ],
   "Actions": [
