@@ -677,6 +677,7 @@ vendor/lib64/libspcom.so
 # Media
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/vppservice
+vendor/etc/seccomp_policy/codec2.vendor.base.policy
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vppservice.rc
 vendor/lib/libcodec2_hidl@1.0.so
