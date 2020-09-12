@@ -966,8 +966,8 @@ vendor/etc/thermal-tgame.conf
 vendor/etc/thermald-devices.conf
 vendor/lib64/libthermalclient.so
 
-# Time
--vendor/app/TimeService/TimeService.apk;:timeservice_app_cert
+# Time services
+-vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
