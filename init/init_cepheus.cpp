@@ -58,6 +58,6 @@ void property_override_dual(char const system_prop[],
 void vendor_load_properties() {
     // fingerprint
     property_override("ro.build.description", "cepheus-user 10 QKQ1.190825.002 V12.0.2.0.QFAEUXM release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ3A.200805.001/6578210:user/release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:11/RP1A.200720.009/6720564:user/release-keys");
     property_override("ro.boot.verifiedbootstate", "green");
 }
