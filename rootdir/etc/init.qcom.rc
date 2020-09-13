@@ -329,7 +329,7 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     group system
     oneshot
 
-service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
+service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
     user audioserver
@@ -346,3 +346,4 @@ service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     interface android.hardware.audio@5.0::IDevicesFactory default
     interface android.hardware.audio@4.0::IDevicesFactory default
     interface android.hardware.audio@2.0::IDevicesFactory default
+    onrestart restart audioserver
