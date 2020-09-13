@@ -27,11 +27,6 @@
    "branch"     : "ten"
  },
  {
-   "repository" : "SOVIET-ANDROID/platform_vendor_google-customization",
-   "target_path": "vendor/google-customization",
-   "branch"     : "10.0"
- },
- {
    "repository" : "kdrag0n/proton-clang",
    "target_path": "prebuilts/clang/host/linux-x86/clang-proton",
    "branch"     : "master"
