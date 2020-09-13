@@ -23,7 +23,6 @@ BUILD_BROKEN_USES_NETWORK := true
 
 # Inherit from proprietary files
 include vendor/xiaomi/cepheus/BoardConfigVendor.mk
-include vendor/miuicamera/common/BoardConfigVendor.mk
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"

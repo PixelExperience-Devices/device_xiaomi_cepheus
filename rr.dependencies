@@ -22,11 +22,6 @@
    "branch"     : "master"
  },
  {
-   "repository" : "EcrosoftXiao/vendor_MiuiCamera",
-   "target_path": "vendor/miuicamera",
-   "branch"     : "ten"
- },
- {
    "repository" : "kdrag0n/proton-clang",
    "target_path": "prebuilts/clang/host/linux-x86/clang-proton",
    "branch"     : "master"

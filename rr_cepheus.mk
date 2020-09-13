@@ -43,11 +43,5 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 # FOD
 TARGET_HAS_FOD := true
 
-# Dev certificate
-PRODUCT_DEFAULT_DEV_CERTIFICATE:= build/target/product/security/devkey
-
-# Inherit from custom vendor
-$(call inherit-product, vendor/miuicamera/common/common-vendor.mk)
-
 # Include firmware
 $(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
