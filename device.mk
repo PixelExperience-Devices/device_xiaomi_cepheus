@@ -125,13 +125,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-# Device Personalization Services
-PRODUCT_PACKAGES += \
-    MatchmakerPrebuilt
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/product/etc/permissions/privapp-permissions-matchmaker.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-matchmaker.xml
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-service \
