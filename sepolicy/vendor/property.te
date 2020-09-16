@@ -1,6 +1,3 @@
-# Dolby
-type vendor_dolby_loglevel_prop, property_type;
-
 # Mlipay
 type mlipay_prop, property_type;
 
