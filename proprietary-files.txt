@@ -790,7 +790,6 @@ vendor/lib64/libqsocket.so
 product/etc/permissions/qcrilhook.xml
 product/etc/permissions/telephonyservice.xml
 product/framework/qcrilhook.jar
-product/framework/qti-telephony-common.jar|74adbf98e89531ac385ab5c4cea3c2549a0d24b0
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/adpl
