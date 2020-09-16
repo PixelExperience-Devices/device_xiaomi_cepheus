@@ -182,10 +182,6 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhidltransport.vendor
 
-# HotwordEnrollement
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
-
 # IFAA manager
 PRODUCT_PACKAGES += \
     org.ifaa.android.manager
