@@ -33,10 +33,10 @@ cc_binary {
 }
 
 cc_binary {
-    name: "android.hardware.lights-service.qti",
+    name: "android.hardware.lights-service.cepheus",
     relative_install_path: "hw",
-    init_rc: ["aidl/android.hardware.lights-qti.rc"],
-    vintf_fragments: ["aidl/android.hardware.lights-qti.xml"],
+    init_rc: ["aidl/android.hardware.lights.cepheus.rc"],
+    vintf_fragments: ["aidl/android.hardware.lights.cepheus.xml"],
     vendor: true,
     shared_libs: [
         "libbase",
