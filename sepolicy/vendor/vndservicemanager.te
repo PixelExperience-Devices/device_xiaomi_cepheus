@@ -1,0 +1,6 @@
+allow vndservicemanager hal_camera_default:dir { search };
+allow vndservicemanager hal_camera_default:file { rw_file_perms map };
+allow vndservicemanager hal_camera_default:process { getattr };
+
+# Allow acess to /dev/binderfs/vndbinder
+allow vndservicemanager binderfs:chr_file { read write open ioctl map };

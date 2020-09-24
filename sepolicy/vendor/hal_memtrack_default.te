@@ -1,0 +1,2 @@
+# Allow hal_memtrack_default to access /dev/binderfs/hwbinder
+allow hal_memtrack_default binderfs:chr_file { read write open ioctl map };

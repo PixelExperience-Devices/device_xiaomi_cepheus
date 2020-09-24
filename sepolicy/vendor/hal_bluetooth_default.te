@@ -1,1 +1,5 @@
-allow hal_bluetooth_default vendor_data_file:file r_file_perms;
+# Allow hal_bluetooth_default to read files in vendor_wifi_vendor_data_file
+allow hal_bluetooth_default vendor_data_file:file { open read };
+
+# Allow hal_bluetooth_default to access /dev/binderfs/hwbinder
+allow hal_bluetooth_default binderfs:chr_file { read write open ioctl map };
