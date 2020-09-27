@@ -58,7 +58,7 @@ using android::base::StringPrintf;
 using android::hardware::thermal::V2_0::toString;
 
 /*
- * Pixel don't offline CPU, so std::thread::hardware_concurrency(); should work.
+ * Cepheus don't offline CPU, so std::thread::hardware_concurrency(); should work.
  * However /sys/devices/system/cpu/present is preferred.
  * The file is expected to contain single text line with two numbers %d-%d,
  * which is a range of available cpu numbers, e.g. 0-7 would mean there
