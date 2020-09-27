@@ -2,7 +2,7 @@
  {
    "repository" : "EcrosoftXiao/vendor_xiaomi_cepheus",
    "target_path": "vendor/xiaomi/cepheus",
-   "branch"     : "ten-cleanup"
+   "branch"     : "eleven"
  },
  {
    "repository" : "EcrosoftXiao/kernel_xiaomi_sm8150",
@@ -12,7 +12,7 @@
  {
    "repository" : "EcrosoftXiao/android_hardware_xiaomi",
    "target_path": "hardware/xiaomi",
-   "branch"     : "lineage-17.1"
+   "branch"     : "eleven"
  },
  {
    "repository" : "EcrosoftXiao/vendor_xiaomi_firmware",
