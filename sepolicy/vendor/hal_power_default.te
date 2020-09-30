@@ -10,4 +10,4 @@ allow hal_power_default sysfs_kgsl:lnk_file { read };
 allow hal_power_default sysfs_devices_system_cpu:file { write };
 allow hal_power_default latency_device:chr_file { write open };
 allow hal_power_default property_socket:sock_file { write };
-set_prop(hal_power_default, power_prop)
+set_prop(hal_power_default, vendor_power_prop)
