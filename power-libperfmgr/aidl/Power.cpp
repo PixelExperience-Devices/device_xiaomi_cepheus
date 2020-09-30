@@ -151,7 +151,7 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             ev.value = enabled ? kWakeupModeOn : kWakeupModeOff;
             write(fd, &ev, sizeof(ev));
             close(fd);
-            [[fallthrough]];
+            break;
             }
         case Mode::FIXED_PERFORMANCE:
             [[fallthrough]];
@@ -179,8 +179,8 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
 
 ndk::ScopedAStatus Power::isModeSupported(Mode type, bool *_aidl_return) {
     bool supported = mHintManager->IsHintSupported(toString(type));
-    // LOW_POWER handled insides PowerHAL specifically
-    if (type == Mode::LOW_POWER) {
+    // LOW_POWER and DOUBLE_TAP_TO_WAKE handled insides PowerHAL specifically
+    if (type == Mode::LOW_POWER || type == Mode::DOUBLE_TAP_TO_WAKE) {
         supported = true;
     }
     LOG(INFO) << "Power mode " << toString(type) << " isModeSupported: " << supported;
