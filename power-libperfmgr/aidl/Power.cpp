@@ -125,19 +125,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     LOG(DEBUG) << "Power setMode: " << toString(type) << " to: " << enabled;
     ATRACE_INT(toString(type).c_str(), enabled);
     switch (type) {
-        case Mode::LOW_POWER:
-            break;
-        case Mode::SUSTAINED_PERFORMANCE:
-            if (enabled) {
-                mHintManager->DoHint("SUSTAINED_PERFORMANCE");
-            }
-            mSustainedPerfModeOn = true;
-            break;
-        case Mode::LAUNCH:
-            if (mSustainedPerfModeOn) {
-                break;
-            }
-            [[fallthrough]];
         case Mode::DOUBLE_TAP_TO_WAKE:
             {
             int fd = open_ts_input();
@@ -153,6 +140,19 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             close(fd);
             break;
             }
+        case Mode::LOW_POWER:
+            break;
+        case Mode::SUSTAINED_PERFORMANCE:
+            if (enabled) {
+                mHintManager->DoHint("SUSTAINED_PERFORMANCE");
+            }
+            mSustainedPerfModeOn = true;
+            break;
+        case Mode::LAUNCH:
+            if (mSustainedPerfModeOn) {
+                break;
+            }
+            [[fallthrough]];
         case Mode::FIXED_PERFORMANCE:
             [[fallthrough]];
         case Mode::EXPENSIVE_RENDERING:
