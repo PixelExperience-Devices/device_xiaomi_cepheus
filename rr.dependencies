@@ -7,7 +7,7 @@
  {
    "repository" : "EcrosoftXiao/kernel_xiaomi_sm8150",
    "target_path": "kernel/xiaomi/cepheus",
-   "branch"     : "ten-cleanup"
+   "branch"     : "eleven"
  },
  {
    "repository" : "EcrosoftXiao/android_hardware_xiaomi",
