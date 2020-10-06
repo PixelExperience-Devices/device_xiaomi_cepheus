@@ -121,6 +121,12 @@ vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 
+# Bluetooth | coral-user-11-RP1A.200720.009-6720564-release-keys
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|d2d55bf0a11eed058a76406cfa5d45d63a0a4f21
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|d8cc4680848db03ddcfd99a53cbe1b15b7b282da
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|73a21d7de95341f64f65859c995064ddcfb0a422
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|6bc11d40eed839c52704483728f0e87c4e0f5d6f
+
 # Camera
 vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
 vendor/bin/remosaic_daemon
