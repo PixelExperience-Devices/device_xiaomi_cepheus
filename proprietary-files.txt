@@ -449,7 +449,6 @@ vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libhdcpsrm.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
@@ -1016,10 +1015,8 @@ product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 product/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 
 # WiFi Display (vendor)
-vendor/bin/wfdhdcphalservice
 vendor/bin/wfdvndservice
 vendor/bin/wifidisplayhalservice
-vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/init/wfdvndservice.rc
 vendor/etc/wfdconfig.xml
@@ -1032,12 +1029,9 @@ vendor/lib/libwfdaac_vendor.so
 vendor/lib/libwfdcodecv4l2_proprietary.so
 vendor/lib/libwfdcommonutils_proprietary.so
 vendor/lib/libwfdconfigutils_proprietary.so
-vendor/lib/libwfdhdcpcp.so
-vendor/lib/libwfdhdcpservice_proprietary.so
 vendor/lib/libwfdmminterface_proprietary.so
 vendor/lib/libwfdmmservice_proprietary.so
 vendor/lib/libwfdmmsrc_proprietary.so
-vendor/lib/libwfdmodulehdcpsession.so
 vendor/lib/libwfdrtsp_proprietary.so
 vendor/lib/libwfdsessionmodule.so
 vendor/lib/libwfdsm_proprietary.so
@@ -1050,6 +1044,25 @@ vendor/lib/libwfduibcsrc_proprietary.so
 vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
+vendor/lib64/libmmosal_proprietary.so
+vendor/lib64/libmmparser_lite_proprietary.so
+
+# WiFi Display (HDCP)
+vendor/bin/wfdhdcphalservice
+vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
+vendor/lib/libhdcp1prov.so
+vendor/lib/libhdcp2p2prov.so
+vendor/lib/libhdcpsrm.so
+vendor/lib/libmm-hdcpmgr.so
+vendor/lib/libwfdhdcpcp.so
+vendor/lib/libwfdhdcpservice_proprietary.so
+vendor/lib/libwfdmodulehdcpsession.so
+vendor/lib64/libhdcp1prov.so
+vendor/lib64/libhdcp2p2prov.so
+vendor/lib64/libhdcpsrm.so
+vendor/lib64/libmm-hdcpmgr.so
+vendor/lib64/libwfdhdcpcp.so
+
 
 # WLAN
 vendor/bin/cnss-daemon
