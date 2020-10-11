@@ -13,6 +13,9 @@
 /sys/kernel/gpu/gpu_clock                      u:object_r:sysfs_device_info:s0
 /sys/kernel/gpu/gpu_busy                       u:object_r:sysfs_device_info:s0
 
+# Contexthub
+/vendor/bin/hw/android\.hardware\.contexthub@1\.1-service\.generic                               u:object_r:hal_contexthub_default_exec:s0
+
 # Fingerprint
 /dev/goodix_fp                                                       u:object_r:fingerprint_device:s0
 /data/vendor/goodix(/.*)?                                            u:object_r:fingerprint_data_file:s0

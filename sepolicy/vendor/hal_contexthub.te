@@ -1,0 +1,5 @@
+# Allow context hub HAL to communicate with daemon via socket
+allow hal_contexthub_default chre:unix_stream_socket connectto;
+
+add_hwservice(hal_contexthub_default, hal_contexthub_hwservice);
+allow hal_contexthub_default hal_contexthub_hwservice:hwservice_manager find;
