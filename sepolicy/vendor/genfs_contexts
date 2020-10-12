@@ -28,3 +28,5 @@ genfscon sysfs /kernel/wlan                                                     
 genfscon sysfs /power/system_sleep/stats                                        u:object_r:sysfs_power_stats:s0
 genfscon sysfs /power/rpmh_stats/master_stats                                   u:object_r:sysfs_power_stats:s0
 genfscon sysfs /kernel/wlan/power_stats                                         u:object_r:sysfs_power_stats:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:vadc@3100/iio:device1/name           u:object_r:sysfs_power_stats:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm8150l@4:vadc@3100/iio:device2/name           u:object_r:sysfs_power_stats:s0
