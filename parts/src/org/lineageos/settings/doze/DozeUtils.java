@@ -32,7 +32,6 @@ import static android.provider.Settings.Secure.DOZE_ALWAYS_ON;
 import static android.provider.Settings.Secure.DOZE_ENABLED;
 
 public final class DozeUtils {
-
     private static final String TAG = "DozeUtils";
     private static final boolean DEBUG = false;
 
@@ -50,15 +49,15 @@ public final class DozeUtils {
     protected static final String GESTURE_RAISE_TO_WAKE = "gesture_raise_to_wake";
 
     public static void startService(Context context) {
-        if (DEBUG) Log.d(TAG, "Starting service");
-        context.startServiceAsUser(new Intent(context, DozeService.class),
-                UserHandle.CURRENT);
+        if (DEBUG)
+            Log.d(TAG, "Starting service");
+        context.startServiceAsUser(new Intent(context, DozeService.class), UserHandle.CURRENT);
     }
 
     protected static void stopService(Context context) {
-        if (DEBUG) Log.d(TAG, "Stopping service");
-        context.stopServiceAsUser(new Intent(context, DozeService.class),
-                UserHandle.CURRENT);
+        if (DEBUG)
+            Log.d(TAG, "Stopping service");
+        context.stopServiceAsUser(new Intent(context, DozeService.class), UserHandle.CURRENT);
     }
 
     public static void checkDozeService(Context context) {
@@ -72,8 +71,8 @@ public final class DozeUtils {
     protected static boolean getProxCheckBeforePulse(Context context) {
         try {
             Context con = context.createPackageContext("com.android.systemui", 0);
-            int id = con.getResources().getIdentifier("doze_proximity_check_before_pulse",
-                    "bool", "com.android.systemui");
+            int id = con.getResources().getIdentifier(
+                    "doze_proximity_check_before_pulse", "bool", "com.android.systemui");
             return con.getResources().getBoolean(id);
         } catch (PackageManager.NameNotFoundException e) {
             return false;
@@ -81,33 +80,33 @@ public final class DozeUtils {
     }
 
     protected static boolean enableDoze(Context context, boolean enable) {
-        return Settings.Secure.putInt(context.getContentResolver(),
-                DOZE_ENABLED, enable ? 1 : 0);
+        return Settings.Secure.putInt(context.getContentResolver(), DOZE_ENABLED, enable ? 1 : 0);
     }
 
     public static boolean isDozeEnabled(Context context) {
-        return Settings.Secure.getInt(context.getContentResolver(),
-                DOZE_ENABLED, 1) != 0;
+        return Settings.Secure.getInt(context.getContentResolver(), DOZE_ENABLED, 1) != 0;
     }
 
     protected static void launchDozePulse(Context context) {
-        if (DEBUG) Log.d(TAG, "Launch doze pulse");
-        context.sendBroadcastAsUser(new Intent(DOZE_INTENT),
-                new UserHandle(UserHandle.USER_CURRENT));
+        if (DEBUG)
+            Log.d(TAG, "Launch doze pulse");
+        context.sendBroadcastAsUser(
+                new Intent(DOZE_INTENT), new UserHandle(UserHandle.USER_CURRENT));
     }
 
     protected static boolean enableAlwaysOn(Context context, boolean enable) {
-        return Settings.Secure.putIntForUser(context.getContentResolver(),
-                DOZE_ALWAYS_ON, enable ? 1 : 0, UserHandle.USER_CURRENT);
+        return Settings.Secure.putIntForUser(context.getContentResolver(), DOZE_ALWAYS_ON,
+                enable ? 1 : 0, UserHandle.USER_CURRENT);
     }
 
     protected static boolean isAlwaysOnEnabled(Context context) {
-        final boolean enabledByDefault = context.getResources()
-                .getBoolean(com.android.internal.R.bool.config_dozeAlwaysOnEnabled);
+        final boolean enabledByDefault = context.getResources().getBoolean(
+                com.android.internal.R.bool.config_dozeAlwaysOnEnabled);
 
-        return Settings.Secure.getIntForUser(context.getContentResolver(),
-                DOZE_ALWAYS_ON, alwaysOnDisplayAvailable(context) && enabledByDefault ? 1 : 0,
-                UserHandle.USER_CURRENT) != 0;
+        return Settings.Secure.getIntForUser(context.getContentResolver(), DOZE_ALWAYS_ON,
+                       alwaysOnDisplayAvailable(context) && enabledByDefault ? 1 : 0,
+                       UserHandle.USER_CURRENT)
+                != 0;
     }
 
     protected static boolean alwaysOnDisplayAvailable(Context context) {
@@ -115,8 +114,7 @@ public final class DozeUtils {
     }
 
     protected static boolean isGestureEnabled(Context context, String gesture) {
-        return PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(gesture, false);
+        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(gesture, false);
     }
 
     protected static boolean isPickUpEnabled(Context context) {

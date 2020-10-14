@@ -21,7 +21,6 @@ import android.preference.PreferenceActivity;
 import android.view.MenuItem;
 
 public class ThermalActivity extends PreferenceActivity {
-
     private static final String TAG_THERMAL = "thermal";
 
     @Override
@@ -30,8 +29,10 @@ public class ThermalActivity extends PreferenceActivity {
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        getFragmentManager().beginTransaction().replace(android.R.id.content,
-                new ThermalSettingsFragment(), TAG_THERMAL).commit();
+        getFragmentManager()
+                .beginTransaction()
+                .replace(android.R.id.content, new ThermalSettingsFragment(), TAG_THERMAL)
+                .commit();
     }
 
     @Override
