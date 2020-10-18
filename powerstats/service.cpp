@@ -136,34 +136,6 @@ int main(int /* argc */, char** /* argv */) {
             new WlanStateResidencyDataProvider(wlanId, "/sys/kernel/wlan/power_stats");
     service->addStateResidencyDataProvider(wlanSdp);
 
-    // Add Airbrush power entity
-    StateResidencyConfig airStateConfig = {
-        .entryCountSupported = true,
-        .entryCountPrefix = "Cumulative count:",
-        .totalTimeSupported = true,
-        .totalTimePrefix = "Cumulative duration msec:",
-        .lastEntrySupported = true,
-        .lastEntryPrefix = "Last entry timestamp msec:",
-    };
-    std::vector<std::pair<std::string, std::string>> airStateHeaders = {
-        std::make_pair("Active", "ACTIVE"),
-        std::make_pair("Sleep", "SLEEP"),
-        std::make_pair("Deep-Sleep", "DEEP SLEEP"),
-        std::make_pair("Suspend", "SUSPEND"),
-        std::make_pair("Off", "OFF"),
-        std::make_pair("Unknown", "UNKNOWN"),
-    };
-
-    sp<GenericStateResidencyDataProvider> airSdp =
-            new GenericStateResidencyDataProvider(
-                    "/sys/devices/platform/soc/soc:abc-sm/state_stats");
-
-    uint32_t airId = service->addPowerEntity("Visual-Core", PowerEntityType::SUBSYSTEM);
-    airSdp->addEntity(airId, PowerEntityConfig("Pixel Visual Core Subsystem Power Stats",
-            generateGenericStateResidencyConfigs(airStateConfig, airStateHeaders)));
-
-    service->addStateResidencyDataProvider(airSdp);
-
     // Add NFC power entity
     StateResidencyConfig nfcStateConfig = {
         .entryCountSupported = true,
