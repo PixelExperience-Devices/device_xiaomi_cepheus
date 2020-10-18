@@ -17,7 +17,7 @@ package {
 }
 
 cc_binary {
-    name: "android.hardware.power.stats@1.0-service.pixel",
+    name: "android.hardware.power.stats@1.0-service.xiaomi",
     include_dirs: [
         "hardware/knowles/athletico/sound_trigger_hal",
     ],
@@ -25,7 +25,8 @@ cc_binary {
         "device_kernel_headers",
     ],
     relative_install_path: "hw",
-    init_rc: ["android.hardware.power.stats@1.0-service.pixel.rc"],
+    vintf_fragments: ["android.hardware.power.stats@1.0-service.xiaomi.xml"],
+    init_rc: ["android.hardware.power.stats@1.0-service.xiaomi.rc"],
     srcs: [
         "service.cpp",
         "RailDataProvider.cpp",
