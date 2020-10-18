@@ -1,0 +1,3 @@
+allow shell hal_power_default:binder call;
+allow shell hal_power_default:fd use;
+allow shell hal_power_default:fifo_file write;
