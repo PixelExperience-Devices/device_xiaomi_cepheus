@@ -27,7 +27,6 @@
 #include <pixelpowerstats/WlanStateResidencyDataProvider.h>
 
 #include "GpuStateResidencyDataProvider.h"
-#include "OsloStateResidencyDataProvider.h"
 #include "RailDataProvider.h"
 
 using android::OK;
@@ -48,7 +47,6 @@ using android::hardware::google::pixel::powerstats::AidlStateResidencyDataProvid
 using android::hardware::google::pixel::powerstats::generateGenericStateResidencyConfigs;
 using android::hardware::google::pixel::powerstats::GenericStateResidencyDataProvider;
 using android::hardware::google::pixel::powerstats::GpuStateResidencyDataProvider;
-using android::hardware::google::pixel::powerstats::OsloStateResidencyDataProvider;
 using android::hardware::google::pixel::powerstats::PowerEntityConfig;
 using android::hardware::google::pixel::powerstats::RailDataProvider;
 using android::hardware::google::pixel::powerstats::StateResidencyConfig;
@@ -194,11 +192,6 @@ int main(int /* argc */, char** /* argv */) {
     uint32_t gpuId = service->addPowerEntity("GPU", PowerEntityType::SUBSYSTEM);
     sp<GpuStateResidencyDataProvider> gpuSdp = new GpuStateResidencyDataProvider(gpuId);
     service->addStateResidencyDataProvider(gpuSdp);
-
-    // Add Oslo power entity
-    uint32_t osloId = service->addPowerEntity("Oslo", PowerEntityType::SUBSYSTEM);
-    sp<OsloStateResidencyDataProvider> osloSdp = new OsloStateResidencyDataProvider(osloId);
-    service->addStateResidencyDataProvider(osloSdp);
 
     // Add Power Entities that require the Aidl data provider
     sp<AidlStateResidencyDataProvider> aidlSdp = new AidlStateResidencyDataProvider();
