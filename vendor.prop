@@ -232,3 +232,6 @@ vendor.usb.product_string=Xiaomi Mi 9
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+
+# Zygote
+zygote.critical_window.minute=10
