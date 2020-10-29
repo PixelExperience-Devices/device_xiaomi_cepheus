@@ -1,5 +1,4 @@
 type sysfs_device_info, sysfs_type, fs_type;
-
 type proc_sched_energy_aware, proc_type, fs_type;
 
 # Insmod
