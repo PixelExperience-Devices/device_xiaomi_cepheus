@@ -1,0 +1,1 @@
+allow vendor_hvdcp self:capability { sys_admin };

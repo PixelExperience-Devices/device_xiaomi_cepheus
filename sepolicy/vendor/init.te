@@ -2,6 +2,9 @@ allow init firmware_file:dir mounton;
 allow init firmware_file:filesystem { mount relabelfrom getattr };
 allow init hal_camera_default_exec:file { read getattr map execute open };
 allow init vendor_file:file execute;
+allow init self:netlink_route_socket { read };
+allow init vendor_hal_dpmqmi_hwservice:hwservice_manager find;
+allow init vendor_hal_dpmQmiMgr:binder call;
 
 # allow init to access /dev/binderfs/hwbinder
 allow init hwservicemanager:binder { call transfer };

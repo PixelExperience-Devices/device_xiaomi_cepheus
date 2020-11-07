@@ -1,0 +1,1 @@
+allow migrate_legacy_obb_data self:capability { sys_admin };

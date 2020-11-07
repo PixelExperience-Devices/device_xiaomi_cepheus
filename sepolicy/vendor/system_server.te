@@ -10,3 +10,7 @@ get_prop(system_server, vendor_default_prop)
 get_prop(system_server, vendor_camera_prop)
 
 add_service(system_server, default_android_service);
+
+allow system_server crash_dump:process getpgid;
+allow system_server hal_light_default:process signal;
+allow system_server init:process signal;

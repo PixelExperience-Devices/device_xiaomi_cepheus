@@ -7,3 +7,7 @@ allow platform_app vendor_sysfs_kgsl:dir search;
 allow platform_app vendor_sysfs_kgsl:file { getattr open read };
 
 allow platform_app sysfs_device_info:lnk_file { read };
+allow platform_app default_android_service:service_manager { find }; 
+
+allow platform_app sysfs_msm_subsys:dir { search };
+allow platform_app sysfs_msm_subsys:file { read open getattr };

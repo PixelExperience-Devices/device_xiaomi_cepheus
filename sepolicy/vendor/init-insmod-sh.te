@@ -11,7 +11,11 @@ set_prop(init-insmod-sh, vendor_device_prop)
 # Allow insmod
 allow init-insmod-sh self:capability sys_module;
 
+allow init-insmod-sh self:capability sys_admin;
+
 allow init-insmod-sh vendor_file:system module_load;
+
+allow init-insmod-sh vendor_sysfs_boot_adsp:file rw_file_perms;
 
 allow init-insmod-sh kernel:key search;
 
