@@ -63,4 +63,7 @@
     <!-- DC dimming settings -->
     <string name="dc_dimming_enable_title">DC Dimming</string>
     <string name="dc_dimming_enable_summary">DC Dimming уменьшает нагрузку на глаза в условиях низкой освещенности</string>
+    <!-- Doze settings -->
+    <string name="wake_on_gesture_title">Просыпаться от жестов</string>
+    <string name="wake_on_gesture_summary">Будить устройство вместо пульсирующих уведомлений при использовании жестов</string>
 </resources>
