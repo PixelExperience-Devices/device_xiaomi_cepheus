@@ -286,6 +286,8 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    libcodec2_vndk.vendor \
+    libcodec2_hidl@1.0.vendor \
     libavservices_minijail \
     libavservices_minijail_32 \
     libavservices_minijail_vendor
