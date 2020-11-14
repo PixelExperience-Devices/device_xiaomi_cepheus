@@ -398,18 +398,18 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 # Consumerir
 vendor/lib64/hw/consumerir.default.so
 
-# Display (from def_reteu-user-10-QPFS30.103-21-1-2-c993f-release-keys)
-vendor/lib64/libdisp-aba.so|3a35a8c7120d5f0748b4584dd56b1398d1acdd69
-vendor/lib64/libdisplayqos.so|86abe8922c686f205520b6980f337dda79182bec
-vendor/lib64/libhdr_tm.so|af4bc2bb1cf38dcfa9dd48997bf603384b156877
-vendor/lib64/libqseed3.so|8d2867d34d9f24bf10307863f8ee46e867a0cda3
-vendor/lib64/libsdedrm.so|dbdcb66859015168a7dbc6c62d1f04b64a157e41
-vendor/lib64/libsdm-color.so|e5c120cb6acbecf5a2c344029b103d6b61fc3925
-vendor/lib64/libsdm-colormgr-algo.so|2dc1679faf4a2fab6ae0e6b0ab89c3547f83ac7d
-vendor/lib64/libsdm-diag.so|d7a96d76dd2fb7516a9ed89c39a3f0992ec3266e
-vendor/lib64/libsdm-disp-vndapis.so|aa658050b07c04b114cb43e6535fe45883943152
-vendor/lib64/libsdmextension.so|72991016a61b3d56ef91265ac76134b55636c392
-vendor/lib64/libtinyxml2_1.so|ba981e332895a053a67fc54a8190365a3ad37f2d
+# Display (from from LA.UM.9.1.r1-07300-SMxxx0.0)
+vendor/lib64/libdisp-aba.so|b7c8567c3079372479c85834ba1aab4e2eee5522
+vendor/lib64/libdisplayqos.so|13aa5350813e6b3b619ba26a4854e512302e2d97
+vendor/lib64/libhdr_tm.so|e4638c3bf21685b84650c5858bafe384ab2118ff
+vendor/lib64/libqseed3.so|1395834daf3c6cd07acbdbc44110decb3be362c2
+vendor/lib64/libsdedrm.so|499fda5345019fdd2fc305fd70ff81f17acb7f2c
+vendor/lib64/libsdm-color.so|9a5a5f27481ef8c29624dc18819442ec2764726e
+vendor/lib64/libsdm-colormgr-algo.so|11b65733d87ff65633a5fe8f4207dde12391625c
+vendor/lib64/libsdm-diag.so|55dafc05ba68666f10412a534f7122d7f45bf403
+vendor/lib64/libsdm-disp-vndapis.so|9ab6725a5efba29b77d1d6ab33e10e3ff3296960
+vendor/lib64/libsdmextension.so|37b50b7865770f4f4ad9540b9fe2b73da554ecae
+vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
 # Display calibration
 vendor/etc/hdr_config.cfg
