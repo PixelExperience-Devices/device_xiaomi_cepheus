@@ -149,6 +149,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@4.0.vendor
 
 PRODUCT_PACKAGES += \
+    vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor
 
 PRODUCT_PACKAGES += \
@@ -281,6 +282,8 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libavservices_minijail_32 \
     libavservices_minijail_vendor
 
 PRODUCT_COPY_FILES += \
