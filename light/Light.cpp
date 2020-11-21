@@ -22,7 +22,6 @@
 
 #include <fstream>
 
-#define LCD_LED         "/sys/class/backlight/panel0-backlight/"
 #define WHITE_LED       "/sys/class/leds/white/"
 
 #define BREATH          "breath"
@@ -98,11 +97,6 @@ static inline uint32_t getScaledBrightness(const LightState& state, uint32_t max
     return scaleBrightness(getBrightness(state), maxBrightness);
 }
 
-static void handleBacklight(const LightState& state) {
-    uint32_t brightness = getScaledBrightness(state, getMaxBrightness(LCD_LED MAX_BRIGHTNESS));
-    set(LCD_LED BRIGHTNESS, brightness);
-}
-
 static void handleNotification(const LightState& state) {
     uint32_t whiteBrightness = getScaledBrightness(state, getMaxBrightness(WHITE_LED MAX_BRIGHTNESS));
 
@@ -146,7 +140,6 @@ static std::vector<LightBackend> backends = {
     { Type::ATTENTION, handleNotification },
     { Type::NOTIFICATIONS, handleNotification },
     { Type::BATTERY, handleNotification },
-    { Type::BACKLIGHT, handleBacklight },
 };
 
 static LightStateHandler findHandler(Type type) {
