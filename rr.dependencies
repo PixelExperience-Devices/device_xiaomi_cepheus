@@ -5,7 +5,7 @@
    "branch"     : "eleven"
  },
  {
-   "repository" : "EcrosoftXiao/kernel_xiaomi_sm8150",
+   "repository" : "EcrosoftXiao/kernel_xiaomi_cepheus",
    "target_path": "kernel/xiaomi/cepheus",
    "branch"     : "eleven"
  },
