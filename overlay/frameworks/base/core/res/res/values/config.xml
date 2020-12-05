@@ -932,14 +932,8 @@
         <item>"/system/lib64/libRSDriver.so"</item>
         <item>"/system/lib64/libRSCpuRef.so"</item>
         <item>"/system/lib64/libblas.so"</item>
-        <item>"/vendor/lib/lib_aion_buffer.so"</item>
-        <item>"/vendor/lib/libcamxexternalformatutils.so"</item>
-        <item>"/vendor/lib/libipebpsstriping.so"</item>
         <item>"/vendor/lib/libCB.so"</item>
         <item>"/vendor/lib/libgsl.so"</item>
-        <item>"/vendor/lib64/lib_aion_buffer.so"</item>
-        <item>"/vendor/lib64/libcamxexternalformatutils.so"</item>
-        <item>"/vendor/lib64/libipebpsstriping.so"</item>
         <item>"/vendor/lib64/libCB.so"</item>
         <item>"/vendor/lib64/libgsl.so"</item>
     </string-array>
@@ -966,14 +960,8 @@
         <item>"/system/lib64/libRSDriver.so"</item>
         <item>"/system/lib64/libRSCpuRef.so"</item>
         <item>"/system/lib64/libblas.so"</item>
-        <item>"/vendor/lib/lib_aion_buffer.so"</item>
-        <item>"/vendor/lib/libcamxexternalformatutils.so"</item>
-        <item>"/vendor/lib/libipebpsstriping.so"</item>
         <item>"/vendor/lib/libCB.so"</item>
         <item>"/vendor/lib/libgsl.so"</item>
-        <item>"/vendor/lib64/lib_aion_buffer.so"</item>
-        <item>"/vendor/lib64/libcamxexternalformatutils.so"</item>
-        <item>"/vendor/lib64/libipebpsstriping.so"</item>
         <item>"/vendor/lib64/libCB.so"</item>
         <item>"/vendor/lib64/libgsl.so"</item>
     </string-array>
