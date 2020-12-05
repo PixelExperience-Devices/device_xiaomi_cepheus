@@ -331,29 +331,26 @@ vendor/lib64/camera/fdconfigvideolite.bin
 # Charger
 vendor/bin/hvdcp_opti
 
-# CNE
--vendor/app/CneApp/CneApp.apk
--vendor/app/IWlanService/IWlanService.apk
-vendor/bin/cnd
-vendor/etc/init/cnd.rc
-vendor/lib64/libcne.so
-vendor/lib64/libcneapiclient.so
-vendor/lib64/libcneoplookup.so
-vendor/lib64/libcneqmiutils.so
-vendor/lib64/libwms.so
-vendor/lib64/libwqe.so
-vendor/lib64/libxml.so
-vendor/lib64/vendor.qti.data.factory@2.0.so
-vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
-vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
-vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
-vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
-vendor/lib64/vendor.qti.hardware.data.connection@1.1.so
-vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
-vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so
-vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
-vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
-vendor/lib64/vendor.qti.latency@2.0.so
+# CNE - from LA.UM.9.1.r1-07300-SMxxx0.0
+-vendor/app/CneApp/CneApp.apk|d27c7fe7d57b2ad01dcf233dccedbaa9af702422
+vendor/bin/cnd|99c357eac6aa3f5116a82ebb59199790204cb504
+vendor/lib64/libcne.so|a49f63b19353f8e352029b9ca7306c04623ae772
+vendor/lib64/libcneapiclient.so|1e7564af8f912b6b9877666db755d0d52a4e6c4f
+vendor/lib64/libcneoplookup.so|14aedb62fb4e0171581347dd2dbadf9395bdd36a
+vendor/lib64/libcneqmiutils.so|a984bc760db218395bd663dcb83a28d4c76f97c6
+vendor/lib64/libwms.so|c50970aab9180ce2ced14bfe98592d5bdc71a3c9
+vendor/lib64/libwqe.so|e22e60b1e814c510c11c7400859d631bd2faa42e
+vendor/lib64/libxml.so|af2ef501c85476a675b770fd03cf24e06a9a70f6
+vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so|992394c3c5dfc585843152296c9f79ea412032a3
+vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so|2aa14f973d92262a14f7f41bb79d7c19eebb10a9
+vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so|9756b31b055c83cdf48bb0ac1fcfd8d3dd420741
+vendor/lib64/vendor.qti.hardware.data.connection@1.0.so|0ee3a6225b025bd53b53c60b0796c50b4bbf73c2
+vendor/lib64/vendor.qti.hardware.data.connection@1.1.so|51a2ad391a943de8cf9f62b46f9d3e1c05093cd4
+vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|b3f78bc6bd2c491d860928fc34d23c0e4f14a70d
+vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|07bf28004086b972367c44703bd0247d7a78faf4
+vendor/lib64/vendor.qti.data.slm@1.0.so|9a452e8bb555dacd4338b657124d56b3f204f0c7
+vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so|098cb52eae47416fe4e846300e9bd1a772433d4e
+vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|b17a82a9740832bd686c3d4c4e36d0e391940705
 
 # CNE configs
 etc/cne/Nexus/ATT/ATT_profiles.xml
@@ -477,6 +474,10 @@ vendor/lib64/liboemcrypto.so|2cee717b25559030a61709e826b4a5dae6043c20
 vendor/lib/liboemcrypto.so|b349d1d049709bbdff15a133698264dc8c01db14
 vendor/lib64/libwvhidl.so|2abdbc8966795ed903062ec1a8ba2e79bb5883f8
 vendor/lib/libwvhidl.so|dd599b1055d1faf025d60bc4f702f9ae11123c30
+
+# Factory - from LA.UM.9.1.r1-07300-SMxxx0
+vendor/lib64/vendor.qti.data.factory@2.0.so|6aaeb2a1065af1edcfcfc3e629bf25468e500972
+vendor/lib64/vendor.qti.data.factory@2.1.so|55ac2c0fedb0a3d63ca19a0e5c2b29c151d0b145
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
@@ -621,6 +622,10 @@ vendor/lib64/libqtikeymaster4.so
 # Keystore
 vendor/lib64/libspcom.so
 
+# Latency
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib64/vendor.qti.latency@2.0.so
+
 # Media - from LA.UM.9.1.r1-07300-SMxxx0.0
 vendor/bin/hw/vendor.qti.media.c2@1.0-service|711fc86b6a7768ba844155b61debdda4e291767e
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
@@ -665,6 +670,7 @@ vendor/lib/libstagefrighthw.so|1d034b00a66804b1808ee039ef8940db5eccf4e8
 
 # Misc
 vendor/bin/vppservice
+vendor/etc/init/cnd.rc
 vendor/etc/init/vppservice.rc
 
 # Mlipay
@@ -1111,6 +1117,7 @@ vendor/lib/libwfdmodulehdcpsession.so|56714450f6c8b00b50e67590db3987c0ae0e7ced
 
 
 # WLAN
+-vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnss-daemon
 vendor/lib/libqsap_sdk.so
 vendor/lib64/libqsap_sdk.so
