@@ -19,7 +19,6 @@ ro.bluetooth.library_name=libbluetooth_qti.so
 ro.sf.blurs_are_expensive=1
 
 # Camera
-persist.camera.gyro.disable=0
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 persist.camera.sat.fallback.dist.d=10
 persist.camera.sat.fallback.dist=40
@@ -29,11 +28,6 @@ persist.vendor.camera.enableNCSService=TRUE
 persist.vendor.camera.enableTOFInterface=TRUE
 persist.vendor.camera.mfnrframenum=8
 persist.vendor.camera.multicam=TRUE
-
-# DPM
-persist.vendor.dpm.feature=1
-persist.vendor.dpm.loglevel=0
-persist.vendor.dpm.nsrm.bkg.evt=3955
 
 # Display density
 ro.sf.lcd_density=440
@@ -81,7 +75,6 @@ ro.product.mod_device=cepheus_eea_global
 # Radio
 DEVICE_PROVISIONED=1
 persist.radio.apm_sim_not_pwdn=1
-persist.radio.dynamic_sar=false
 persist.radio.multisim.config=dsds
 persist.radio.NO_STAPA=1
 persist.radio.sar_sar_sensor=true
