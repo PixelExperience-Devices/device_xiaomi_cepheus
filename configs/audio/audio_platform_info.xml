@@ -53,6 +53,7 @@
         <device name="SND_DEVICE_OUT_USB_HEADSET" acdb_id="10012"/>
         <device name="SND_DEVICE_OUT_GAME_USB_HEADSET" acdb_id="10022"/>
         <device name="SND_DEVICE_OUT_USB_HEADPHONES" acdb_id="10012"/>
+        <device name="SND_DEVICE_OUT_BT_A2DP" acdb_id="10012"/>
         <device name="SND_DEVICE_IN_USB_REALIME_LOOPBACK_MIC" acdb_id="10019"/>
         <device name="SND_DEVICE_OUT_USB_HEADSET_KARA" acdb_id="10020"/>
     </acdb_ids>
