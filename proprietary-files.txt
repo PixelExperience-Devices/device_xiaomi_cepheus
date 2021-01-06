@@ -475,9 +475,11 @@ vendor/lib/librmp.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # DRM - Widevine -L1
-vendor/lib64/liboemcrypto.so
-vendor/lib/liboemcrypto.so
 vendor/lib64/libwvhidl.so
+
+# DRM - Widevine -L1 | cepheus-user-10-QKQ1.190825.002-V12.0.3.0.QFAEUXM-release-keys
+vendor/lib/liboemcrypto.so|7a8be0a1b2b6f7441c658dd1a1550510c8c154ee
+vendor/lib64/liboemcrypto.so|b99e70b63bb2fa92fd5660382b6b16e1998968cc
 
 # DSP
 vendor/bin/dspservice
