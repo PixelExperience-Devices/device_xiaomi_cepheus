@@ -443,43 +443,36 @@ vendor/lib64/libdpmqmihal.so
 vendor/bin/qseecomd
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libStDrvInt.so
+vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
+vendor/lib64/libGPreqcancel.so
+vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
+vendor/lib64/libQSEEComAPI.so
 vendor/lib64/librpmb.so
-vendor/lib64/libsecureui.so
-vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libsi.so
+vendor/lib64/libspl.so
 vendor/lib64/libssd.so
-vendor/lib/libQSEEComAPI.so
-vendor/lib/libcpion.so
-vendor/lib/libdrmfs.so
 
 # DRM - Widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib64/libbase64.so
-vendor/lib64/libcpion.so
-vendor/lib64/librmp.so
-vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib/libbase64.so
-vendor/lib/libcppf.so
-vendor/lib/librmp.so
-vendor/lib/mediadrm/libwvdrmengine.so
-
-# DRM - Widevine -L1
 vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
 
 # DRM - Widevine -L1 | cepheus-user-10-QKQ1.190825.002-V12.0.3.0.QFAEUXM-release-keys
-vendor/lib/liboemcrypto.so|7a8be0a1b2b6f7441c658dd1a1550510c8c154ee
 vendor/lib64/liboemcrypto.so|b99e70b63bb2fa92fd5660382b6b16e1998968cc
+widevine.b00:vendor/firmware/widevine.b00|d306b8986e114b8eecf3e18e1bf66d39cdbc9389
+widevine.b01:vendor/firmware/widevine.b01|99e625951ab89be21422c1c630901a1f106be8e6
+widevine.b02:vendor/firmware/widevine.b02|f270abc3c95c975bd200320b3af7bf9b1a52173e
+widevine.b03:vendor/firmware/widevine.b03|517be4e5bed7dd8cafec2b6dcaf0f7a1127d0566
+widevine.b04:vendor/firmware/widevine.b04|9c614f6accd047ae0ac7e99ef99f04afde1175aa
+widevine.b05:vendor/firmware/widevine.b05|706191d55a1433a1c03a9e2571972b6b7400950d
+widevine.b06:vendor/firmware/widevine.b06|4da05c9c81331f41e819674fe09d7fdf19f1e588
+widevine.b07:vendor/firmware/widevine.b07|bb2ca7694e882efa803b2a9dcb6e6a91e6b60eb2
+widevine.mdt:vendor/firmware/widevine.mdt|62652442f67bb24ff574b8a6b9d8a301103cfa71
 
 # DSP
 vendor/bin/dspservice
