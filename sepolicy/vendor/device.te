@@ -1,0 +1,5 @@
+# Fingerprint
+type fingerprint_device, dev_type;
+
+# Sound
+type sound_device, dev_type;

@@ -1,5 +1,25 @@
 # Allow hal_bluetooth_default to read files in vendor_wifi_vendor_data_file
-allow hal_bluetooth_default vendor_wifi_vendor_data_file:file { open read };
+r_dir_file(hal_bluetooth_default, vendor_wifi_vendor_data_file)
 
-# Allow hal_bluetooth_default to access /dev/binderfs/hwbinder
-allow hal_bluetooth_default binderfs:chr_file { read write open ioctl map };
+# Allow hal_bluetooth_default to read bluetooth_data_file
+allow hal_bluetooth_default vendor_data_file:file r_file_perms;
+
+# Allow hal_bluetooth_default to access bt firmware
+allow hal_bluetooth_default vendor_bt_data_file:dir create_dir_perms;
+allow hal_bluetooth_default vendor_bt_data_file:file create_file_perms;
+
+# Add bt_channel_avoidance HIDL
+add_hwservice(hal_bluetooth_default, hal_bt_channel_avoidance_hwservice)
+allow hal_bluetooth_default hal_bt_channel_avoidance_hwservice:hwservice_manager find;
+
+# Allow bluetooth to get incremental_prop
+get_prop(bluetooth, incremental_prop)
+
+# Allow bluetooth to read proc filesystem
+allow bluetooth proc_filesystems:file r_file_perms;
+
+userdebug_or_eng(`
+  diag_use(hal_bluetooth_default)
+');
+# Ignore in user builds
+dontaudit hal_bluetooth_default vendor_diag_device:chr_file rw_file_perms;

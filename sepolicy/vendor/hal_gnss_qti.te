@@ -1,0 +1,7 @@
+userdebug_or_eng(`
+  diag_use(vendor_hal_gnss_qti)
+  get_prop(vendor_hal_gnss_qti, vendor_pd_locater_dbg_prop)
+')
+# Ignore in user builds
+dontaudit vendor_hal_gnss_qti vendor_diag_device:chr_file rw_file_perms;
+dontaudit vendor_hal_gnss_qti vendor_pd_locater_dbg_prop:file r_file_perms;

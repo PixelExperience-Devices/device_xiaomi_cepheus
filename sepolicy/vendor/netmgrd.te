@@ -1,1 +1,5 @@
-allow vendor_netmgrd self:capability { sys_admin };
+userdebug_or_eng(`
+  diag_use(vendor_netmgrd)
+')
+# Ignore in user builds
+dontaudit vendor_netmgrd vendor_diag_device:chr_file rw_file_perms;

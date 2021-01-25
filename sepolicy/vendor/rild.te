@@ -1,3 +1,6 @@
-allow rild vendor_file:file ioctl;
-set_prop(rild, vendor_radio_prop)
+# Ignore in user builds
+dontaudit rild vendor_diag_device:chr_file rw_file_perms;
+dontaudit rild vendor_pd_locater_dbg_prop:file r_file_perms;
+
+# Allow rild to get default prop
 get_prop(rild, default_prop)

@@ -1,4 +1,0 @@
-allow vendor_qti_init_shell proc_sched_energy_aware:file { write open };
-allow vendor_qti_init_shell sysfs:file { write };
-allow vendor_qti_init_shell sysfs_loop:file { write };
-dontaudit vendor_qti_init_shell self:capability dac_override;

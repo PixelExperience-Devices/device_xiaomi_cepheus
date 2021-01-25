@@ -1,33 +1,38 @@
 # Camera
-vendor.camera.                     u:object_r:vendor_camera_prop:s0
-camera.sensor.rearMain.fuseID      u:object_r:vendor_camera_prop:s0
-camera.sensor.frontAux.fuseID      u:object_r:vendor_camera_prop:s0
-camera.sensor.frontMain.fuseID     u:object_r:vendor_camera_prop:s0
-camera.sensor.rearUltra.fuseID     u:object_r:vendor_camera_prop:s0
-camera.sensor.rearTele.fuseID      u:object_r:vendor_camera_prop:s0
-persist.camera.                    u:object_r:vendor_camera_prop:s0
+vendor.camera.                          u:object_r:vendor_camera_prop:s0
+camera.sensor.rearMain.fuseID           u:object_r:vendor_camera_prop:s0
+camera.sensor.frontAux.fuseID           u:object_r:vendor_camera_prop:s0
+camera.sensor.frontMain.fuseID          u:object_r:vendor_camera_prop:s0
+camera.sensor.rearUltra.fuseID          u:object_r:vendor_camera_prop:s0
+camera.sensor.rearTele.fuseID           u:object_r:vendor_camera_prop:s0
+persist.camera.                         u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.                       u:object_r:vendor_camera_prop:s0
+ro.camera.                              u:object_r:vendor_camera_prop:s0
 
 # Fingerprint
-persist.vendor.sys.fp.             u:object_r:vendor_fp_prop:s0
-ro.boot.fpsensor                   u:object_r:vendor_fp_prop:s0
-ro.hardware.fp                     u:object_r:vendor_fp_prop:s0
-vendor.fps_hal.                    u:object_r:vendor_fp_prop:s0
-sys.panel.display                  u:object_r:vendor_fp_prop:s0
+persist.vendor.sys.fp.                  u:object_r:vendor_fp_prop:s0
+ro.boot.fpsensor                        u:object_r:vendor_fp_prop:s0
+ro.hardware.fp                          u:object_r:vendor_fp_prop:s0
+vendor.fps_hal.                         u:object_r:vendor_fp_prop:s0
+sys.panel.display                       u:object_r:vendor_fp_prop:s0
+
+# Insmod
+vendor.all.modules.ready                u:object_r:vendor_device_prop:s0
+vendor.all.devices.ready                u:object_r:vendor_device_prop:s0
 
 # Mlipay
 persist.vendor.sys.pay.                 u:object_r:mlipay_prop:s0
 persist.vendor.sys.provision.status     u:object_r:mlipay_prop:s0
-ro.hardware.fp.fod			            u:object_r:mlipay_prop:s0
+ro.hardware.fp.fod                      u:object_r:mlipay_prop:s0
 
-# Insmod
-vendor.all.modules.ready           u:object_r:vendor_device_prop:s0
-vendor.all.devices.ready           u:object_r:vendor_device_prop:s0
+# Pixel PowerHAL
+vendor.powerhal.                        u:object_r:vendor_power_prop:s0
 
-# Power
-vendor.powerhal.           u:object_r:vendor_power_prop:s0
+# Sensor
+persist.sensor.                         u:object_r:persist_sensors_prop:s0
 
-# Sensors
-persist.sensor.                    u:object_r:persist_sensors_prop:s0
+#Thermal
+vendor.thermal.config              u:object_r:vendor_thermal_prop:s0
 
 # Xiaomi thermal daemon
-sys.thermal.                       u:object_r:thermal_normal_prop:s0
+vendor.sys.thermal.                     u:object_r:thermal_normal_prop:s0

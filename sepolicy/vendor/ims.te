@@ -1,2 +1,5 @@
-allow vendor_ims vendor_diag_device:chr_file { read write };
-allow vendor_ims vendor_diag_device:chr_file { open };
+userdebug_or_eng(`
+  diag_use(vendor_ims)
+')
+# Ignore in user builds
+dontaudit vendor_ims vendor_diag_device:chr_file rw_file_perms;

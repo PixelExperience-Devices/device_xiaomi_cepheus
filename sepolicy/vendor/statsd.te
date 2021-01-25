@@ -1,2 +1,0 @@
-# Allow statsd to access /dev/binderfs/
-allow statsd binderfs:chr_file { read write open ioctl map };

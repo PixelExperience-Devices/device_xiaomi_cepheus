@@ -1,8 +1,7 @@
 r_dir_file(vendor_sensors, vendor_sysfs_graphics)
 
-allow vendor_sensors vendor_diag_device:chr_file { read write open ioctl };
-allow vendor_sensors vendor_sysfs_graphics:dir { search };
-allow vendor_sensors vendor_sysfs_graphics:file { read open getattr };
-
-allow vendor_sensors sysfs_msm_subsys:dir { search };
-allow vendor_sensors sysfs_msm_subsys:file { read open getattr };
+userdebug_or_eng(`
+  diag_use(vendor_sensors)
+');
+# Ignore in user builds
+dontaudit vendor_sensors vendor_diag_device:chr_file rw_file_perms;

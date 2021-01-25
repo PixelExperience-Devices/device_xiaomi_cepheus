@@ -1,0 +1,19 @@
+dontaudit {
+  bootanim
+  hal_graphics_allocator_default
+  hal_sensors_default
+  platform_app
+  system_app
+  surfaceflinger
+  vendor_sensors
+} sysfs_msm_subsys:dir search;
+
+# Ignore harmless QCOM denials
+dontaudit gmscore_app {
+  bt_firmware_file
+  firmware_file
+}:filesystem getattr;
+
+# Ignore in user builds
+dontaudit traced_probes debugfs_tracing_debug:file rw_file_perms;
+dontaudit hal_atrace_default debugfs_tracing_debug:file rw_file_perms;

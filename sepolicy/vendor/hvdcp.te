@@ -1,1 +1,2 @@
-allow vendor_hvdcp self:capability { sys_admin };
+allow vendor_hvdcp kmsg_device:chr_file rw_file_perms;
+allow vendor_hvdcp vendor_sysfs_usb_supply:file create_file_perms;

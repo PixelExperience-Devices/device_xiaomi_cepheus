@@ -1,2 +1,0 @@
-allow netutils_wrapper init:unix_stream_socket { read write }; 
-dontaudit netutils_wrapper self:capability sys_admin;

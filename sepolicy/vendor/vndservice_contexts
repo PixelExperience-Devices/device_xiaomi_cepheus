@@ -1,2 +1,5 @@
+# Remosaic
 android.IRemosaicDaemon                        u:object_r:remosaic_daemon_service:s0
-power.stats-vendor                             u:object_r:power_stats_service:s0
+
+# Pixel Powerstats
+power.stats-vendor			       u:object_r:power_stats_service:s0

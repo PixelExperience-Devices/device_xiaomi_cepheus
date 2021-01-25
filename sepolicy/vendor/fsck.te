@@ -1,0 +1,4 @@
+dontaudit fsck self:capability {
+  dac_override
+  dac_read_search
+};

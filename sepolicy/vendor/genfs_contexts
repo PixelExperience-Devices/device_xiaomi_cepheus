@@ -1,35 +1,38 @@
-# Lights
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/white u:object_r:vendor_sysfs_graphics:s0
+# FlickerFree
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable                                                                                  u:object_r:vendor_sysfs_graphics:s0
 
-# Wireless charger
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless u:object_r:vendor_sysfs_battery_supply:s0
-genfscon sysfs /devices/platform/soc/890000.i2c/i2c-0/0-003b/power_supply/idt u:object_r:vendor_sysfs_battery_supply:s0
+# HBM
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/hbm                                                                                               u:object_r:vendor_sysfs_graphics:s0
 
 # Insmod
-genfscon sysfs /kernel/boot_cdsp/boot                                           u:object_r:sysfs_msm_boot:s0
-genfscon sysfs /kernel/boot_slpi/boot                                           u:object_r:sysfs_msm_boot:s0
+genfscon sysfs /kernel/boot_cdsp/boot                                                                                                                               u:object_r:sysfs_msm_boot:s0
+genfscon sysfs /kernel/boot_slpi/boot                                                                                                                               u:object_r:sysfs_msm_boot:s0
+genfscon sysfs /bus/platform/devices/1d84000.ufshc/clkscale_enable                                                                                                  u:object_r:sysfs_scsi_devices_0000:s0
 
-# PowerHal
-genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp                      u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/2c00000.qcom,kgsl-3d0                      u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,gpubw                             u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq                     u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw                   u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw                   u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-cpu-l3-lat                   u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-cpu-l3-lat                   u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable               u:object_r:sysfs_scsi_devices_0000:s0
-genfscon sysfs /devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable       u:object_r:sysfs_scsi_devices_0000:s0
-genfscon proc /sys/kernel/sched_energy_aware                                    u:object_r:proc_sched_energy_aware:s0
+# Lights
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/white                                   u:object_r:vendor_sysfs_graphics:s0
 
-# Powerstats
-genfscon sysfs /bus/iio/devices                                                 u:object_r:sysfs_iio_devices:s0
-genfscon sysfs /kernel/wlan                                                     u:object_r:sysfs_msm_wlan:s0
-genfscon sysfs /power/system_sleep/stats                                        u:object_r:sysfs_power_stats:s0
-genfscon sysfs /power/rpmh_stats/master_stats                                   u:object_r:sysfs_power_stats:s0
-genfscon sysfs /kernel/wlan/power_stats                                         u:object_r:sysfs_power_stats:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:vadc@3100/iio:device1/name           u:object_r:sysfs_power_stats:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm8150l@4:vadc@3100/iio:device2/name           u:object_r:sysfs_power_stats:s0
+# Pixel PowerHal
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp                                                                                                          u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/2c00000.qcom,kgsl-3d0                                                                                                          u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,gpubw                                                                                                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq                                                                                                         u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw                                                                                                       u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw                                                                                                       u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-cpu-l3-lat                                                                                                       u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-cpu-l3-lat                                                                                                       u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable                                                                                                   u:object_r:sysfs_scsi_devices_0000:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable                                                                                           u:object_r:sysfs_scsi_devices_0000:s0
+genfscon proc /sys/kernel/sched_energy_aware                                                                                                                        u:object_r:proc_sched_energy_aware:s0
+
+# Pixel Powerstats
+genfscon sysfs /power/system_sleep/stats                                                                                                                            u:object_r:sysfs_power_stats:s0
+genfscon sysfs /power/rpmh_stats/master_stats                                                                                                                       u:object_r:sysfs_power_stats:s0
+genfscon sysfs /kernel/wifi/power_stats                                                                                                                             u:object_r:sysfs_power_stats:s0
+genfscon sysfs /bus/iio/devices                                                                                                                                     u:object_r:sysfs_iio_devices:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:vadc@3100/iio:device0/name                                   u:object_r:sysfs_power_stats_ignore:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:vadc@3100/iio:device1/name                                  u:object_r:sysfs_power_stats_ignore:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm8150l@4:vadc@3100/iio:device2/name                                  u:object_r:sysfs_power_stats_ignore:s0
 
 # Wakeup source stats
 genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/wakeup                                                                                                     u:object_r:sysfs_wakeup:s0
@@ -39,7 +42,7 @@ genfscon sysfs /devices/platform/soc/890000.i2c/i2c-0/0-003b/power_supply/idt/wa
 genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/wakeup                                                                                                    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a84000.i2c/i2c-1/1-0028/wakeup                                                                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c80000.i2c/i2c-2/2-0049/wakeup                                                                                                 u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless/wakeup38               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless/wakeup37               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/171c0000.slim/tavil-slim-pgd/wakeup                                                                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:gpio_keys/wakeup                                                                                                           u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/vendor/vendor:extcon_usb1/wakeup                                                                                                   u:object_r:sysfs_wakeup:s0
@@ -61,3 +64,6 @@ genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup                           
 genfscon sysfs /devices/virtual/misc/msm_wma/wakeup                                                                                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup                                                                                                              u:object_r:sysfs_wakeup:s0
 
+# Wireless charger
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless                        u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/890000.i2c/i2c-0/0-003b/power_supply/idt                                                                                       u:object_r:vendor_sysfs_battery_supply:s0

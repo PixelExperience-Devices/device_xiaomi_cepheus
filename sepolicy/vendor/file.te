@@ -1,13 +1,34 @@
-type sysfs_device_info, sysfs_type, fs_type;
+# Adsp
+type public_adsprpcd_file, file_type;
+
+# Audio
+type audio_socket, file_type;
+
+# Define file types used by pixel powerhal and powerstats
+type sysfs_iio_devices, fs_type, sysfs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_scsi_devices_0000, sysfs_type, fs_type;
+type sysfs_msm_wlan, sysfs_type, fs_type;
 type proc_sched_energy_aware, proc_type, fs_type;
+
+# Camera
+type camera_persist_file, file_type, vendor_persist_type;
+
+# debugfs wlan
+type debugfs_wlan, debugfs_type, fs_type;
+
+# Fingerprint
+type fingerprint_data_file, data_file_type, file_type;
 
 # Insmod
 type sysfs_msm_boot, fs_type, sysfs_type;
 
-# Powerstats
-type sysfs_iio_devices, fs_type, sysfs_type;
-type sysfs_msm_subsys, sysfs_type, fs_type;
+# IR
+type ir_spi_device, dev_type, file_type;
+
+# Pixel Powerstats
 type sysfs_power_stats, sysfs_type, fs_type;
 type sysfs_power_stats_ignore, sysfs_type, fs_type;
-type sysfs_scsi_devices_0000, sysfs_type, fs_type;
-type sysfs_msm_wlan, sysfs_type, fs_type;
+
+# Thermal
+type thermal_data_file, file_type, data_file_type;

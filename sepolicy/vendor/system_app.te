@@ -1,15 +1,7 @@
-allow system_app sysfs_dm:file rw_file_perms;
-allow system_app vendor_sysfs_graphics:file { read open getattr };
-allow system_app default_android_service:service_manager { add find };
+r_dir_file(system_app, sysfs_zram)
 
-# Battery Health
-allow system_app vendor_sysfs_battery_supply:dir { search };
-allow system_app vendor_sysfs_battery_supply:file { read };
-allow system_app vendor_sysfs_battery_supply:file { open };
-allow system_app vendor_sysfs_battery_supply:file { getattr };
+# Allow system_app to write graphics nodes
+allow system_app vendor_sysfs_graphics:file rw_file_perms;
 
-allow system_app vendor_sysfs_kgsl:dir search;
-allow system_app vendor_sysfs_kgsl:file { getattr open read };
-
-allow system_app sysfs_device_info:lnk_file { read };
-allow system_app sysfs_device_info:file r_file_perms;
+# Allow system_app to write thermal config
+allow system_app sysfs_thermal:file rw_file_perms;

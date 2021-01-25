@@ -1,2 +1,0 @@
-# Allow access to /dev/binderfs/hwbinder
-allow hwservicemanager binderfs:chr_file { read write open ioctl map };

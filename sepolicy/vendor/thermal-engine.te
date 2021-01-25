@@ -1,2 +1,0 @@
-allow vendor_thermal-engine self:capability { sys_admin };
-allow vendor_thermal-engine sysfs_msm_subsys:dir { search };

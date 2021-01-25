@@ -8,19 +8,15 @@ allow init-insmod-sh vendor_toolbox_exec:file rx_file_perms;
 # Set the vendor.all.modules.ready property
 set_prop(init-insmod-sh, vendor_device_prop)
 
-# Allow insmod
+# Allow insmod to load modules
 allow init-insmod-sh self:capability sys_module;
-
-allow init-insmod-sh self:capability sys_admin;
-
 allow init-insmod-sh vendor_file:system module_load;
-
-allow init-insmod-sh vendor_sysfs_boot_adsp:file rw_file_perms;
 
 allow init-insmod-sh kernel:key search;
 
 allow init-insmod-sh {
   sysfs_msm_boot
+  vendor_sysfs_boot_adsp
 }:file w_file_perms;
 
 # modprobe need proc_modules and proc_cmdline

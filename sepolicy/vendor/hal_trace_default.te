@@ -1,0 +1,2 @@
+# Ignore in user builds
+dontaudit traced_probes debugfs_tracing_debug:file rw_file_perms;
