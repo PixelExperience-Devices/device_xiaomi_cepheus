@@ -37,6 +37,10 @@
 #define FOD_STATUS_ON 1
 #define FOD_STATUS_OFF 0
 
+#define DIMLAYER_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm"
+#define DIMLAYER_HBM_ON 1
+#define DIMLAYER_HBM_OFF 0
+
 #define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui"
 
 #define FOD_SENSOR_X 455
@@ -130,10 +134,12 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
+    set(DIMLAYER_HBM_PATH, DIMLAYER_HBM_ON);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
+    set(DIMLAYER_HBM_PATH, DIMLAYER_HBM_OFF);
     return Void();
 }
 
