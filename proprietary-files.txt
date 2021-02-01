@@ -54,7 +54,6 @@ vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
-vendor/lib/libadpcmdec.so
 vendor/lib/libaudcal.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioconfigstore.so
@@ -66,15 +65,10 @@ vendor/lib/libcapiv2vop.so
 vendor/lib/libcomprcapture.so
 vendor/lib/libdrc.so
 vendor/lib/libexthwplugin.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
 vendor/lib/libhdmiedid.so
 vendor/lib/libhdmipassthru.so
 vendor/lib/libhfp.so
 vendor/lib/libqtigef.so
-vendor/lib/libsmwrapper.so
 vendor/lib/libspkrprot.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libtinycompress.so
@@ -101,7 +95,6 @@ vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 vendor/lib/hw/audio.primary.msmnile.so
 
 # Audio Hardware
-vendor/lib/hw/sound_trigger.primary.msmnile.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 
