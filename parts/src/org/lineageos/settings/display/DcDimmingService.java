@@ -63,6 +63,7 @@ public class DcDimmingService extends Service {
     public static final int MODE_AUTO_TIME = 1;
     public static final int MODE_AUTO_BRIGHTNESS = 2;
     public static final int MODE_AUTO_FULL = 3;
+    private static final boolean DEBUG = false;
 
     private final Handler mHandler = new Handler();
     private SettingsObserver mSettingsObserver;
@@ -110,7 +111,7 @@ public class DcDimmingService extends Service {
         } catch (ParseException e) {
         }
         updateState(mDcOn);
-        Log.d(TAG, "DcDimmingService started");
+        if (DEBUG) Log.d(TAG, "DcDimmingService started");
     }
 
     public class LocalBinder extends Binder {
@@ -121,27 +122,25 @@ public class DcDimmingService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        Log.d(TAG, "DcDimmingService bound");
+        if (DEBUG) Log.d(TAG, "DcDimmingService bound");
         return mBinder;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "DcDimmingService destroyed");
+        if (DEBUG) Log.d(TAG, "DcDimmingService destroyed");
     }
 
     private final Runnable mBrightnessRunnable = new Runnable() {
         @Override
         public void run() {
             updateBrightnessAvg();
-            Log.d(TAG, "DcDimming mBrightnessRunnable mBrightnessAvg:" + mBrightnessAvg + " mBrightnessThreshold:" + mBrightnessThreshold);
+            if (DEBUG) Log.d(TAG, "DcDimming mBrightnessRunnable mBrightnessAvg:" + mBrightnessAvg + " mBrightnessThreshold:" + mBrightnessThreshold);
             if (!mHandler.hasCallbacks(mBrightnessRunnable)) {
                 mHandler.postDelayed(mBrightnessRunnable, 10000);
             }
-            if (!mScreenOff) {
-                updateState(mDcOn);
-            }
+            updateState(mDcOn);
         }
     };
 
@@ -151,6 +150,7 @@ public class DcDimmingService extends Service {
             calendar = Calendar.getInstance();
             mHour = calendar.get(Calendar.HOUR_OF_DAY);
             mMinute = calendar.get(Calendar.MINUTE);
+            if (DEBUG) Log.d(TAG, "DcDimming mTimeRunnable");
             try {
                 timeRunnable = inputParser.parse(mHour + ":" + mMinute);
             } catch (ParseException e) {
@@ -158,9 +158,7 @@ public class DcDimmingService extends Service {
             if (!mHandler.hasCallbacks(mTimeRunnable)) {
                 mHandler.postDelayed(mTimeRunnable, 21000);
             }
-            if (!mScreenOff) {
-                updateState(mDcOn);
-            }
+            updateState(mDcOn);
         }
     };
 
@@ -168,19 +166,19 @@ public class DcDimmingService extends Service {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (Intent.ACTION_SCREEN_ON.equals(intent.getAction())) {
-                Log.d(TAG, "DcDimming mIntentReceiver ACTION_SCREEN_ON");
+                if (DEBUG) Log.d(TAG, "DcDimming mIntentReceiver ACTION_SCREEN_ON");
                 mScreenOff = false;
                 if (!mHandler.hasCallbacks(mBrightnessRunnable)) {
-                    mHandler.postDelayed(mBrightnessRunnable, 500);
+                    mHandler.postDelayed(mBrightnessRunnable, 2500);
                 }
                 if (!mHandler.hasCallbacks(mTimeRunnable)) {
-                    mHandler.postDelayed(mTimeRunnable, 700);
+                    mHandler.postDelayed(mTimeRunnable, 5000);
                 }
                 mHandler.postDelayed(() -> {
                     updateState(mDcOn);
                 }, 300);
             } else if (Intent.ACTION_SCREEN_OFF.equals(intent.getAction())) {
-                Log.d(TAG, "DcDimming mIntentReceiver ACTION_SCREEN_OFF");
+                if (DEBUG) Log.d(TAG, "DcDimming mIntentReceiver ACTION_SCREEN_OFF");
                 mScreenOff = true;
                 mHandler.removeCallbacks(mBrightnessRunnable);
                 mHandler.removeCallbacks(mTimeRunnable);
@@ -200,13 +198,17 @@ public class DcDimmingService extends Service {
                         mHandler.postDelayed(mTimeRunnable, 21000);
                     }
                     mDcOn = autoEnableDC();
+                    mHandler.removeCallbacks(mBrightnessRunnable);
                     writeNode(mDcOn);
+                    break;
                 case MODE_AUTO_BRIGHTNESS:
                     if (!mHandler.hasCallbacks(mBrightnessRunnable)) {
                         mHandler.postDelayed(mBrightnessRunnable, 10000);
                     }
                     mDcOn = autoEnableDC();
+                    mHandler.removeCallbacks(mTimeRunnable);
                     writeNode(mDcOn);
+                    break;
                 case MODE_AUTO_FULL:
                     if (!mHandler.hasCallbacks(mTimeRunnable)) {
                         mHandler.postDelayed(mTimeRunnable, 21000);
@@ -216,6 +218,7 @@ public class DcDimmingService extends Service {
                     }
                     mDcOn = autoEnableDC();
                     writeNode(mDcOn);
+                    break;
             }
         } else {
             mHandler.removeCallbacks(mBrightnessRunnable);
@@ -226,7 +229,7 @@ public class DcDimmingService extends Service {
     }
 
     public void writeNode(boolean enable) {
-        Log.d(TAG, "DcDimming writeNode enable:" + enable);
+        if (DEBUG) Log.d(TAG, "DcDimming writeNode enable:" + enable);
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new FileWriter(mDcDimmingNode));
@@ -318,7 +321,7 @@ public class DcDimmingService extends Service {
         final long ident = Binder.clearCallingIdentity();
         try {
             if (mAutoMode != mode) {
-                Log.d(TAG, "DcDimming setAutoMode(" + mode + ")");
+                if (DEBUG) Log.d(TAG, "DcDimming setAutoMode(" + mode + ")");
                 mAutoMode = mode;
                 Settings.System.putIntForUser(mContext
                                 .getContentResolver(),
@@ -332,6 +335,7 @@ public class DcDimmingService extends Service {
     }
 
     public void setDcDimming(boolean enable) {
+    	if (DEBUG) Log.d(TAG, "DcDimming setDcDimming(" + enable + ")");
         final long ident = Binder.clearCallingIdentity();
         try {
             Settings.System.putIntForUser(mContext.getContentResolver(),
@@ -386,6 +390,7 @@ public class DcDimmingService extends Service {
     }
 
     public void setBrightnessThreshold(int thresh) {
+    	if (DEBUG) Log.d(TAG, "DcDimming setBrightnessThreshold(" + thresh + ")");
         mBrightnessThreshold = thresh;
         if (!mScreenOff) {
             final long ident = Binder.clearCallingIdentity();
@@ -462,11 +467,8 @@ public class DcDimmingService extends Service {
             mBrightness = Settings.System.getIntForUser(getContentResolver(),
                     Settings.System.SCREEN_BRIGHTNESS, 0,
                     UserHandle.USER_CURRENT);
-            Log.d(TAG, "DcDimming onChange brightness:" + mBrightness);
+            if (DEBUG) Log.d(TAG, "DcDimming onChange brightness:" + mBrightness);
             mBrightnessMap.put(mBrightness, currTime);
-            if (mBrightnessMap.size() == 10) {
-                updateBrightnessAvg();
-            }
         }
     }
 }
