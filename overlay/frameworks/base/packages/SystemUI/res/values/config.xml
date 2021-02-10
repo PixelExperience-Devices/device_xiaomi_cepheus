@@ -41,4 +41,18 @@
 
     <!-- Allow device to use unordinary cutout overlays -->
     <bool name="config_customCutout">true</bool>
+
+    <!-- Default rounded corner curve (a Bezier). Must match (the curved path in) rounded.xml.
+         Note that while rounded.xml includes the entire path (including the horizontal and vertical
+         corner edges), this pulls out just the curve.
+     -->
+    <string name="config_rounded_mask" translatable="false">M 118.88 0.00 C 92.62 0.73 65.04 3.19 41.99 16.95 C 25.47 26.58 13.97 43.17 8.22 61.18 C 2.11 79.38 0.60 98.71 0.00 118.88</string>
+
+    <!-- Respect drawable/rounded.xml intrinsic size for multiple radius corner path customization -->
+    <bool name="config_roundedCornerMultipleRadius">true</bool>
+
+    <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
+    <dimen name="config_rounded_mask_size">130px</dimen>
+    <dimen name="config_rounded_mask_size_top">120px</dimen>
+    <dimen name="config_rounded_mask_size_bottom">130px</dimen>
 </resources>
