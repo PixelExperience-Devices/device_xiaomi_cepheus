@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.ContentObserver;
+import android.hardware.display.DisplayManager;
 import android.os.Binder;
 import android.os.IBinder;
 import android.os.Handler;
@@ -28,6 +29,7 @@ import android.os.SystemClock;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.ArrayMap;
+import android.view.Display;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -75,12 +77,13 @@ public class DcDimmingService extends Service {
     private Date timeRunnable, startTime, endTime;
     private Calendar calendar;
     private SimpleDateFormat inputParser;
+    private Display mDisplay;
 
     @Override
     public void onCreate() {
         super.onCreate();
         mContext = this;
-
+        mDisplay = mContext.getSystemService(DisplayManager.class).getDisplay(Display.DEFAULT_DISPLAY);
         mDcDimmingNode = getString(R.string.dc_dimming_node);
         mSettingsObserver = new SettingsObserver(mHandler);
         final IntentFilter intentFilter =
@@ -229,7 +232,13 @@ public class DcDimmingService extends Service {
     }
 
     public void writeNode(boolean enable) {
-        if (DEBUG) Log.d(TAG, "DcDimming writeNode enable:" + enable);
+        String nodeVal = readNode();
+        boolean isDisplayOn = mDisplay.getState() == Display.STATE_ON;
+        if (DEBUG) Log.d(TAG, "DcDimming DisplayON: " + isDisplayOn);
+        if (nodeVal == null || !isDisplayOn) {
+            return;
+        }
+        if (DEBUG) Log.d(TAG, "DcDimming writeNode enable: " + enable);
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new FileWriter(mDcDimmingNode));
