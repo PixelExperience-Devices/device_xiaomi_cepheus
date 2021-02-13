@@ -19,10 +19,4 @@
         orientation. If zero, the value of rounded_corner_radius is used. -->
     <dimen name="rounded_corner_content_padding">16dp</dimen>
 
-    <!-- Custom cutout overlay view sizes -->
-    <dimen name="config_customCutoutTopWidth">144.0px</dimen>
-    <dimen name="config_customCutoutTopHeight">144.0px</dimen>
-    <dimen name="config_customCutoutBottomWidth">154.0px</dimen>
-    <dimen name="config_customCutoutBottomHeight">154.0px</dimen>
-
 </resources>

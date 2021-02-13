@@ -11,15 +11,6 @@
      limitations under the License.
 -->
 <resources>
-     <!-- Battery Health -->
-    <bool name="config_supportBatteryHealth">true</bool>
-    <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
-    <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
-    <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
-
     <!-- Use only if devices have variable intensity support for haptics-->
     <bool name="config_vibration_supports_multiple_intensities">true</bool>
-     
-     <!-- Screen off FOD -->
-    <bool name="config_supportScreenOffFod">true</bool>
 </resources>

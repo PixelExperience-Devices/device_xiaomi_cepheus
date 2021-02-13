@@ -1013,9 +1013,6 @@
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
-    <!-- Enable pocket mode -->
-    <bool name="config_proxiSensorWakupCheck">true</bool> 
-
     <!-- Specifies the maximum burn-in offset displacement from the center. If -1, no maximum value
          will be used. -->
     <integer name="config_burnInProtectionMaxRadius">-1</integer>
