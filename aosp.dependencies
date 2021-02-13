@@ -22,12 +22,6 @@
    "branch"     : "master"
  },
  {
-   "repository" : "EcrosoftXiao/hardware-qcom-display-caf-sm8150",
-   "target_path": "hardware/qcom-caf/sm8150/display",
-   "remote"     : "github",
-   "branch"     : "11.0"
- },
- {
    "repository" : "kdrag0n/proton-clang",
    "target_path": "prebuilts/clang/host/linux-x86/clang-proton",
    "branch"     : "master"
