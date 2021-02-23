@@ -677,6 +677,20 @@
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout"> M 96.00 0.00 C 85.46 0.97 73.83 3.18 66.54 11.54 C 58.13 21.04 57.46 34.46 51.13 45.11 C 41.62 62.37 22.93 73.78 3.33 75.00 L -2.45 75.00 C -24.41 74.56 -45.35 60.64 -54.50 40.43 C -59.86 30.02 -60.34 17.60 -69 9.56 C -76.11 2.71 -87.68 1.00 -96.00 0.00 L 96.00 0.00 Z</string>
 
+    <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
+         one single bounding rect per device edge to the app via
+         {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
+         appearance of the cutout as much as possible, and may be smaller than
+         config_mainBuiltInDisplayCutout
+         -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
+        M -70,0
+        V 77
+        H 70
+        V 0
+        Z
+    </string>
+
     <!-- Whether the display cutout region of the main built-in display should be forced to
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
         -->
