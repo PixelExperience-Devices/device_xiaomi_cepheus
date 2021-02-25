@@ -643,7 +643,7 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
 # Listen - from LA.UM.9.1.r1-07300-SMxxx0.0
-vendor/lib/hw/sound_trigger.primary.msmnile.so|b17b288016371b1b7b00cc860a8fde1972b1419d
+#vendor/lib/hw/sound_trigger.primary.msmnile.so|b17b288016371b1b7b00cc860a8fde1972b1419d
 vendor/lib/libadpcmdec.so|491fedbdcf9a395340ce4142c277156c0056bcf8
 vendor/lib/libgcs-calwrapper.so|add1a884b96057164966b67084ef8c2b4d88510e
 vendor/lib/libgcs-ipc.so|98b9061ad73f9387546e8e35eca80cb5bd1ab5eb
