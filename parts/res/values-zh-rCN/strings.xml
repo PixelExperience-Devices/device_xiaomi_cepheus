@@ -34,4 +34,78 @@
     <string name="thermal_gaming">游戏</string>
     <string name="thermal_streaming">视频</string>
 
+    <!-- Device specific settings -->
+    <string name="device_settings_app_name">高级设置</string>
+
+    <!-- Ambient display settings -->
+    <string name="ambient_display_title">环境显示</string>
+    <string name="ambient_display_enable_summary">收到通知时唤醒屏幕</string>
+
+    <!-- Dirac settings -->
+    <string name="dirac_title">米音</string>
+    <string name="dirac_summary">使用米音提升音质</string>
+    <string name="dirac_headset_title">耳机类型设置</string>
+    <string name="dirac_preset_title">请选择预设效果</string>
+
+    <!-- Dirac settings: Headset types -->
+    <string name="dirac_headset_default">无</string>
+    <string name="dirac_headset_earbuds">灵动耳塞式</string>
+    <string name="dirac_headset_in_ear_2013">灵悦入耳式</string>
+    <string name="dirac_headset_piston_1">小米活塞1</string>
+    <string name="dirac_headset_general">通用耳塞式</string>
+    <string name="dirac_headset_general_inear">通用入耳式</string>
+    <string name="dirac_headset_piston_basic">小米活塞简装版</string>
+    <string name="dirac_headset_piston_2">小米活塞2</string>
+    <string name="dirac_headset_piston_standard">小米活塞标准版</string>
+    <string name="dirac_headset_headphone">小米头戴式</string>
+    <string name="dirac_headset_piston_youth">小米活塞青春版</string>
+    <string name="dirac_headset_piston_color">小米活塞炫彩版</string>
+    <string name="dirac_headset_in_ear">小米圈铁</string>
+    <string name="dirac_headset_capsule">小米胶囊</string>
+    <string name="dirac_headset_in_ear_pro">小米圈铁Pro</string>
+    <string name="dirac_headset_comfort">小米头戴轻松版</string>
+    <string name="dirac_headset_reduction_noise">小米降噪 typeC</string>
+    <string name="dirac_headset_cancelling">小米降噪 3.5mm</string>
+    <string name="dirac_headset_half_in_ear">小米半入耳式</string>
+    <string name="dirac_headset_in_ear2">小米圈铁2</string>
+    <string name="dirac_headset_earphone_basic">小米耳机基本款</string>
+    <string name="dirac_headset_earphone">小米耳机</string>
+
+    <!-- Dirac settings: Equalizer presets -->
+    <string name="dirac_preset_default">无</string>
+    <string name="dirac_preset_rock">摇滚</string>
+    <string name="dirac_preset_jazz">爵士</string>
+    <string name="dirac_preset_pop">流行</string>
+    <string name="dirac_preset_classical">古典</string>
+    <string name="dirac_preset_hiphop">嘻哈</string>
+    <string name="dirac_preset_blues">布鲁斯</string>
+    <string name="dirac_preset_electronic">电子音乐</string>
+    <string name="dirac_preset_country">乡村</string>
+    <string name="dirac_preset_dance">舞曲</string>
+    <string name="dirac_preset_metal">金属</string>
+
+    <!-- DC Dimming -->
+    <string name="dc_dimming_enable">开启防闪烁模式</string>
+    <string name="dc_dimming_title">防闪烁模式</string>
+    <string name="dc_dimming_summary">全局直流调光，低亮度下防闪烁护眼</string>
+    <string name="dc_dimming_summary_on">开启</string>
+    <string name="dc_dimming_summary_off">关闭</string>
+    <string name="dc_dimming_info">低亮度下防闪烁护眼，但是可能会降低图像质量</string>
+    <string name="dc_dimming_auto_mode_title">设定时间</string>
+    <string name="dc_dimming_mode_never">无</string>
+    <string name="dc_dimming_mode_time">在设定的时间开启</string>
+    <string name="dc_dimming_mode_brightness">当亮度低于阈值时开启</string>
+    <string name="dc_dimming_mode_full">基于时间和亮度</string>
+    <string name="dc_dimming_brightness_title">亮度阈值</string>
+    <string name="dc_dimming_brightness_info">仅当亮度低于阈值时开启DC调光</string>
+    <string name="dc_dimming_off_auto_mode_auto">将会自动开启</string>
+    <string name="dc_dimming_on_auto_mode_auto">将会自动关闭</string>
+    <string name="dc_dimming_start_time">开始时间</string>
+    <string name="dc_dimming_end_time">结束时间</string>
+
+    <!-- Clear Speaker -->
+    <string name="clear_speaker_title">清理扬声器</string>
+    <string name="clear_speaker_summary">播放一段约30秒的音频来清理扬声器</string>
+    <string name="clear_speaker_description">当扬声器被少量灰尘覆盖时，将音量调至最大运行1-2次。\n\n当扬声器充满灰尘时运行2-5次, 同时将扬声器朝下轻轻摇晃您的设备。</string>
+
 </resources>
