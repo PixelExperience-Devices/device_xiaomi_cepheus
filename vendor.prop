@@ -213,5 +213,9 @@ persist.vendor.uspsensor=default
 # Zygote preforking
 persist.device_config.runtime_native.usap_pool_enabled=true
 
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8150
+
 # WiFi
 wifi.aware.interface=wifi-aware0
