@@ -18,11 +18,6 @@
     <!-- Pick-up to wake gesture-->
     <string name="wake_gesture_title">Wake up</string>
     <string name="wake_gesture_summary">Wake up the device instead of pulsing notifications</string>
-
-    <!-- DC dimming settings -->
-    <string name="dc_dimming_enable_title">DC Dimming</string>
-    <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
-    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
  
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>
