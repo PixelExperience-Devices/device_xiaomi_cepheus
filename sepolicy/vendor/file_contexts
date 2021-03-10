@@ -35,6 +35,9 @@
 /dev/ir_spi                                                                                            u:object_r:ir_spi_device:s0
 /dev/lirc0                                                                                             u:object_r:ir_spi_device:s0
 
+# Livedisplay
+/vendor/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.cepheus                                      u:object_r:hal_lineage_livedisplay_qti_exec:s0
+
 # Mlipay
 /vendor/bin/mlipayd@1\.1                                                                               u:object_r:hal_mlipay_default_exec:s0
 
