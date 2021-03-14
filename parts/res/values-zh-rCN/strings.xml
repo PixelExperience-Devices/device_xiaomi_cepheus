@@ -22,6 +22,7 @@
     <!-- DC Dimming settings -->
     <string name="dc_dimming_enable_title">防闪烁模式</string>
     <string name="dc_dimming_enable_summary">全局直流调光，低亮度下防闪烁护眼</string>
+    <string name="dc_dimming_enable_summary_not_supported">当前内核不支持防闪烁模式</string>
 
     <!-- Thermal Profiles -->
     <string name="thermal_title">温控模式</string>
@@ -83,25 +84,6 @@
     <string name="dirac_preset_country">乡村</string>
     <string name="dirac_preset_dance">舞曲</string>
     <string name="dirac_preset_metal">金属</string>
-
-    <!-- DC Dimming -->
-    <string name="dc_dimming_enable">开启防闪烁模式</string>
-    <string name="dc_dimming_title">防闪烁模式</string>
-    <string name="dc_dimming_summary">全局直流调光，低亮度下防闪烁护眼</string>
-    <string name="dc_dimming_summary_on">开启</string>
-    <string name="dc_dimming_summary_off">关闭</string>
-    <string name="dc_dimming_info">低亮度下防闪烁护眼，但是可能会降低图像质量</string>
-    <string name="dc_dimming_auto_mode_title">设定时间</string>
-    <string name="dc_dimming_mode_never">无</string>
-    <string name="dc_dimming_mode_time">在设定的时间开启</string>
-    <string name="dc_dimming_mode_brightness">当亮度低于阈值时开启</string>
-    <string name="dc_dimming_mode_full">基于时间和亮度</string>
-    <string name="dc_dimming_brightness_title">亮度阈值</string>
-    <string name="dc_dimming_brightness_info">仅当亮度低于阈值时开启DC调光</string>
-    <string name="dc_dimming_off_auto_mode_auto">将会自动开启</string>
-    <string name="dc_dimming_on_auto_mode_auto">将会自动关闭</string>
-    <string name="dc_dimming_start_time">开始时间</string>
-    <string name="dc_dimming_end_time">结束时间</string>
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">清理扬声器</string>

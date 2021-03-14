@@ -31,23 +31,4 @@
     <string name="thermal_gaming">Gaming</string>
     <string name="thermal_streaming">Streaming</string>
 
-    <!-- DC dimming settings -->
-    <string name="dc_dimming_enable">Abilita DC Dimming</string>
-    <string name="dc_dimming_title">DC Dimming</string>
-    <string name="dc_dimming_summary">Riduce l\'affaticamento visivo in condizioni di scarsa luminosità</string>
-    <string name="dc_dimming_summary_on">Abilitato</string>
-    <string name="dc_dimming_summary_off">Disabilitato</string>
-    <string name="dc_dimming_info">Riduce l\'affaticamento visivo in condizioni di scarsa luminosità. Può causare perdita di fedeltà cromatica.</string>
-    <string name="dc_dimming_auto_mode_title">Pianifica</string>
-    <string name="dc_dimming_mode_never">Mai</string>
-    <string name="dc_dimming_mode_time">Abilita all\'orario specificato</string>
-    <string name="dc_dimming_mode_brightness">Abilita quando la luminosità è sotto la soglia impostata</string>
-    <string name="dc_dimming_mode_full">In base all\'orario e alla luminosità</string>
-    <string name="dc_dimming_brightness_title">Soglia luminosità</string>
-    <string name="dc_dimming_brightness_info">Abilita DC Dimming quando la luminosità media è sotto la soglia</string>
-    <string name="dc_dimming_off_auto_mode_auto">Si attiverà in automatico</string>
-    <string name="dc_dimming_on_auto_mode_auto">Si disattiverà in automatico</string>
-    <string name="dc_dimming_start_time">Orario attivazione</string>
-    <string name="dc_dimming_end_time">Orario disattivazione</string>
-
 </resources>

@@ -61,25 +61,15 @@
         </service>
 
         <service
-            android:name=".display.DcDimmingService"
-            android:permission="XiaomiDcDimmingService">
-        </service>
-
-        <activity
-            android:name=".display.DcDimmingSettingsActivity"
-            android:label="@string/dc_dimming_title"
-            android:theme="@style/Theme.Main">
+            android:name=".display.DcDimmingTileService"
+            android:icon="@drawable/ic_dc_tile"
+            android:label="@string/dc_dimming_enable_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
-
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.display" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/dc_dimming_summary" />
-        </activity>
+        </service>
 
         <activity
             android:name=".doze.DozeSettingsActivity"
@@ -97,13 +87,28 @@
         </activity>
 
         <activity
+            android:name=".display.DcDimmingSettingsActivity"
+            android:label="@string/dc_dimming_enable_title"
+            android:theme="@style/Theme.Main">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/dc_dimming_enable_summary" />
+        </activity>
+
+        <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
             android:theme="@style/Theme.Main">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
-
             <meta-data
                 android:name="com.android.settings.category"
                 android:value="com.android.settings.category.ia.battery" />

@@ -18,6 +18,11 @@
     <!-- Pick-up to wake gesture-->
     <string name="wake_gesture_title">Wake up</string>
     <string name="wake_gesture_summary">Wake up the device instead of pulsing notifications</string>
+
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
  
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>
@@ -84,26 +89,6 @@
     <string name="dirac_preset_country">Country</string>
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
-
-    <!-- DC Dimming -->
-    <string name="dc_dimming_enable">Enable DC Dimming</string>
-    <string name="dc_dimming_title">DC Dimming</string>
-    <string name="dc_dimming_summary">Reduces eye strain in low light conditions</string>
-    <string name="dc_dimming_summary_on">Enabled</string>
-    <string name="dc_dimming_summary_off">Disabled</string>
-    <string name="dc_dimming_info">Reduces eye strain in low light conditions but may result in reduced image quality and poor color production.</string>
-    <string name="dc_dimming_auto_mode_title">Schedule</string>
-    <string name="dc_dimming_mode_never">None</string>
-    <string name="dc_dimming_mode_time">Turn on at the specified time</string>
-    <string name="dc_dimming_mode_brightness">Turn on when brightness is below the threshold</string>
-    <string name="dc_dimming_mode_full">Dependent on time and brightness</string>
-    <string name="dc_dimming_brightness_title">Brightness threshold</string>
-    <string name="dc_dimming_brightness_info">Only activate DC Dimming when the average brightness is below the threshold</string>
-    <string name="dc_dimming_off_auto_mode_auto">Will turn on automatically</string>
-    <string name="dc_dimming_on_auto_mode_auto">Will turn off automatically</string>
-    <string name="dc_dimming_start_time">Start time</string>
-    <string name="dc_dimming_end_time">End time</string>
-    <string name="dc_dimming_node">/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_bl</string>
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Clear speaker</string>
