@@ -30,13 +30,11 @@
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
-
          Zone 0:        0 <= LUX < array[0]
          Zone 1:        array[0] <= LUX < array[1]
          ...
          Zone N:        array[N - 1] <= LUX < array[N]
          Zone N + 1     array[N] <= LUX < infinity
-
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
@@ -63,12 +61,10 @@
          in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
          config_screenBrightnessMaximumNits, the display brightness is defined as the measured
          brightness of an all-white image.
-
          If this is defined then:
             - config_autoBrightnessLcdBacklightValues should not be defined
             - config_screenBrightnessNits must be defined
             - config_screenBrightnessBacklight must be defined
-
          This array should have size one greater than the size of the config_autoBrightnessLevels
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
@@ -94,9 +90,49 @@
         <item>420</item>  <!-- 5000+ -->
     </array>
 
+    <!-- Minimum screen brightness allowed by the power manager. -->
+    <integer name="config_screenBrightnessDim">6</integer>
+
+    <!-- Screen brightness when dozing. -->
+    <integer name="config_screenBrightnessDoze">25</integer>
+
+    <!-- Whether the always on display mode is available. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Disable AOD by default -->
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
+    <!-- True if the display hardware only has brightness buckets rather than a full range of
+         backlight values -->
+    <bool name="config_displayBrightnessBucketsInDoze">true</bool>
+
+    <!-- Default screen brightness for VR setting. Target default value: 0x0BB for EVT1.1. -->
+    <!-- 8 bit brightness level of 6 corresponds to the 10 bit brightness level of 0x0B6,
+         8 bit brightness level of 7 corresponds to the 10 bit brightness level of 0x0C1 on EVT1.1. -->
+    <integer name="config_screenBrightnessForVrSettingDefault">7</integer>
+    <integer name="config_screenBrightnessForVrSettingMinimum">6</integer>
+    <integer name="config_screenBrightnessForVrSettingMaximum">7</integer>
+
+    <!-- Minimum screen brightness setting allowed by power manager.
+         -2 is invalid so setting will resort to int value specified above.
+         Set this to 0.0 to allow screen to go to minimal brightness.
+         The user is forbidden from setting the brightness below this level. -->
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.00392156862</item>
+
+    <!-- Maximum screen brightness allowed by the power manager.
+         -2 is invalid so setting will resort to int value specified above.
+         Set this to 1.0 for maximum brightness range.
+         The user is forbidden from setting the brightness above this level. -->
+    <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
+
+    <!-- Default screen brightness setting
+         Must be in the range specified by minimum and maximum.
+         This value is a fraction between 3.5% and 100
+         Equivalent to 98/255 (default for this device)    -->
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.38188976378</item>
+
     <!-- An array describing the screen's backlight values corresponding to the brightness
          values in the config_screenBrightnessNits array.
-
          This array should be equal in size to config_screenBrightnessBacklight. -->
     <integer-array name="config_screenBrightnessBacklight">
         <item>1</item>
@@ -355,13 +391,11 @@
         <item>254</item>
         <item>255</item>
     </integer-array>
-
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
          values in the config_screenBrightnessBacklight array.  On OLED displays these  values
          should be measured with an all white image while the display is in the fully on state.
          Note that this value should *not* reflect the maximum brightness value for any high
          brightness modes but only the maximum brightness value obtainable in a sustainable manner.
-
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
         <item>2.2</item>
@@ -621,23 +655,14 @@
         <item>420</item>
     </array>
 
-    <!-- Screen brightness used to dim the screen when the user activity
-         timeout expires.  May be less than the minimum allowed brightness setting
-         that can be set by the user. -->
-    <integer name="config_screenBrightnessDim">2</integer>
-
-    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
-         May be less than the minimum allowed brightness setting
-         that can be set by the user. -->
-    <integer name="config_screenBrightnessDoze">34</integer>
-
-    <!-- Default screen brightness setting.
-         Must be in the range specified by minimum and maximum. -->
-    <integer name="config_screenBrightnessSettingDefault">98</integer>
-
-    <!-- Minimum screen brightness setting allowed by the power manager.
-         The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">2</integer>
+    <!-- The nominal white coordinates, in CIE1931 XYZ color space, for Display White Balance to
+         use in its calculations. AWB will adapt this white point to the target ambient white
+         point. The array must include a total of 3 float values (X, Y, Z) -->
+    <string-array name="config_displayWhiteBalanceDisplayNominalWhite">
+        <!-- Nominal White X --> <item>0.950352</item>
+        <!-- Nominal White Y --> <item>1.0     </item>
+        <!-- Nominal White Z --> <item>1.089366</item>
+    </string-array>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
@@ -653,15 +678,6 @@
          Otherwise, the device may fail to wake out of suspend reliably.
          The default is false. -->
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
-
-    <!-- Control whether the always on display mode is available. This should only be enabled on
-         devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
-         states. -->
-    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
-
-    <!-- Control whether the always on display mode is enabled by default. This value will be used
-         during initialization when the setting is still null. -->
-    <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
