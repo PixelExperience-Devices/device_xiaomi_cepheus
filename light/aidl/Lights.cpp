@@ -30,9 +30,6 @@ namespace {
 #define STRINGIFY(x) STRINGIFY_INNER(x)
 
 #define LEDS(x) PPCAT(/sys/class/leds, x)
-#define BLUE_ATTR(x) STRINGIFY(PPCAT(LEDS(blue), x))
-#define GREEN_ATTR(x) STRINGIFY(PPCAT(LEDS(green), x))
-#define RED_ATTR(x) STRINGIFY(PPCAT(LEDS(red), x))
 #define WHITE_ATTR(x) STRINGIFY(PPCAT(LEDS(white), x))
 /* clang-format on */
 
@@ -41,9 +38,6 @@ using ::android::base::WriteStringToFile;
 
 // Default max brightness
 constexpr auto kDefaultMaxLedBrightness = 255;
-
-// Each step will stay on for 70ms by default.
-constexpr auto kRampStepDurationDefault = 70;
 
 // Write value to path and close file.
 bool WriteToFile(const std::string& path, uint32_t content) {
@@ -103,9 +97,7 @@ Lights::Lights() {
 
     std::string buf;
 
-    if (ReadFileToString(BLUE_ATTR(max_brightness), &buf) ||
-        ReadFileToString(RED_ATTR(max_brightness), &buf) ||
-        ReadFileToString(WHITE_ATTR(max_brightness), &buf)) {
+    if (ReadFileToString(WHITE_ATTR(max_brightness), &buf)) {
         max_led_brightness_ = std::stoi(buf);
     } else {
         max_led_brightness_ = kDefaultMaxLedBrightness;
@@ -149,30 +141,20 @@ void Lights::setLightNotification(int id, const HwLightState& state) {
 }
 
 void Lights::applyNotificationState(const HwLightState& state) {
-    std::map<std::string, int> colorValues;
-    colorValues["red"] = colorValues["green"] = colorValues["blue"] = colorValues["white"] =
-            RgbaToBrightness(state.color, max_led_brightness_);
+    uint32_t white_brightness = RgbaToBrightness(state.color, max_led_brightness_);
 
-    auto makeLedPath = [](const std::string& led, const std::string& op) -> std::string {
-        return "/sys/class/leds/" + led + "/" + op;
-    };
-    for (const auto& entry : colorValues) {
-        // Turn off the leds (initially)
-        WriteToFile(makeLedPath(entry.first, "breath"), 0);
-        if (state.flashMode == FlashMode::TIMED && state.flashOnMs > 0 && state.flashOffMs > 0) {
-            WriteToFile(makeLedPath(entry.first, "step_ms"),
-                        static_cast<uint32_t>(kRampStepDurationDefault)),
-                    WriteToFile(makeLedPath(entry.first, "pause_lo_count"), 30),
-                    WriteToFile(makeLedPath(entry.first, "lo_idx"), 0);
-            WriteToFile(makeLedPath(entry.first, "lux_pattern"), 0);
-            WriteToFile(makeLedPath(entry.first, "delay_on"),
-                        static_cast<uint32_t>(state.flashOnMs));
-            WriteToFile(makeLedPath(entry.first, "delay_off"),
-                        static_cast<uint32_t>(state.flashOffMs));
-            WriteToFile(makeLedPath(entry.first, "breath"), 1);
-        } else {
-            WriteToFile(makeLedPath(entry.first, "brightness"), entry.second);
-        }
+    WriteToFile(WHITE_ATTR(breath), 0);
+
+    if (state.flashMode == FlashMode::TIMED && state.flashOnMs > 0 && state.flashOffMs > 0) {
+        LOG(DEBUG) << __func__ << ": color=" << std::hex << state.color << std::dec
+                   << " onMs=" << state.flashOnMs << " offMs=" << state.flashOffMs;
+
+        // White
+        WriteToFile(WHITE_ATTR(delay_off), static_cast<uint32_t>(state.flashOffMs));
+        WriteToFile(WHITE_ATTR(delay_on), static_cast<uint32_t>(state.flashOnMs));
+        WriteToFile(WHITE_ATTR(breath), 1);
+    } else {
+        WriteToFile(WHITE_ATTR(brightness), white_brightness);
     }
 }
 
