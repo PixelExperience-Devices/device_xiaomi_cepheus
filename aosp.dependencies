@@ -1,11 +1,12 @@
 [
  {
-   "repository" : "EcrosoftXiao/vendor_xiaomi_cepheus",
+   "repository" : "vendor_xiaomi_cepheus",
    "target_path": "vendor/xiaomi/cepheus",
+   "remote"     : "pixel-devices-blobs",
    "branch"     : "eleven"
  },
  {
-   "repository" : "EcrosoftXiao/kernel_xiaomi_cepheus",
+   "repository" : "kernel_xiaomi_cepheus",
    "target_path": "kernel/xiaomi/cepheus",
    "branch"     : "eleven"
  },
