@@ -413,18 +413,6 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "585000000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "GPUMinFreq",
-      "Duration": 0,
-      "Value": "427000000"
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "TASchedtuneBoost",
       "Duration": 0,
       "Value": "30"
@@ -506,18 +494,6 @@
       "Node": "CPULittleClusterMinFreq",
       "Duration": 5000,
       "Value": "9999999"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GPUMaxFreq",
-      "Duration": 2000,
-      "Value": "585000000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GPUMinFreq",
-      "Duration": 2000,
-      "Value": "427000000"
     },
     {
       "PowerHint": "LAUNCH",
