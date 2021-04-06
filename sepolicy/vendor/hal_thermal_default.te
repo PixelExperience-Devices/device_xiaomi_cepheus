@@ -5,7 +5,9 @@ allow hal_thermal_default hal_power_service:service_manager find;
 
 allow hal_thermal_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 
-# read thermal config
+hal_client_domain(hal_thermal_default, hal_power);
+
+# read thermal_config
 get_prop(hal_thermal_default, vendor_thermal_prop)
 
 binder_call(hal_thermal_default, servicemanager)

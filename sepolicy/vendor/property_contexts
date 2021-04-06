@@ -32,7 +32,7 @@ vendor.powerhal.                        u:object_r:vendor_power_prop:s0
 persist.sensor.                         u:object_r:persist_sensors_prop:s0
 
 #Thermal
-vendor.thermal.config              u:object_r:vendor_thermal_prop:s0
+vendor.thermal.                         u:object_r:vendor_thermal_prop:s0
 
 # Xiaomi thermal daemon
 vendor.sys.thermal.                     u:object_r:thermal_normal_prop:s0
