@@ -150,9 +150,6 @@ on post-fs-data
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
-    mkdir /data/vendor/metadata_apex 0755 root system
-    mkdir /data/vendor/metadata_apex/sessions 0700 root system
-
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
 
