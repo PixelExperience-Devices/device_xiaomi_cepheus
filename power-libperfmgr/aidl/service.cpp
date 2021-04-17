@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power-service.xiaomi-libperfmgr"
+#define LOG_TAG "android.hardware.power-service.cepheus-libperfmgr"
 
 #include <thread>
 
@@ -34,7 +34,7 @@ constexpr char kPowerHalConfigPath[] = "/vendor/etc/powerhint.json";
 constexpr char kPowerHalInitProp[] = "vendor.powerhal.init";
 
 int main() {
-    LOG(INFO) << "Pixel Power HAL AIDL Service with Extension is starting.";
+    LOG(INFO) << "Cepheus Power HAL AIDL Service with Extension is starting.";
 
     // Parse config but do not start the looper
     std::shared_ptr<HintManager> hm = HintManager::GetFromJSON(kPowerHalConfigPath, false);
@@ -58,7 +58,7 @@ int main() {
     const std::string instance = std::string() + Power::descriptor + "/default";
     binder_status_t status = AServiceManager_addService(pw->asBinder().get(), instance.c_str());
     CHECK(status == STATUS_OK);
-    LOG(INFO) << "Pixel Power HAL AIDL Service with Extension is started.";
+    LOG(INFO) << "Cepheus Power HAL AIDL Service with Extension is started.";
 
     std::thread initThread([&]() {
         ::android::base::WaitForProperty(kPowerHalInitProp, "1");
@@ -69,6 +69,6 @@ int main() {
     ABinderProcess_joinThreadPool();
 
     // should not reach
-    LOG(ERROR) << "Pixel Power HAL AIDL Service with Extension just died.";
+    LOG(ERROR) << "Cepheus Power HAL AIDL Service with Extension just died.";
     return EXIT_FAILURE;
 }

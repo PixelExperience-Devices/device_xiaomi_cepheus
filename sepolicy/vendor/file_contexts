@@ -42,7 +42,7 @@
 /vendor/bin/remosaic_daemon                                                                            u:object_r:remosaic_daemon_exec:s0
 
 # Pixel Powerhal
-/vendor/bin/hw/android\.hardware\.power-service\.xiaomi-libperfmgr                                     u:object_r:hal_power_default_exec:s0
+/vendor/bin/hw/android\.hardware\.power-service\.cepheus-libperfmgr                                    u:object_r:hal_power_default_exec:s0
 
 # Pixel Powerstats
 /vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.xiaomi                                    u:object_r:hal_power_stats_default_exec:s0
