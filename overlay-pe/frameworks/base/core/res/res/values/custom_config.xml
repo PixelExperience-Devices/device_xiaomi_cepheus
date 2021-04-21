@@ -32,4 +32,7 @@
 
     <!-- Pocket Lock -->
     <bool name="config_pocketModeSupported">false</bool>
+
+    <!-- Whether device supports in-display fingerprint when screen is turned off -->
+    <bool name="config_supportsScreenOffInDisplayFingerprint">true</bool>
 </resources>
