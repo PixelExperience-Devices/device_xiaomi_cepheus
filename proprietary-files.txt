@@ -618,11 +618,11 @@ vendor/firmware/a640_zap.b02
 vendor/firmware/a640_zap.elf
 vendor/firmware/a640_zap.mdt
 
-# HotwordEnrollment - from qssi-user-11-RP1A.201005.001-2010150042-release-keys
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|9fbc18b83c6f4c308dc736295b902d3894e7538b
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|3dca2fc2f805e47612f8b0240fe8fcae13e70eca
+# HotwordEnrollment - from Xiaomi/vayu_global/vayu:11/RKQ1.200826.002/V12.0.6.0.RJUMIXM:user/release-keys
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED|62e301d2f386771facd9a9aa546c0fcc241116da
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk;PRESIGNED|8639661f6fad570723bc6f2759da76604bd804fa
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
--system_ext/framework/com.android.hotwordenrollment.common.util.jar|0492cd3db2e253e23b78e56fa8ea7b3a4b15edeb
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar|bef92589e75a6da6043f85f4b9b0e85866429624
 
 # IRQ balance
 vendor/bin/msm_irqbalance
@@ -646,16 +646,32 @@ vendor/lib64/libspcom.so
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
-# Listen - from LA.UM.9.1.r1-07300-SMxxx0.0
-#vendor/lib/hw/sound_trigger.primary.msmnile.so|b17b288016371b1b7b00cc860a8fde1972b1419d
-vendor/lib/libadpcmdec.so|491fedbdcf9a395340ce4142c277156c0056bcf8
-vendor/lib/libgcs-calwrapper.so|add1a884b96057164966b67084ef8c2b4d88510e
-vendor/lib/libgcs-ipc.so|98b9061ad73f9387546e8e35eca80cb5bd1ab5eb
-vendor/lib/libgcs-osal.so|0e762ecaf6b0d59e5322323b0fef17e8c76d0b4a
-vendor/lib/libgcs.so|f5b600f244e85f178b649fae507f482183a4977c
-vendor/lib/liblistensoundmodel2.so|2aef0a61f0e054288689a6fdfb28d92afcd6e8c7
-vendor/lib/libmulawdec.so|53257dee0befc2a353ceb84a906a680a33d745f1
-vendor/lib/libsmwrapper.so|e68b476ab54c68be6fc8dc2e35ea7936ca669586
+# Listen - from Xiaomi/vayu_global/vayu:11/RKQ1.200826.002/V12.0.6.0.RJUMIXM:user/release-keys
+vendor/etc/listen_platform_info.xml|02c1eab57442e34135d542d2205c3e77033c7d54
+vendor/etc/sound_trigger_mixer_paths.xml|6f86d5de7911408e8c73182aea212117139ea8c6
+vendor/etc/sound_trigger_mixer_paths_wcd9340.xml|18f9e8ec655f0d1daed30b0fd0e9ba3e8bea6218
+vendor/etc/sound_trigger_mixer_paths_wcd9340_qrd.xml|8bb4449ca78bfe5bd78ffa539771e2b6a86842f9
+vendor/etc/sound_trigger_platform_info.xml|94ac38676cf78cb6ec4657a106f2aa88138965f2
+vendor/lib/hw/sound_trigger.primary.msmnile.so|25331d55dc000a4b6ce6210a834fbd9f0a6abaa3
+vendor/lib/libadpcmdec.so|5232c32b93a8653612cd8fcdde161a9d7fe39c7f
+vendor/lib/libcapiv2svacnn.so|10271e9d5a32377740292bcf27f35098ee65fb5b
+vendor/lib/libcapiv2vop.so|ffde544a5b8b4db988e92308568a84caad80518e
+vendor/lib/libgcs-calwrapper.so|39179c0e2a3b39a441bc694a732bf2fd4b54a97d
+vendor/lib/libgcs-ipc.so|0bb298d160ee8a2dcc3e38c0edb2820848b29e64
+vendor/lib/libgcs-osal.so|c8055991809da427b5fdf0b18b67cefc7b17a399
+vendor/lib/libgcs.so|58447a83f45f6de56d76bd8bfa3345d1940a592b
+vendor/lib/liblistensoundmodel2.so|8e5d795988c666c7d8c42653d6eab231bb5952cc
+vendor/lib/libmulawdec.so|4ad85b4982bf0cfed77c9bede75aac09a51ab062
+vendor/lib/libsmwrapper.so|a3a0301b270e7bbf832fa6b7d9929400c057ee41
+vendor/lib64/hw/sound_trigger.primary.msmnile.so|921f2c55b5a299876b3d2d84d8f75e24b05fe2f5
+vendor/lib64/libcapiv2svacnn.so|2feddde9dfee7ba606b72266d1b42e95d0e03c70
+vendor/lib64/libcapiv2vop.so|23a80adfacbfe48b8b4b57d74b3f4f847447ddf5
+vendor/lib64/libgcs-calwrapper.so|efb5bef39e2f73270a33f32ba007412fbbf7e300
+vendor/lib64/libgcs-ipc.so|80538fd8059abfd529e2921a4fb9448d499d35ad
+vendor/lib64/libgcs-osal.so|59ab5c733b8ded09a79dd6e233536c965ed0887c
+vendor/lib64/libgcs.so|bb20bedde985fdea4905ff08b163e9fffb0560c7
+vendor/lib64/liblistensoundmodel2.so|53303a1046d4684e8d5c13104f30a73b2ad414dc
+vendor/lib64/libmulawdec.so|75298ca84a46f99b47e5a5ecc21b22a54d65c52c
 
 # Media
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
