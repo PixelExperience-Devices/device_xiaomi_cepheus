@@ -459,8 +459,13 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
-# DRM - Widevine -L1 | cepheus-user-10-QKQ1.190825.002-V12.0.3.0.QFAEUXM-release-keys
-vendor/lib64/liboemcrypto.so|b99e70b63bb2fa92fd5660382b6b16e1998968cc
+# DRM - Widevine -L1 - from xiaomi.eu
+vendor/lib/libminksocket.so|72ddd72e8def974ad7a99d52b67c8b7cddfced21
+vendor/lib/liboemcrypto.so|bd6c31e31016704fdf58ce10e8787bdf0e8d6398
+vendor/lib/libtrustedapploader.so|b4197cb22bc73a7a71ecc677ac45facd1a0e77a3
+vendor/lib64/libminksocket.so|0722b9042892e83d4c615e0f70e4ad040365b170
+vendor/lib64/liboemcrypto.so|9aad24f21a73880ff304925f2859695664bd973c
+vendor/lib64/libtrustedapploader.so|83efdf29c9a85409ca973b5e0c8610a7449748d9
 widevine.b00:vendor/firmware/widevine.b00|d306b8986e114b8eecf3e18e1bf66d39cdbc9389
 widevine.b01:vendor/firmware/widevine.b01|99e625951ab89be21422c1c630901a1f106be8e6
 widevine.b02:vendor/firmware/widevine.b02|f270abc3c95c975bd200320b3af7bf9b1a52173e
