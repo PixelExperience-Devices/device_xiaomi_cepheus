@@ -78,8 +78,8 @@ void vendor_load_properties() {
     set_ro_product_prop("device", "cepheus");
     set_ro_product_prop("model", "MI 9");
     set_ro_product_prop("name", "cepheus");
-    set_ro_build_prop("fingerprint", "Xiaomi/cepheus/cepheus:11/RKQ1.200826.002/21.4.29:user/release-keys");
+    set_ro_build_prop("fingerprint", "Xiaomi/cepheus/cepheus:11/RKQ1.200826.002/V12.5.3.0.RFACNXM:user/release-keys");
 
     // description
-    property_override("ro.build.description", "cepheus-user 11 RKQ1.200826.002 21.4.29 release-keys");
+    property_override("ro.build.description", "cepheus-user 11 RKQ1.200826.002 V12.5.3.0.RFACNXM release-keys");
 }
