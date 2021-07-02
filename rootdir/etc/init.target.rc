@@ -109,7 +109,9 @@ on boot
 
     # Set doze mode permissions
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/doze_mode
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/doze_status
     chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/doze_mode
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/doze_status
 
     # Set permission for double tap to wake support
     chmod 0660 /proc/touchpanel/wake_gesture
