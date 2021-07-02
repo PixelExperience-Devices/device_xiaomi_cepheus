@@ -46,7 +46,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         PendingResult pendingResult = goAsync();
         DiracUtils.initialize(context);
-        DozeUtils.checkDozeService(context);
+        DozeUtils.onBootCompleted(context);
         ThermalUtils.startService(context);
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
