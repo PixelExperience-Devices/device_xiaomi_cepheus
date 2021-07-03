@@ -52,7 +52,7 @@ public final class DozeUtils {
     protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
     protected static final String GESTURE_RAISE_TO_WAKE = "gesture_raise_to_wake";
 
-    private static final String DOZE_MODE_PATH =
+    protected static final String DOZE_MODE_PATH =
             "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/doze_mode";
     protected static final String DOZE_MODE_HBM = "1";
     protected static final String DOZE_MODE_LBM = "0";
