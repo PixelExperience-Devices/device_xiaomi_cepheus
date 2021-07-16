@@ -17,7 +17,7 @@
  },
  {
    "repository" : "vendor_xiaomi-firmware",
-   "target_path": "vendor/xiaomi/firmware",
+   "target_path": "vendor/xiaomi-firmware",
    "remote"     : "pixel-devices-blobs",
    "clone-depth": "1",
    "branch"     : "eleven"

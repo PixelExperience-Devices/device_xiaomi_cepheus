@@ -35,4 +35,4 @@ PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Include firmware
-$(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
+$(call inherit-product, vendor/xiaomi-firmware/cepheus/firmware.mk)
