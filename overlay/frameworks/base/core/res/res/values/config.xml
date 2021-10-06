@@ -1085,4 +1085,14 @@
     <string name="db_default_journal_mode">MEMORY</string>
     <string name="db_default_sync_mode">OFF</string>
     <string name="db_wal_sync_mode">OFF</string>
+
+     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+    <integer-array name="config_udfps_sensor_props" translatable="false" >
+        <item>542</item>  <!-- <item>sensorLocationX</item> -->
+        <item>2007</item> <!-- <item>sensorLocationY</item> -->
+        <item>87</item>   <!-- <item>sensorRadius</item> -->
+    </integer-array>
+
+    <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
+    <integer name="config_udfps_illumination_transition_ms">0</integer>
 </resources>
