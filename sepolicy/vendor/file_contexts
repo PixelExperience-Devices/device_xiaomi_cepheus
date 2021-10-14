@@ -19,7 +19,6 @@
 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm                                    u:object_r:sysfs_fod:s0
 /sys/devices/virtual/touch/tp_dev/fod_status                                                           u:object_r:sysfs_fod:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.cepheus                        u:object_r:hal_fingerprint_default_exec:s0
-/vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1\.0-service\.cepheus                u:object_r:hal_lineage_fod_default_exec:s0
 
 # HALs
 /vendor/bin/hw/android\.hardware\.lights-service\.cepheus                                              u:object_r:hal_light_default_exec:s0
