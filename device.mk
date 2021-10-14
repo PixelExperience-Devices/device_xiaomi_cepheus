@@ -178,10 +178,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.cepheus \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.cepheus \
-    android.hardware.biometrics.fingerprint@2.1.vendor \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
+    android.hardware.biometrics.fingerprint@2.3-service.cepheus \
+    android.hardware.biometrics.fingerprint@2.3.vendor \
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.cepheus
 
 
 PRODUCT_COPY_FILES += \
