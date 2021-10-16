@@ -35,3 +35,6 @@ type sysfs_power_stats_ignore, sysfs_type, fs_type;
 
 # Thermal
 type thermal_data_file, file_type, data_file_type;
+
+# Touch Panel
+type sysfs_touchpanel, sysfs_type, fs_type;

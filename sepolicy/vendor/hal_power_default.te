@@ -5,12 +5,14 @@ r_dir_file(hal_power_default, input_device)
 allow hal_power_default {
   vendor_latency_device
   input_device
+  sysfs_touchpanel
 }:chr_file rw_file_perms;
 
 allow hal_power_default {
   vendor_sysfs_devfreq
   vendor_sysfs_kgsl
   sysfs_msm_subsys
+  sysfs_touchpanel
 }:dir search;
 
 allow hal_power_default {
@@ -19,6 +21,7 @@ allow hal_power_default {
   sysfs_devices_system_cpu
   sysfs_msm_subsys
   sysfs_scsi_devices_0000
+  sysfs_touchpanel
   vendor_sysfs_devfreq
   vendor_sysfs_kgsl
 }:file rw_file_perms;
