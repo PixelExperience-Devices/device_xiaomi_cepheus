@@ -238,8 +238,8 @@ PRODUCT_PACKAGES += \
     IFAAService \
     org.ifaa.android.manager
 
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
+#PRODUCT_BOOT_JARS += \
+#    org.ifaa.android.manager
 
 # Init scripts
 PRODUCT_COPY_FILES += \
@@ -527,8 +527,8 @@ PRODUCT_PACKAGES += \
     libnl \
     libqdMetaData
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
