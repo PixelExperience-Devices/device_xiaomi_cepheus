@@ -22,6 +22,7 @@ type debugfs_wlan, debugfs_type, fs_type;
 
 # Fingerprint
 type fingerprint_data_file, data_file_type, file_type;
+type sysfs_fod, sysfs_type, fs_type;
 
 # Insmod
 type sysfs_msm_boot, fs_type, sysfs_type;

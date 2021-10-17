@@ -13,6 +13,8 @@ allow vendor_init {
 # Allow vendor_init to set Powerhal properties
 set_prop(vendor_init, vendor_power_prop)
 
+get_prop(vendor_init, persist_debug_prop)
+
 # Allow init to bind mount dsp file
 allow init adsprpcd_file:file mounton;
 
