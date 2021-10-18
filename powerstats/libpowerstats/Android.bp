@@ -1,0 +1,84 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+cc_library_static {
+    name: "libpixelpowerstats",
+    vendor_available: true,
+    export_include_dirs: ["include"],
+
+    srcs: [
+        "PowerStats.cpp",
+        "PowerStatsUtils.cpp",
+        "GenericStateResidencyDataProvider.cpp",
+        "WlanStateResidencyDataProvider.cpp",
+        "AidlStateResidencyDataProvider.cpp",
+        "DisplayStateResidencyDataProvider.cpp",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    shared_libs: [
+        "android.hardware.power@1.1",
+        "android.hardware.power.stats@1.0",
+        "pixelpowerstats_provider_aidl_interface-cpp",
+        "liblog",
+        "libbinder",
+    ],
+}
+
+cc_library {
+    name: "android.hardware.power.stats-impl.pixel",
+    vendor_available: true,
+    export_include_dirs: ["include"],
+    defaults: ["powerstats_pixel_defaults"],
+
+    srcs: [
+        "dataproviders/*.cpp",
+        "PowerStatsAidl.cpp",
+    ],
+}
+
+cc_defaults {
+    name: "powerstats_pixel_defaults",
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "libcutils",
+        "libhardware",
+        "liblog",
+        "libutils",
+        "pixel_stateresidency_provider_aidl_interface-ndk_platform",
+        "android.hardware.power.stats-V1-ndk_platform",
+    ],
+}
+
+filegroup {
+    name: "pixel_powerstats_rc",
+    srcs: ["android.hardware.power.stats-service.pixel.rc"],
+}
+
+filegroup {
+    name: "pixel_powerstats_xml",
+    srcs: ["android.hardware.power.stats-service.pixel.xml"],
+}
+
+cc_defaults {
+    name: "powerstats_pixel_binary_defaults",
+    defaults: ["powerstats_pixel_defaults"],
+    init_rc: [":pixel_powerstats_rc"],
+    vintf_fragments: [":pixel_powerstats_xml"],
+    relative_install_path: "hw",
+    proprietary: true,
+    shared_libs: [
+        "android.hardware.power.stats-impl.pixel",
+    ],
+}
