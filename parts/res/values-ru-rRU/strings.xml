@@ -20,17 +20,6 @@
     <string name="wake_gesture_title">Просыпаться от жестов</string>
     <string name="wake_gesture_summary">Будить устройство вместо пульсирующих уведомлений при использовании жестов</string>
 
-    <!-- Thermal profiles -->
-    <string name="thermal_title">Тепловые профили</string>
-    <string name="thermal_summary">Регулируйте тепловые профили для каждого приложения для оптимальной производительности</string>
-    <string name="thermal_default">По-умолчанию</string>
-    <string name="thermal_benchmark">Тест производительности</string>
-    <string name="thermal_browser">Браузер</string>
-    <string name="thermal_camera">Камера</string>
-    <string name="thermal_dialer">Телефон</string>
-    <string name="thermal_gaming">Игра</string>
-    <string name="thermal_streaming">Стриминг</string>
-
     <!-- Dirac settings -->
     <string name="dirac_title">Улучшение звука Mi</string>
     <string name="dirac_summary">Улучшить качество звука</string>
