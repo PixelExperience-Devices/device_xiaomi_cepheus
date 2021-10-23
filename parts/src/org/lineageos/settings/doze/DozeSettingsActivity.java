@@ -23,7 +23,7 @@ import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.collapsingtoolbar.R;
 
 public class DozeSettingsActivity extends CollapsingToolbarBaseActivity {
-    private static final String TAG_DOZE = "doze";
+    private static final String TAG = "doze";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class DozeSettingsActivity extends CollapsingToolbarBaseActivity {
 
         getFragmentManager()
                 .beginTransaction()
-                .replace(R.id.content_frame, new DozeSettingsFragment(), TAG_DOZE)
+                .replace(R.id.content_frame, new DozeSettingsFragment(), TAG)
                 .commit();
     }
 }

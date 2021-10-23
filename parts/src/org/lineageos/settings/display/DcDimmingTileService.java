@@ -28,7 +28,7 @@ import org.lineageos.settings.utils.FileUtils;
 
 public class DcDimmingTileService extends TileService {
 
-    private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
+    private static final String DC_DIMMING_KEY = "dc_dimming";
     private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_bl";
 
     private void updateUI(boolean enabled) {
@@ -41,7 +41,7 @@ public class DcDimmingTileService extends TileService {
     public void onStartListening() {
         super.onStartListening();
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        updateUI(sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false));
+        updateUI(sharedPrefs.getBoolean(DC_DIMMING_KEY, false));
     }
 
     @Override
@@ -53,9 +53,9 @@ public class DcDimmingTileService extends TileService {
     public void onClick() {
         super.onClick();
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        final boolean enabled = !(sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false));
+        final boolean enabled = !(sharedPrefs.getBoolean(DC_DIMMING_KEY, false));
         FileUtils.writeLine(DC_DIMMING_NODE, enabled ? "1" : "0");
-        sharedPrefs.edit().putBoolean(DC_DIMMING_ENABLE_KEY, enabled).commit();
+        sharedPrefs.edit().putBoolean(DC_DIMMING_KEY, enabled).commit();
         updateUI(enabled);
     }
 }

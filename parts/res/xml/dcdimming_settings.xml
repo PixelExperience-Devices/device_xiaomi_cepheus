@@ -15,11 +15,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <SwitchPreference
-        android:key="dc_dimming_enable"
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/dc_dimming_title">
+
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="dc_dimming_top_intro"
+        android:title="@string/dc_dimming_text" />
+
+    <com.android.settingslib.widget.MainSwitchPreference
+        android:key="dc_dimming"
         android:defaultValue="false"
-        android:icon="@drawable/ic_dcdimming"
-        android:title="@string/dc_dimming_enable_title"
-        android:summary="@string/dc_dimming_enable_summary" />
+        android:title="@string/dc_dimming_enable" />
 </PreferenceScreen>

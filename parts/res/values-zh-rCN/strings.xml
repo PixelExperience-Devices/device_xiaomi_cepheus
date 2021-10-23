@@ -20,16 +20,15 @@
     <string name="wake_gesture_summary">抬手直接唤醒屏幕不使用息屏显示</string>
 
     <!-- DC Dimming settings -->
-    <string name="dc_dimming_enable_title">防闪烁模式</string>
-    <string name="dc_dimming_enable_summary">全局直流调光，低亮度下防闪烁护眼</string>
-    <string name="dc_dimming_enable_summary_not_supported">当前内核不支持防闪烁模式</string>
+    <string name="dc_dimming_title">防闪烁模式</string>
+    <string name="dc_dimming_text">全局直流调光，低亮度下防闪烁护眼</string>
+    <string name="dc_dimming_text_not_supported">当前内核不支持防闪烁模式</string>
 
     <!-- Device specific settings -->
     <string name="device_settings_app_name">高级设置</string>
 
     <!-- Ambient display settings -->
     <string name="ambient_display_title">环境显示</string>
-    <string name="ambient_display_enable_summary">收到通知时唤醒屏幕</string>
 
     <!-- Dirac settings -->
     <string name="dirac_title">米音</string>
@@ -77,6 +76,6 @@
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">清理扬声器</string>
     <string name="clear_speaker_summary">播放一段约30秒的音频来清理扬声器</string>
-    <string name="clear_speaker_description">当扬声器被少量灰尘覆盖时，将音量调至最大运行1-2次。\n\n当扬声器充满灰尘时运行2-5次, 同时将扬声器朝下轻轻摇晃您的设备。</string>
+    <string name="clear_speaker_text">当扬声器被少量灰尘覆盖时，将音量调至最大运行1-2次。\n\n当扬声器充满灰尘时运行2-5次, 同时将扬声器朝下轻轻摇晃您的设备。</string>
 
 </resources>

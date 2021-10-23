@@ -20,19 +20,17 @@
     <string name="wake_gesture_summary">Wake up the device instead of pulsing notifications</string>
 
     <!-- DC dimming settings -->
-    <string name="dc_dimming_enable_title">DC Dimming</string>
-    <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
-    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
+    <string name="dc_dimming_title">DC Dimming</string>
+    <string name="dc_dimming_enable">Use DC Dimming</string>
+    <string name="dc_dimming_text">Reduces eye strain in low light conditions</string>
+    <string name="dc_dimming_text_not_supported">DC Dimming is currently not supported by the kernel</string>
 
     <!-- Device specific settings -->
     <string name="device_settings_app_name">Advanced settings</string>
 
-    <!-- Ambient display settings -->
-    <string name="ambient_display_title">Ambient display</string>
-    <string name="ambient_display_enable_summary">Wake screen when you receive notifications</string>
-
     <!-- Dirac settings -->
     <string name="dirac_title">Dirac sound enhancer</string>
+    <string name="dirac_enable">Use Dirac</string>
     <string name="dirac_summary">Optimize audio quality</string>
     <string name="dirac_headset_title">Headset type</string>
     <string name="dirac_preset_title">Sound preset</string>
@@ -81,11 +79,13 @@
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Clear speaker</string>
+    <string name="clear_speaker_enable">Enable clear speaker mode</string>
     <string name="clear_speaker_summary">Play a 30-second audio to clear the speaker</string>
-    <string name="clear_speaker_description">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2-5 times while shaking your device with the speaker facing downwards.</string>
+    <string name="clear_speaker_text">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2-5 times while shaking your device with the speaker facing downwards.</string>
 
     <!-- Ambient settings -->
     <string name="ambient_enable">Use ambient display</string>
+    <string name="ambient_display_title">Ambient display</string>
 
     <string name="doze_brightness_title">Always on brightness</string>
     <string name="doze_brightness_summary">%s mode is enabled</string>
