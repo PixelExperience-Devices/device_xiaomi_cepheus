@@ -87,6 +87,9 @@ TARGET_USES_DRM_PP := true
 TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
 
+# Graphics
+BOARD_USES_ADRENO := true
+
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
