@@ -57,16 +57,6 @@ void property_override(char const prop[], char const value[], bool add = true)
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void set_ro_build_prop(const std::string &prop, const std::string &value) {
-    for (const auto &source : ro_props_default_source_order) {
-        auto prop_name = "ro." + source + "build." + prop;
-        if (source == "")
-            property_override(prop_name.c_str(), value.c_str());
-        else
-            property_override(prop_name.c_str(), value.c_str(), false);
-    }
-};
-
 void set_ro_product_prop(const std::string &prop, const std::string &value) {
     for (const auto &source : ro_props_default_source_order) {
         auto prop_name = "ro.product." + source + prop;
@@ -78,8 +68,4 @@ void vendor_load_properties() {
     set_ro_product_prop("device", "cepheus");
     set_ro_product_prop("model", "MI 9");
     set_ro_product_prop("name", "cepheus");
-    set_ro_build_prop("fingerprint", "Xiaomi/cepheus/cepheus:11/RKQ1.200826.002/V12.5.5.0.RFACNXM:user/release-keys");
-
-    // description
-    property_override("ro.build.description", "cepheus-user 11 RKQ1.200826.002 V12.5.5.0.RFACNXM release-keys");
 }
