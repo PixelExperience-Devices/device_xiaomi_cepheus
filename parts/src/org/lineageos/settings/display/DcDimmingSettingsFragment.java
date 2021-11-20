@@ -49,7 +49,7 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
             mDcDimmingSwitchBar.setEnabled(true);
             mDcDimmingSwitchBar.addOnSwitchChangeListener(this);
         } else {
-            mIntroText.setSummary(R.string.dc_dimming_text_not_supported);
+            mIntroText.setSummary(R.string.dc_dimming_enable_summary_not_supported);
             mDcDimmingSwitchBar.setEnabled(false);
         }
     }

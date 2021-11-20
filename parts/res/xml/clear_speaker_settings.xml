@@ -5,11 +5,11 @@
 
     <com.android.settingslib.widget.TopIntroPreference
         android:key="clear_speaker_intro"
-        android:title="@string/clear_speaker_text" />
+        android:title="@string/clear_speaker_description" />
 
     <com.android.settingslib.widget.MainSwitchPreference
         android:key="clear_speaker_pref"
         android:defaultValue="false"
-        android:title="@string/clear_speaker_enable" />
+        android:title="@string/clear_speaker_title" />
 
 </PreferenceScreen>
