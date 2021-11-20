@@ -3,28 +3,23 @@
    "repository" : "vendor_xiaomi_cepheus",
    "target_path": "vendor/xiaomi/cepheus",
    "remote"     : "pixel-devices-blobs",
-   "branch"     : "eleven"
+   "branch"     : "twelve"
  },
  {
    "repository" : "kernel_xiaomi_cepheus",
    "target_path": "kernel/xiaomi/cepheus",
-   "branch"     : "eleven"
+   "branch"     : "twelve"
  },
  {
-   "repository" : "LineageOS/android_hardware_xiaomi",
+   "repository" : "PixelExperience/hardware_xiaomi",
    "target_path": "hardware/xiaomi",
-   "branch"     : "lineage-18.1"
+   "branch"     : "twelve"
  },
  {
    "repository" : "vendor_xiaomi-firmware",
    "target_path": "vendor/xiaomi-firmware",
    "remote"     : "pixel-devices-blobs",
    "clone-depth": "1",
-   "branch"     : "eleven"
- },
- {
-   "repository" : "kdrag0n/proton-clang",
-   "target_path": "prebuilts/clang/host/linux-x86/clang-proton",
-   "branch"     : "master"
+   "branch"     : "twelve"
  }
 ]
