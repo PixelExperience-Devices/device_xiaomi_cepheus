@@ -120,10 +120,6 @@ public class DozeSettingsFragment extends PreferenceFragment
             } else {
                 DozeUtils.updateDozeBrightnessIcon(getContext(), mDozeBrightnessPreference);
             }
-            mPickUpPreference.setDependency(DozeUtils.ALWAYS_ON_DISPLAY);
-            pickupSensorCategory.setDependency(DozeUtils.ALWAYS_ON_DISPLAY);
-            proximitySensorCategory.setDependency(DozeUtils.ALWAYS_ON_DISPLAY);
-            raiseToWakeGesture.setDependency(DozeUtils.ALWAYS_ON_DISPLAY);
         }
     }
 
@@ -134,10 +130,6 @@ public class DozeSettingsFragment extends PreferenceFragment
             if (!(Boolean) newValue) {
                 mDozeBrightnessPreference.setValue(DozeUtils.DOZE_BRIGHTNESS_LBM);
                 DozeUtils.setDozeMode(DozeUtils.DOZE_BRIGHTNESS_LBM);
-            } else {
-                mPickUpPreference.setChecked(false);
-                mHandwavePreference.setChecked(false);
-                mPocketPreference.setChecked(false);
             }
             mDozeBrightnessPreference.setEnabled((Boolean) newValue);
         } else if (DozeUtils.DOZE_BRIGHTNESS_KEY.equals(preference.getKey())) {
@@ -166,9 +158,6 @@ public class DozeSettingsFragment extends PreferenceFragment
             mAlwaysOnDisplayPreference.setChecked(false);
             mDozeBrightnessPreference.setValue(DozeUtils.DOZE_BRIGHTNESS_LBM);
             DozeUtils.updateDozeBrightnessIcon(getContext(), mDozeBrightnessPreference);
-            mPickUpPreference.setChecked(false);
-            mHandwavePreference.setChecked(false);
-            mPocketPreference.setChecked(false);
         }
         mAlwaysOnDisplayPreference.setEnabled(isChecked);
         mDozeBrightnessPreference.setEnabled(
