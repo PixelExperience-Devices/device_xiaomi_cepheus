@@ -6,6 +6,12 @@
    "branch"     : "twelve"
  },
  {
+   "repository" : "vendor_xiaomi_sdm845-common-extra",
+   "target_path": "vendor/xiaomi/sdm845-common-extra",
+   "branch"     : "twelve",
+   "remote"     : "pixel-devices-blobs"
+ },
+ {
    "repository" : "kernel_xiaomi_cepheus",
    "target_path": "kernel/xiaomi/cepheus",
    "branch"     : "twelve"
