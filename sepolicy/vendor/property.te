@@ -8,11 +8,11 @@ vendor_restricted_prop(vendor_fp_prop)
 vendor_restricted_prop(vendor_device_prop)
 
 # Mlipay
-type mlipay_prop, property_type;
+vendor_public_prop(mlipay_prop)
 
 # Pixel PowerHal
 vendor_internal_prop(vendor_power_prop)
 
 # Thermal
-type vendor_thermal_prop, property_type;
+vendor_internal_prop(vendor_thermal_prop)
 vendor_internal_prop(thermal_normal_prop)
