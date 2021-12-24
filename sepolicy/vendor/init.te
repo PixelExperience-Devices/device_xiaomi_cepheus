@@ -4,5 +4,3 @@ allow init adsprpcd_file:file mounton;
 # For mount /sys/kernel/debug/tracing
 # to support tracefs if debugfs is disabled
 allow init debugfs_tracing_debug:dir mounton;
-
-allow init property_type:file { append create getattr map open read relabelto rename setattr unlink write };
