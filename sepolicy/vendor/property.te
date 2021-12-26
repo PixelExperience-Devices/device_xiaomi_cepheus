@@ -2,7 +2,7 @@
 vendor_internal_prop(persist_sensors_prop)
 
 # Fingerprint
-vendor_restricted_prop(vendor_fp_prop)
+vendor_public_prop(vendor_fp_prop)
 
 # Insmod
 vendor_restricted_prop(vendor_device_prop)
