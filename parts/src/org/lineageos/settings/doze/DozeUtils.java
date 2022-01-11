@@ -58,11 +58,6 @@ public final class DozeUtils {
     protected static final String DOZE_MODE_HBM = "1";
     protected static final String DOZE_MODE_LBM = "0";
 
-    private static final String DOZE_STATUS_PATH =
-            "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/doze_status";
-    protected static final String DOZE_STATUS_ENABLED = "1";
-    protected static final String DOZE_STATUS_DISABLED = "0";
-
     protected static final String DOZE_BRIGHTNESS_LBM = "0";
     protected static final String DOZE_BRIGHTNESS_HBM = "1";
     protected static final String DOZE_BRIGHTNESS_AUTO = "2";
@@ -84,7 +79,9 @@ public final class DozeUtils {
     }
 
     public static void checkDozeService(Context context) {
-        if (isDozeEnabled(context) && (isAlwaysOnEnabled(context) || sensorsEnabled(context))) {
+        if (isDozeEnabled(context)
+                && (!isAlwaysOnEnabled(context) || isDozeAutoBrightnessEnabled(context))
+                && sensorsEnabled(context)) {
             startService(context);
         } else {
             stopService(context);
@@ -144,10 +141,6 @@ public final class DozeUtils {
 
     protected static boolean setDozeMode(String value) {
         return FileUtils.writeLine(DOZE_MODE_PATH, value);
-    }
-
-    protected static boolean setDozeStatus(String value) {
-        return FileUtils.writeLine(DOZE_STATUS_PATH, value);
     }
 
     protected static boolean isDozeAutoBrightnessEnabled(Context context) {
