@@ -27,5 +27,11 @@
    "remote"     : "pixel-devices-blobs",
    "clone-depth": "1",
    "branch"     : "twelve"
+ },
+ {
+   "repository" : "jjpprrrr/prelude-clang",
+   "target_path": "prebuilts/clang/host/linux-x86/clang-prelude",
+   "branch"     : "master",
+   "remote"     : "gitlab"
  }
 ]
