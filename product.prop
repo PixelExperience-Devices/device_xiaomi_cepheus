@@ -9,6 +9,9 @@ ro.bluetooth.library_name=libbluetooth_qti.so
 # Blur
 ro.sf.blurs_are_expensive=1
 
+# Bluetooth
+bluetooth.profile.asha.central=false
+
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 persist.camera.sat.fallback.dist.d=10
