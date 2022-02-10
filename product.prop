@@ -10,7 +10,7 @@ ro.bluetooth.library_name=libbluetooth_qti.so
 ro.sf.blurs_are_expensive=1
 
 # Bluetooth
-bluetooth.profile.asha.central=false
+bluetooth.profile.asha.central.enabled=false
 
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
