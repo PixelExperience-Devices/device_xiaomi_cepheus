@@ -623,19 +623,16 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a585
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
-# Keymaster
-vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti
-vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
-vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqcbor.so
-vendor/lib64/libqtikeymaster4.so
-
-# Keystore
-vendor/lib64/libspcom.so
+# Keymaster - from Xiaomi/nabu/nabu:11/RKQ1.200826.002/V12.5.13.0.RKXCNXM:user/release-key
+vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|97853e573163c69d1e9408d11bec9e94543b0524
+vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|dd28418cf9fb70a8df08c6f0040a033fb76c1b2b
+vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc|26710162b144c80a84a04e5211bdcaaf3bd1c2b9
+vendor/lib64/libkeymasterdeviceutils.so|f95b8401343efd8af098b45f25afb97dfb60de19
+vendor/lib64/libkeymasterprovision.so|2004bab12a51dcaeef2e838492b5d1fa6532b898
+vendor/lib64/libkeymasterutils.so|b9c888d579c9cf7a1c8f463be4048eb9d935daf8
+vendor/lib64/libqcbor.so|67acd94f3c7110c9419f0fd064b6eb69c09a0738
+vendor/lib64/libqtikeymaster4.so|6b84db846c36c07d416259d1f01830895ff4b57c
+vendor/lib64/libspcom.so|eef7a179687dfbc4a2d317f4e5c45a3ae64cbd10
 
 # Latency
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
