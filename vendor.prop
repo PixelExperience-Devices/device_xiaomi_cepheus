@@ -227,5 +227,8 @@ ro.soc.model=SM8150
 # System
 persist.sys.binary_xml=false
 
+# USB
+vendor.usb.product_string=Xiaomi Mi 9
+
 # WiFi
 wifi.aware.interface=wifi-aware0
