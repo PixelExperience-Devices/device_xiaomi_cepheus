@@ -1,2 +1,0 @@
-# Allow system server to communicate with FOD
-hal_client_domain(system_server, hal_lineage_fod)
