@@ -11,3 +11,7 @@ vendor.xiaomi.hardware.mlipay::IMlipayService                               u:ob
 # NXP services
 vendor.nxp.nxpese::INxpEse                                                  u:object_r:nxpese_hwservice:s0
 vendor.nxp.nxpnfc::INxpNfc                                                  u:object_r:nxpnfc_hwservice:s0
+
+# Radio
+vendor.qti.hardware.radio.ims.IImsRadio/imsradio0                           u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.ims.IImsRadio/imsradio1                           u:object_r:hal_telephony_hwservice:s0
