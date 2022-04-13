@@ -29,9 +29,10 @@
    "branch"     : "twelve"
  },
  {
-   "repository" : "jjpprrrr/prelude-clang",
-   "target_path": "prebuilts/clang/host/linux-x86/clang-prelude",
-   "branch"     : "master",
+   "repository" : "Panchajanya1999/azure-clang",
+   "target_path": "prebuilts/clang/host/linux-x86/clang-azure",
+   "branch"     : "main",
+   "clone-depth": "1",
    "remote"     : "gitlab"
  }
 ]
