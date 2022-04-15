@@ -98,6 +98,7 @@ vendor.audio_hal.period_multiplier=3
 vendor.audio_hal.period_size=192
 
 # Bluetooth
+bluetooth.device.default_name=Xiaomi Mi 9
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=false
