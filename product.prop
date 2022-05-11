@@ -20,6 +20,9 @@ persist.vendor.camera.enableTOFInterface=TRUE
 persist.vendor.camera.mfnrframenum=8
 persist.vendor.camera.multicam=TRUE
 
+# Dex2oat
+dalvik.vm.systemuicompilerfilter=speed
+
 # Display density
 ro.sf.lcd_density=440
 
