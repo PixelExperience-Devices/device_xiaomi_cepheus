@@ -235,7 +235,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
 # IFAA manager
-include vendor/xiaomi/sdm845-common-extra/ifaa.mk
+PRODUCT_PACKAGES += \
+    IFAAService \
+    org.ifaa.android.manager
+
+PRODUCT_BOOT_JARS += \
+    org.ifaa.android.manager
 
 # Init scripts
 PRODUCT_COPY_FILES += \
