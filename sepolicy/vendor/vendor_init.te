@@ -23,3 +23,6 @@ allow vendor_qti_init_shell {
   sysfs_devices_system_cpu
   sysfs_zram
 }:file w_file_perms;
+
+# Allow vendor_init to change watermark_scale_factor
+allow vendor_init proc_watermark_scale_factor:file w_file_perms;
