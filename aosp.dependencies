@@ -3,24 +3,24 @@
    "repository" : "vendor_xiaomi_cepheus",
    "target_path": "vendor/xiaomi/cepheus",
    "remote"     : "pixel-devices-blobs",
-   "branch"     : "twelve"
+   "branch"     : "thirteen"
  },
  {
    "repository" : "kernel_xiaomi_cepheus",
    "target_path": "kernel/xiaomi/cepheus",
-   "branch"     : "twelve"
+   "branch"     : "thirteen"
  },
  {
    "repository" : "PixelExperience/hardware_xiaomi",
    "target_path": "hardware/xiaomi",
-   "branch"     : "twelve"
+   "branch"     : "thirteen"
  },
  {
    "repository" : "vendor_xiaomi-firmware",
    "target_path": "vendor/xiaomi-firmware",
    "remote"     : "pixel-devices-blobs",
    "clone-depth": "1",
-   "branch"     : "twelve"
+   "branch"     : "thirteen"
  },
  {
    "repository" : "Panchajanya1999/azure-clang",
