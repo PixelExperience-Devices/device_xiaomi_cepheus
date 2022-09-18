@@ -26,7 +26,8 @@ INSTALLED_SUPERIMAGE_DUMMY_TARGET := $(PRODUCT_OUT)/super_dummy.img
 $(INSTALLED_SUPERIMAGE_DUMMY_TARGET): $(PRODUCT_OUT)/super_empty.img $(LPFLASH)
 	$(call pretty,"Target dummy super image: $@")
 	$(hide) touch $@
-	$(hide) $(LPFLASH) $@ $(PRODUCT_OUT)/super_empty.img
+	$(hide) echo $(CURDIR)
+	$(hide) $(LPFLASH) $(CURDIR)/$@ $(CURDIR)/$(PRODUCT_OUT)/super_empty.img
 
 .PHONY: super_dummyimage
 super_dummyimage: $(INSTALLED_SUPERIMAGE_DUMMY_TARGET)
