@@ -69,7 +69,7 @@ function blob_fixup() {
         patchelf --remove-needed "libmegface.so" "${2}"
         patchelf --add-needed "libshim_megvii.so" "${2}"
         ;;
-    vendor/lib/camera/components/com.qti.node.watermark.so)
+    vendor/lib64/camera/components/com.qti.node.watermark.so)
         patchelf --add-needed "libpiex_shim.so" "${2}"
         ;;
     esac
