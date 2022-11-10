@@ -6,8 +6,9 @@
    "branch"     : "thirteen"
  },
  {
-   "repository" : "kernel_xiaomi_cepheus",
+   "repository" : "EcrosoftXiao/kernel_xiaomi_cepheus",
    "target_path": "kernel/xiaomi/cepheus",
+   "remote"     : "github",
    "branch"     : "thirteen"
  },
  {
