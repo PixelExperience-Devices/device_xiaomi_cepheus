@@ -26,7 +26,5 @@ allow init-insmod-sh {
 }:file r_file_perms;
 
 allow init-insmod-sh {
-  vendor_debugfs_ipc
-  vendor_debugfs_wlan
   vendor_sysfs_slpi
 }:dir search;
