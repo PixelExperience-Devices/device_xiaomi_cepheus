@@ -134,16 +134,6 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 # Camera
 vendor/bin/remosaic_daemon
 vendor/lib/libswvdec.so
-vendor/lib/vendor.qti.hardware.camera.device@1.0.so
-vendor/lib/vendor.qti.hardware.camera.device@2.0.so
-vendor/lib/vendor.qti.hardware.camera.device@3.5.so
-vendor/lib64/camera.device@1.0-impl.so
-vendor/lib64/camera.device@3.2-impl.so
-vendor/lib64/camera.device@3.3-impl.so
-vendor/lib64/camera.device@3.4-external-impl.so
-vendor/lib64/camera.device@3.4-impl.so
-vendor/lib64/camera.device@3.5-external-impl.so
-vendor/lib64/camera.device@3.5-impl.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/lib_denoiser3.so
@@ -202,9 +192,6 @@ vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libVDClearShot.so
 vendor/lib64/libvidhance.so
 vendor/lib64/libXMFD_AgeGender.so
-vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
-vendor/lib64/vendor.qti.hardware.camera.device@2.0.so
-vendor/lib64/vendor.qti.hardware.camera.device@3.5.so
 
 # Camera (components)
 vendor/lib64/camera/components/com.almalence.node.sr.so
