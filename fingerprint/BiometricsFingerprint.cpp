@@ -256,7 +256,7 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 }
 
 Return<RequestStatus> BiometricsFingerprint::cancel() {
-    set(FOD_HBM_PATH, FOD_HBM_OFF);
+    set(FOD_STATUS_PATH, FOD_STATUS_OFF);
     set(DIMLAYER_HBM_PATH, DIMLAYER_HBM_OFF);
     return ErrorFilter(mDevice->cancel(mDevice));
 }
