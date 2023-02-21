@@ -439,7 +439,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@1.1.vendor
 
 PRODUCT_PACKAGES += \
-    sensors.udfps
+    sensors.cepheus_udfps
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
